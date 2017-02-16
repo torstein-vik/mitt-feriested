@@ -3,7 +3,7 @@
 ?>
 <html>
     <head>
-        <title> Adventures in the Faroe Islands</title>
+        <title>Faroe Adventure</title>
     </head>
     <body>
 
