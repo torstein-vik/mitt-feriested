@@ -12,6 +12,9 @@
         "logout" => [
             "page" => "logout.php"
         ],
+        "register" => [
+            "page" => "register.php"
+        ],
         "404" => [
             "page" => "notfound.php"
         ]
