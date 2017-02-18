@@ -30,6 +30,7 @@
             $hash = hash('sha256', $password.$salt);
 
             if($hash == bin2hex($user["passhash"])){
+                $_SESSION['userid'] = $user["userid"];
                 $_SESSION['user'] = $username;
                 $_SESSION['admin'] = ($user['privilege'] == 'admin');
 
