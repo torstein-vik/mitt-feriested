@@ -1,3 +1,1 @@
-<?php
-    echo 'test';
-?>
+<h1> The faroe islands!</h1>
