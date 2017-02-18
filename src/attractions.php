@@ -59,6 +59,8 @@
             $redir = "attractions";
         }
 
+        echo "<h1> Pick an attraction! </h1>";
+
         foreach($attractions as $key => $attraction){
             echo "<a href='?page=".$redir."&a=".($key + 1)."'>".$attraction["name"]."</a>";
         }
