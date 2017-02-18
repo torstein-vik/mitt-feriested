@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `mitt-feriested`.`tips` (
   `userid` INT NOT NULL,
   `attractionid` INT NOT NULL,
   `timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `title` VARCHAR(45) NOT NULL,
   `content` TEXT NOT NULL,
   PRIMARY KEY (`tipid`),
   FOREIGN KEY (`userid`)
