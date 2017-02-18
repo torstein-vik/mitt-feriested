@@ -56,8 +56,20 @@
                     <ul>
                         <li><a href="?page=home"> Home </a></li>
                         <li><a href="?page=attractions"> Attractions </a></li>
-                        <li><a href=<?php echo $auth ? '?page=mypage' : '?page=register' ?>> <?php echo $auth ? 'My page' : 'Register' ?> </a></li>
-                        <li><a href=<?php echo $auth ? '?page=logout' : '?page=login' ?>> <?php echo $auth ? 'Log out' : 'Log in' ?> </a></li>
+                        <?php
+                        if($auth){
+                            ?>
+                            <li><a href='?page=mypage'> My page </a></li>
+                            <li><a href='?page=addcomment'> Add comment </a></li>
+                            <li><a href='?page=logout'> Log out </a></li>
+                            <?php
+                        } else {
+                            ?>
+                            <li><a href='?page=register'> Register </a></li>
+                            <li><a href='?page=login'> Log in </a></li>
+                            <?php
+                        }
+                        ?>
                     </ul>
                 </nav>
             </header>
