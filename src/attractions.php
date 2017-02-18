@@ -24,7 +24,7 @@
 
         echo "<h1> Comments about ".$attraction["name"].": </h1>";
 
-        $comment_query = $conn->query("SELECT users.username, users.privilege, tips.timestamp, tips.content, tips.title FROM `mitt-feriested`.`users`, `mitt-feriested`.`tips` WHERE users.userid=tips.userid AND tips.attractionid=".$attraction["attractionid"]." ORDER BY tips.timestamp DESC;");
+        $comment_query = $conn->query("SELECT users.username, users.privilege, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title FROM `mitt-feriested`.`users`, `mitt-feriested`.`tips` WHERE users.userid=tips.userid AND tips.attractionid=".$attraction["attractionid"]." ORDER BY tips.timestamp DESC;");
 
         if(!$comment_query){
             echo $conn->error;
@@ -38,7 +38,7 @@
 
         foreach($comments as $comment){
             ?>
-                <h3> <?php echo($comment['title']." - ".$comment["username"].($comment['privilege'] == 'admin' ? " [admin]" : "")); ?></h3>
+                <h3> <?php echo($comment['title']." - ".$comment["username"].($comment['privilege'] == 'admin' ? " [admin]" : "").' (posted '.date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"]).")"); ?></h3>
                 <p>
                     <?php echo($comment["content"]);?>
                 </p>
