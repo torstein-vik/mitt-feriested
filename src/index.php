@@ -18,6 +18,16 @@
         </script>
     </head>
     <body>
+        <div id="content">
+            <header>
 
+            </header>
+            <main>
+
+            </main>
+            <footer>
+
+            </footer>
+        </div>
     </body>
 </html>
