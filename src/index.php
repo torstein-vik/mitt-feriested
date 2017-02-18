@@ -1,5 +1,19 @@
 <?php
+    $pages = [
+        "home" => [
+            "page" => "home.php"
 
+        ],
+        "404" => [
+            "page" => "notfound.php"
+        ]
+    ];
+
+    if (array_key_exists("page", $_GET)){
+        $page = $_GET["page"];
+    } else {
+        $page = "home";
+    }
 ?>
 <html>
     <head>
@@ -23,7 +37,13 @@
 
             </header>
             <main>
-
+                <?php
+                    if(array_key_exists($page, $pages) ){
+                        include $pages[$page]["page"];
+                    } else {
+                        include $pages["404"]["page"];
+                    }
+                ?>
             </main>
             <footer>
                 <copyright>
