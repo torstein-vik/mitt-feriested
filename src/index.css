@@ -1,5 +1,5 @@
 body{
-    font: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: red;
     margin: 0;
 }
@@ -26,4 +26,17 @@ main{
 footer{
     height: 100px;
     background-color: yellow;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+copyright{
+
+}
+
+copyright::before{
+    content: "©";
 }

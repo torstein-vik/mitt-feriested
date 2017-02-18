@@ -26,7 +26,9 @@
 
             </main>
             <footer>
-
+                <copyright>
+                    Johannes Hansen Aas, Torstein Vik 2017
+                </copyright>
             </footer>
         </div>
     </body>
