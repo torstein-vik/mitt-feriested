@@ -1,16 +1,29 @@
 body{
     font: 'Open Sans', sans-serif;
     background-color: red;
+    margin: 0;
+}
+
+#content{
+
+    display:flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 header{
-
+    height: 100px;
+    background-color: green;
 }
 
 main{
-
+    width: 60%;
+    height: calc(100% - 200px);
+    margin: 0 auto;
+    background-color: aqua;
 }
 
 footer{
-
+    height: 100px;
+    background-color: yellow;
 }
