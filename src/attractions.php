@@ -53,8 +53,14 @@
         }
 
     } else {
+        if (isset($_GET["redir"])){
+            $redir = $_GET["redir"];
+        } else {
+            $redir = "attractions";
+        }
+
         foreach($attractions as $key => $attraction){
-            echo "<a href='?page=attractions&a=".($key + 1)."'>".$attraction["name"]."</a>";
+            echo "<a href='?page=".$redir."&a=".($key + 1)."'>".$attraction["name"]."</a>";
         }
     }
 
