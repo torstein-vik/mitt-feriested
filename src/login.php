@@ -34,16 +34,29 @@
                 $_SESSION['user'] = $username;
                 $_SESSION['admin'] = ($user['privilege'] == 'admin');
 
-                header('Location: ?page=login');
+
+                if (isset($_GET['redir'])){
+                    $redir = $_GET['redir'];
+                } else {
+                    $redir = 'login';
+                }
+
+                header('Location: ?page='.$redir);
             } else {
                 echo "Wrong password!";
                 return;
             }
 
         } else {
+            if (isset($_GET['redir'])){
+                $redir = $_GET['redir'];
+            } else {
+                $redir = 'login';
+            }
+
             ?>
 
-            <form method="POST" action="?page=login">
+            <form method="POST" action=<?php echo "?page=login&redir=".$redir;?>>
                 <input name="username" type="text" placeholder="username">
                 <input name="password" type="password" placeholder="password">
                 <input type="submit" value="Log in">
