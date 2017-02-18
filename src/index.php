@@ -20,6 +20,9 @@
         "addcomment" => [
             "page" => "addcomment.php"
         ],
+        "mypage" => [
+            "page" => "mypage.php"
+        ],
         "404" => [
             "page" => "notfound.php"
         ]
