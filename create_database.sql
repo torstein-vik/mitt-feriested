@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS `mitt-feriested`.`users` (
   `userid` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
   `passhash` BINARY(64) NOT NULL,
+  `passsalt` BINARY(32) NOT NULL,
   `privilege` ENUM('user', 'admin') NOT NULL,
   PRIMARY KEY (`userid`),
   UNIQUE INDEX `username_UNIQUE` (`username` ASC))
