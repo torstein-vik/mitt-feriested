@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `mitt-feriested`.`tips` (
   `tipid` INT NOT NULL AUTO_INCREMENT,
   `userid` INT NOT NULL,
   `attractionid` INT NOT NULL,
-  `timestamp` TIMESTAMP NOT NULL,
+  `timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `content` TEXT NOT NULL,
   PRIMARY KEY (`tipid`),
   FOREIGN KEY (`userid`)
