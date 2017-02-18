@@ -3,6 +3,6 @@
         echo 'You\'re logged in!';
     } else {
         $_SESSION["user"] = "someone";
-        header("Refresh:0");
+        header("Location: ?page=login");
     }
 ?>
