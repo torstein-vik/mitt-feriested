@@ -4,7 +4,6 @@
     $pages = [
         "home" => [
             "page" => "home.php"
-
         ],
         "login" => [
             "page" => "login.php"
@@ -14,6 +13,9 @@
         ],
         "register" => [
             "page" => "register.php"
+        ],
+        "attractions" => [
+            "page" => "attractions.php"
         ],
         "404" => [
             "page" => "notfound.php"
@@ -50,7 +52,7 @@
                 <nav>
                     <ul>
                         <li><a href="?page=home"> Home </a></li>
-                        <li><a href="?page=attractions&a=1"> Attractions </a></li>
+                        <li><a href="?page=attractions"> Attractions </a></li>
                         <li><a href=<?php echo $auth ? '?page=mypage' : '?page=register' ?>> <?php echo $auth ? 'My page' : 'Register' ?> </a></li>
                         <li><a href=<?php echo $auth ? '?page=logout' : '?page=login' ?>> <?php echo $auth ? 'Log out' : 'Log in' ?> </a></li>
                     </ul>
@@ -58,7 +60,7 @@
             </header>
             <main>
                 <?php
-                    if(array_key_exists($page, $pages) ){
+                    if(isset($pages[$page]) ){
                         include $pages[$page]["page"];
                     } else {
                         include $pages["404"]["page"];
