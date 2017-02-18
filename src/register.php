@@ -18,23 +18,24 @@
 
         $username_conflict = $conn->query("SELECT * FROM `mitt-feriested`.`users` WHERE username = '".$username."'");
 
-        if(mysqli_num_rows($username_conflict) > 0){
+        if($username_conflict->num_rows > 0){
             echo 'Username already in use!';
             return;
         }
 
         print $conn->error;
 
-        $salt = random_bytes(8);
+        $salt = bin2hex(random_bytes(32));
 
-        $hash = hash('sha256', $password.bin2hex($salt));
+        $hash = hash('sha256', $password.$salt);
 
         $privilege = "'user'";
 
-        $query = $conn->query("INSERT INTO `mitt-feriested`.`users`  (username, passhash, passsalt, privilege) VALUES ('".$username."',0x".$hash.",0x".bin2hex($salt).",".$privilege.");");
+        $query = $conn->query("INSERT INTO `mitt-feriested`.`users`  (username, passhash, passsalt, privilege) VALUES ('".$username."',0x".$hash.",0x".$salt.",".$privilege.");");
 
         if($query){
             echo "success! ";
+            $conn->close();
             include("login.php");
 
         } else {
