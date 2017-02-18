@@ -13,7 +13,8 @@ USE `mitt-feriested` ;
 CREATE TABLE IF NOT EXISTS `mitt-feriested`.`users` (
   `userid` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
-  `passhash` BINARY(64) NULL,
+  `passhash` BINARY(64) NOT NULL,
+  `privilege` ENUM('user', 'admin') NOT NULL,
   PRIMARY KEY (`userid`),
   UNIQUE INDEX `username_UNIQUE` (`username` ASC))
 ENGINE = InnoDB;
@@ -21,8 +22,8 @@ ENGINE = InnoDB;
 -- Attaction table
 CREATE TABLE IF NOT EXISTS `mitt-feriested`.`attractions` (
   `attractionid` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NULL,
-  `pagefile` VARCHAR(45) NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `pagefile` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`attractionid`))
 ENGINE = InnoDB;
 
@@ -31,8 +32,8 @@ CREATE TABLE IF NOT EXISTS `mitt-feriested`.`tips` (
   `tipid` INT NOT NULL AUTO_INCREMENT,
   `userid` INT NOT NULL,
   `attractionid` INT NOT NULL,
-  `timestamp` TIMESTAMP NULL,
-  `content` TEXT NULL,
+  `timestamp` TIMESTAMP NOT NULL,
+  `content` TEXT NOT NULL,
   PRIMARY KEY (`tipid`),
   FOREIGN KEY (`userid`)
     REFERENCES `mitt-feriested`.`users` (`userid`),
