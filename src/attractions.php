@@ -38,7 +38,7 @@
 
         foreach($comments as $comment){
             ?>
-                <h3> <?php echo($comment["username"].($comment['privilege'] == 'admin' ? " [admin]" : "")); ?></h3>
+                <h3> <?php echo($comment['title']." - ".$comment["username"].($comment['privilege'] == 'admin' ? " [admin]" : "")); ?></h3>
                 <p>
                     <?php echo($comment["content"]);?>
                 </p>
