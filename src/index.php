@@ -17,6 +17,9 @@
         "attractions" => [
             "page" => "attractions.php"
         ],
+        "addcomment" => [
+            "page" => "addcomment.php"
+        ],
         "404" => [
             "page" => "notfound.php"
         ]
