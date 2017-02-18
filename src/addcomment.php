@@ -5,7 +5,7 @@
         return;
     }
 
-    if(!isset($_SESSION["userid"])){
+    if(!$auth){
         header("Location: ?page=login&redir=addcomment");
         return;
     }
