@@ -9,7 +9,8 @@
 ?>
 
 
-<h1> Welcome, <?php echo $name;?>!</h1> <br>
+<h1> Welcome, <?php echo $name;?>!</h1>
+<br>
 
 <?php
     if($admin){
