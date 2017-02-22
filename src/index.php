@@ -40,6 +40,7 @@
     <head>
         <title>Faroe Adventure</title>
         <meta charset="utf-8" />
+        <link rel="icon" href="favicon.png">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
