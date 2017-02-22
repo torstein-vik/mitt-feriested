@@ -56,6 +56,7 @@
     <body>
         <div id="content">
             <header>
+                <img src="main_logo.png" alt="Faroe Adventures">
                 <nav>
                     <ul>
                         <li><a href="?page=home"> Home </a></li>
