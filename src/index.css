@@ -12,8 +12,17 @@ body{
 }
 
 header{
-    height: 100px;
+    height: 150px;
     background-color: aliceblue;
+}
+
+#logo {
+    height: 150px;
+}
+
+#logo img {
+    height: 120px;
+    padding: 15px;
 }
 
 main{
@@ -39,4 +48,16 @@ copyright{
 
 copyright::before{
     content: "©";
+}
+
+#bottomCorner_logo {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    height: 50px;
+}
+
+#bottomCorner_logo img {
+    height: 40px;
+    padding: 0 10px 10px 0;
 }

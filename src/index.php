@@ -56,7 +56,9 @@
     <body>
         <div id="content">
             <header>
-                <img src="main_logo.png" alt="Faroe Adventures">
+                <div id="logo">
+                    <img src="photos/main_logo.png" alt="Faroe Adventures">
+                </div>
                 <nav>
                     <ul>
                         <li><a href="?page=home"> Home </a></li>
@@ -92,6 +94,9 @@
                     Johannes Hansen Aas, Torstein Vik 2017
                 </copyright>
             </footer>
+            <div id="bottomCorner_logo">
+                <img src="photos/black_logo.png">
+            </div>
         </div>
     </body>
 </html>
