@@ -53,13 +53,12 @@ footer{
     width: 100%;
     left: 0;
     bottom: 0;
-    background-color: #333;
+    background-color: #539BC1;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    color: aliceblue;
 }
 
 copyright {

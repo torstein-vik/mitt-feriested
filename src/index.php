@@ -57,7 +57,7 @@
         <div id="content">
             <header>
                 <div id="logo">
-                    <img src="res/main_logo.png" alt="Faroe Adventures">
+                    <img src="res/logo_transparent_text.png" alt="Faroe Adventures">
                 </div>
                 <nav>
                     <ul>
