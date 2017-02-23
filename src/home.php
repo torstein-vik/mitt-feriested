@@ -1,1 +1,1 @@
-<h1> The faroe islands!</h1>
+<h1>The faroe islands!</h1>

@@ -28,8 +28,10 @@ header{
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
 
+
 #logo {
     height: 100px;
+    float: left;
 }
 
 #logo img {
@@ -37,12 +39,30 @@ header{
     padding: 10px;
 }
 
+nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+
+    text-align: center;
+}
+
+nav li {
+    flex: auto;
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
 main{
     max-width: 800px;
     width: 100%;
     min-height: 100px;
     margin: 50px auto;
-    background-color: #0c9;
+    background-color: #29a329;
     text-align: center;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
