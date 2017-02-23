@@ -49,12 +49,13 @@ nav ul {
 
 nav li {
     flex: auto;
-    margin: 10px;
 }
 
 nav a {
+    display: block;
     text-decoration: none;
     font-size: 20px;
+    line-height: 100px;
 }
 
 main{
