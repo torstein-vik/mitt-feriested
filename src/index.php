@@ -40,7 +40,7 @@
     <head>
         <title>Faroe Adventure</title>
         <meta charset="utf-8" />
-        <link rel="icon" href="favicon.png">
+        <link rel="icon" href="res/favicon.png">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
@@ -57,7 +57,7 @@
         <div id="content">
             <header>
                 <div id="logo">
-                    <img src="photos/main_logo.png" alt="Faroe Adventures">
+                    <img src="res/main_logo.png" alt="Faroe Adventures">
                 </div>
                 <nav>
                     <ul>
@@ -95,7 +95,7 @@
                 </copyright>
             </footer>
             <div id="bottomCorner_logo">
-                <img src="photos/black_logo.png">
+                <img src="res/black_logo.png">
             </div>
         </div>
     </body>
