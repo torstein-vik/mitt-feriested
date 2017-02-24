@@ -8,6 +8,15 @@
     <div id="slide3">
 
     </div>
+    <div id="console">
+        <buttom id="left">
+            <
+        </button>
+        <button id="right">
+            >
+        </button>
+
+    </div>
 </div>
 
 
