@@ -3,7 +3,9 @@
 
     $pages = [
         "home" => [
-            "page" => "home.php"
+            "page" => "home.php",
+            "script" => "home.js",
+            "scriptinit" => "init"
         ],
         "login" => [
             "page" => "login.php"
@@ -49,9 +51,21 @@
         <link rel="stylesheet" href="index.css"/>
         <script src="index.js"></script>
 
-        <script>
-            $(init);
-        </script>
+
+        <?php
+            if(isset($pages[$page]) and isset($pages[$page]["script"])){
+                echo "<script src=".$pages[$page]["script"]."></script>";
+            }
+
+            if(isset($pages[$page]) and isset($pages[$page]["scriptinit"])){
+                ?>
+                <script>
+                    $(<?php echo $pages[$page]["scriptinit"];?>);
+                </script>
+                <?php
+            }
+        ?>
+
     </head>
     <body>
         <div id="content">
