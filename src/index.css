@@ -56,11 +56,14 @@ nav a {
     font-size: 20px;
     line-height: 100px;
     background-color: aliceblue;
+    color: #333;
     clip-path: polygon(15% 30px, 83% 35px, 87% 65px, 13% 70px);
+    transition: 200ms;
 }
 
 nav a:hover {
-    background-color: darkgrey;
+    background-color: 6F961B;
+    color: aliceblue;
 }
 
 main{
