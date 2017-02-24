@@ -1,11 +1,11 @@
 <div id="slideshow">
-    <div id="slide1">
+    <div id="slide1" class="slide">
 
     </div>
-    <div id="slide2">
+    <div id="slide2" class="slide">
 
     </div>
-    <div id="slide3">
+    <div id="slide3" class="slide">
 
     </div>
     <div id="console">
