@@ -9,7 +9,7 @@
 
     </div>
     <div id="console">
-        <buttom id="left">
+        <button id="left">
             <
         </button>
         <button id="right">
