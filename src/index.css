@@ -70,9 +70,28 @@ main{
     max-width: 800px;
     width: 100%;
     min-height: 100px;
-    margin: 50px auto;
-    background-color: #29a329;
     text-align: center;
+    margin: 0 auto;
+}
+
+.contentBody {
+    margin: 50px auto;
+}
+
+#homeHeader {
+    clip-path: polygon(73% 0, 100% 70%, 100% 100%, 0 100%, 27% 12%, 53% 26%);
+    background-color: #6F961B;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+
+}
+
+#homeHeader h1 {
+    line-height: 100px;
+    color: aliceblue;
+}
+
+.mainContent {
+    background-color: aliceblue;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
 
