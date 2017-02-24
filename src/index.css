@@ -58,7 +58,7 @@ nav a {
     background-color: aliceblue;
     color: #333;
     clip-path: polygon(15% 30px, 83% 35px, 87% 65px, 13% 70px);
-    transition: 200ms;
+    transition: 300ms;
 }
 
 nav a:hover {
