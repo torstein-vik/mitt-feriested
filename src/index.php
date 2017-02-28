@@ -49,7 +49,7 @@
         <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
 
         <link rel="stylesheet" href="index.css"/>
-        <script src="index.js"></script>
+        <script src="home.js"></script>
 
 
         <?php
