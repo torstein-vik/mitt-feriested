@@ -41,15 +41,18 @@
 
     } else {
         ?>
-
-        <h1> Add comment to <?php echo $attraction_name;?> </h1>
-
-        <form method="POST" action=<?php "?page=addcomment?a=".$_GET["a"]?>>
-            <input name="title" type="text" placeholder="title">
-            <input name="comment" type="text" placeholder="comment">
-            <input type="submit" value="Add comment">
-        </form>
-
+        <div class="contentBody">
+            <header>
+                <h1> Add comment to <?php echo $attraction_name;?> </h1>
+            </header>
+            <main class="mainContent">
+                <form method="POST" action=<?php "?page=addcomment?a=".$_GET["a"]?>>
+                    <input name="title" type="text" placeholder="title">
+                    <input name="comment" type="text" placeholder="comment">
+                    <input type="submit" value="Add comment">
+                </form>
+            </main>
+        </div>
         <?php
     }
     $conn->close();
