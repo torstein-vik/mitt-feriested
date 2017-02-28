@@ -1,16 +1,24 @@
 function init() {
-    console.log("it works!");
+
+    var slideIndex = 0;
+    var slides = $('.slide');
+    var slideAmt = slides.length;
+
+    function slideShow() {
+        var slide = $('.slide').eq(slideIndex);
+
+        slides.css('display', 'none');
+        slide.css('display', 'block');
+
+    }
+
+    var autoSlide = setInterval(function() {
+        slideIndex += 1;
+        if (slideIndex > slideAmt - 1) {
+            slideIndex = 0;
+        }
+        slideShow();
+    }, 3000);
+
 }
 
-var slideIndex = 0;
-var slides = $('.slide');
-var slideAmt = slides.length;
-
-//function slideshow() {
-    var slide = $('.slide').eq(slideIndex);
-    console.log(slideAmt);
-
-    slide.css('display', 'block');
-    slides.css('display', 'none');
-
-//}
