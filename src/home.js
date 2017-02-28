@@ -8,8 +8,9 @@ var slideAmt = slides.length;
 
 //function slideshow() {
     var slide = $('.slide').eq(slideIndex);
-    //console.log(slide);
+    console.log(slideAmt);
 
     slide.css('display', 'block');
+    slides.css('display', 'none');
 
 //}
