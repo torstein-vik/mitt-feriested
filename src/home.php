@@ -18,7 +18,7 @@
 
             </div>
             <div id="slide3" class="slide">
-                hei
+
             </div>
 
             <div id="console">
