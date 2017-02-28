@@ -1,15 +1,8 @@
-
-
-
-
-
 <div class="contentBody">
     <header id="homeHeader">
         <h1>The faroe islands!</h1>
     </header>
     <main class="mainContent">
-        <p>:(</p>
-
         <div id="slideshow">
             <div id="slide1" class="slide">
 
