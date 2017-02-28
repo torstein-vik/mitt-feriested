@@ -144,6 +144,7 @@ copyright::before{
 
 #slide1 {
     background-color: coral;
+    display: block;
 }
 #slide2 {
     background-color: #0c9;
