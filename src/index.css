@@ -57,7 +57,8 @@ nav a {
     line-height: 100px;
     background-color: aliceblue;
     color: #333;
-    clip-path: polygon(15% 30px, 83% 35px, 87% 65px, 13% 70px);
+    clip-path: polygon(17% 24%, 84% 28%, 94% 70%, 13% 75%);
+    -webkit-clip-path: polygon(17% 24%, 84% 28%, 94% 70%, 13% 75%);
     transition: 300ms;
 }
 
@@ -79,15 +80,26 @@ main{
 }
 
 #homeHeader {
-    clip-path: polygon(73% 0, 100% 70%, 100% 100%, 0 100%, 27% 12%, 53% 26%);
+    clip-path: polygon(73% 0, 100% 75px, 100% 100%, 0 100%, 20px 60px, 27% 12%, 53% 26%);
     background-color: #6F961B;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-
+    height: 125px;
 }
 
 #homeHeader h1 {
-    line-height: 100px;
+    z-index: 1;
     color: aliceblue;
+    line-height: 150px;
+}
+
+#grey-triangle1 {
+    float: right;
+    margin-top: -75px;
+}
+
+#grey-triangle2 {
+    float: left;
+    margin-top: -90px;
 }
 
 .mainContent {

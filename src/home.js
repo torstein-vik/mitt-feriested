@@ -18,7 +18,7 @@ function init() {
             slideIndex = 0;
         }
         slideShow();
-    }, 3000);
+    }, 4000);
 
 }
 
