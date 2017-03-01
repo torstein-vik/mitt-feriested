@@ -12,13 +12,12 @@ html {
 body{
     font-family: 'Open Sans', sans-serif;
     background-color: lightgrey;
-    margin: 0 0 100px;
 }
 
 #content{
     display:flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100vh;
 }
 
 header {
@@ -67,12 +66,12 @@ nav a:hover {
     color: aliceblue;
 }
 
-main{
+main {
+    flex: 1;
     max-width: 800px;
     width: 100%;
-    min-height: 100px;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 100px auto;
 }
 
 .contentBody {
@@ -109,7 +108,6 @@ main{
 
 footer {
 
-    display: none;
     position: absolute;
     height: 100px;
     width: 100%;
@@ -117,7 +115,7 @@ footer {
     bottom: 0;
     background-color: #539BC1;
 
-    /*display: flex;*/
+    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
