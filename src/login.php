@@ -56,12 +56,17 @@
 
             ?>
 
-            <form method="POST" action=<?php echo "?page=login&redir=".$redir;?>>
-                <input name="username" type="text" placeholder="username">
-                <input name="password" type="password" placeholder="password">
-                <input type="submit" value="Log in">
-            </form>
-
+            <div class="contentBody">
+                <header id="loginHeader">
+                    <h1>Login</h1>
+                </header>
+                <main class="class=mainContent"
+                    <form method="POST" action=<?php echo "?page=login&redir=".$redir;?>>
+                        <input name="username" type="text" placeholder="username">
+                        <input name="password" type="password" placeholder="password">
+                        <input type="submit" value="Log in">
+                    </form>
+            </div>
             <?php
         }
 
