@@ -1,3 +1,19 @@
+<div id="slideShow">
+    <div id="slide1" class="slide">
+        hei
+    </div>
+    <div id="slide2" class="slide">
+        på
+    </div>
+    <div id="slide3" class="slide">
+        deg
+    </div>
+
+    <a id="prev"> < </a>
+    <a id="next"> > </a>
+
+</div>
+
 <div class="contentBody">
     <header id="homeHeader">
         <h1>The faroe islands!</h1>
@@ -9,25 +25,6 @@
         </svg>
     </header>
     <main class="mainContent">
-        <div id="slideshow">
-            <div id="slide1" class="slide">
-                hei
-            </div>
-            <div id="slide2" class="slide">
-                på
-            </div>
-            <div id="slide3" class="slide">
-                deg
-            </div>
 
-            <div id="console">
-                <button id="left">
-                    <
-                </button>
-                <button id="right">
-                    >
-                </button>
-            </div>
-        </div>
     </main>
 </div>
