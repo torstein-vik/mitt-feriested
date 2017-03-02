@@ -15,8 +15,8 @@
 </div>
 
 <div class="contentBody">
-    <header id="homeHeader">
-        <h1>The faroe islands!</h1>
+    <header class="contentHeader">
+        <h1>The Faroe Islands!</h1>
         <svg id="grey-triangle1" width="190px" height="50px">
             <polygon points="0,50 190,0 190,50" style="fill:#A8A5A4;">
         </svg>
