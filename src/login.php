@@ -57,15 +57,22 @@
             ?>
 
             <div class="contentBody">
-                <header id="loginHeader">
+                <header class="contentHeader">
                     <h1>Login</h1>
+                    <svg id="grey-triangle1" width="190px" height="50px">
+                        <polygon points="0,50 190,0 190,50" style="fill:#A8A5A4;">
+                    </svg>
+                    <svg id="grey-triangle2" width="220px" height="65px">
+                        <polygon points="0,65 19,0 220,65" style="fill:#7C7972;">
+                    </svg>
                 </header>
-                <main class="class=mainContent"
+                <main class="mainContent">
                     <form method="POST" action=<?php echo "?page=login&redir=".$redir;?>>
                         <input name="username" type="text" placeholder="username">
                         <input name="password" type="password" placeholder="password">
                         <input type="submit" value="Log in">
                     </form>
+                </main>
             </div>
             <?php
         }
