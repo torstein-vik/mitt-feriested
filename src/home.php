@@ -15,13 +15,13 @@
 </div>
 
 <div class="contentBody">
-    <header class="contentHeader">
+    <header id="homeHeader" class="contentHeader">
         <h1>The Faroe Islands!</h1>
-        <svg id="grey-triangle1" width="190px" height="50px">
-            <polygon points="0,50 190,0 190,50" style="fill:#A8A5A4;">
+        <svg id="homeHeaderSvg1" width="220px" height="55px">
+            <polygon points="0,55 60,0 220,55" style="fill:#3f5e10;" />
         </svg>
-        <svg id="grey-triangle2" width="220px" height="65px">
-            <polygon points="0,65 19,0 220,65" style="fill:#7C7972;">
+        <svg id="homeHeaderSvg2" width="200px" height="125px">
+            <polygon points="0,125 200,0 200,125" style="fill:#7C7972;" />
         </svg>
     </header>
     <main class="mainContent">
