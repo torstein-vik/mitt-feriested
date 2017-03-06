@@ -20,5 +20,13 @@ function init() {
         slideShow();
     }, 4000);
 
+    $('#prev').click(function() {
+        clearInterval(autoSlide);
+        slideIndex -= 1;
+        if (slideIndex > slideAmt - 1) {
+            slideIndex = 0;
+        }
+    });
+
 }
 
