@@ -9,7 +9,7 @@
         deg
     </div>
 
-    <a id="prev"> < </a>
+    <button id="prev"> < </button>
     <a id="next"> > </a>
 
 </div>
