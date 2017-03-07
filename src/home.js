@@ -11,13 +11,17 @@ function init() {
         slide.css('display', 'block');
     }
 
-    var autoSlide = setInterval(function() {
+    function autoSlide() {
         slideIndex += 1;
         if (slideIndex > slideAmt - 1) {
             slideIndex = 0;
         }
         slideShow();
-    }, 4000);
+    }
+
+    $(document).ready(function() {
+        setInterval(autoSlide, 3000);
+    });
 
     $('#prev').click(function() {
         clearInterval(autoSlide);
@@ -28,6 +32,7 @@ function init() {
             slideIndex = slideAmt - 1;
         }
         slideShow();
+        setInterval(autoSlide, 3000);
     });
 
     $('#next').click(function() {
@@ -39,6 +44,7 @@ function init() {
             slideIndex = slideAmt - 1;
         }
         slideShow();
+        setInterval(autoSlide, 3000);
     });
 
 }
