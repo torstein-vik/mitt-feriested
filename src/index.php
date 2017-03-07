@@ -71,14 +71,14 @@
         <div id="content">
             <header>
                 <div id="logo">
-                    <img src="res/logo_transparent_text.png" alt="Faroe Adventures">
+                    <a href='?page=home'><img src="res/logo_transparent_text.png" alt="Faroe Adventures"></a>
                 </div>
                 <nav>
                     <ul>
                         <li><a href="?page=home"> Home </a></li>
                         <li><a href="?page=attractions"> Attractions </a></li>
                         <?php
-                        if($auth){
+                        if($auth) {
                             ?>
                             <li><a href='?page=mypage'> My page </a></li>
                             <li><a href='?page=addcomment'> Add comment </a></li>
