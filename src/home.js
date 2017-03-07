@@ -24,6 +24,8 @@ function init() {
         slideIndex -= 1;
         if (slideIndex > slideAmt - 1) {
             slideIndex = 0;
+        } else if (slideIndex < 0){
+            slideIndex = slideAmt - 1;
         }
         slideShow();
     });
@@ -33,6 +35,8 @@ function init() {
         slideIndex += 1;
         if (slideIndex > slideAmt - 1) {
             slideIndex = 0;
+        } else if (slideIndex < 0){
+            slideIndex = slideAmt - 1;
         }
         slideShow();
     });
