@@ -19,12 +19,10 @@ function init() {
         slideShow();
     }
 
-    $(document).ready(function() {
-        setInterval(autoSlide, 3000);
-    });
+    var autoSlide2 = setInterval(autoSlide, 3000);
 
     $('#prev').click(function() {
-        clearInterval(autoSlide);
+        clearInterval(autoSlide2);
         slideIndex -= 1;
         if (slideIndex > slideAmt - 1) {
             slideIndex = 0;
