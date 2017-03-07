@@ -9,7 +9,6 @@ function init() {
 
         slides.css('display', 'none');
         slide.css('display', 'block');
-
     }
 
     var autoSlide = setInterval(function() {
@@ -26,6 +25,16 @@ function init() {
         if (slideIndex > slideAmt - 1) {
             slideIndex = 0;
         }
+        slideShow();
+    });
+
+    $('#next').click(function() {
+        clearInterval(autoSlide);
+        slideIndex += 1;
+        if (slideIndex > slideAmt - 1) {
+            slideIndex = 0;
+        }
+        slideShow();
     });
 
 }
