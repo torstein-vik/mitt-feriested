@@ -63,6 +63,8 @@
                         <input name="password" type="password" placeholder="password">
                         <input type="submit" value="Log in">
                     </form>
+                    <br>
+                    <a href="?page=register"> Click here to register </a>
                 </main>
             </div>
             <?php
