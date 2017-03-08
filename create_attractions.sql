@@ -12,8 +12,8 @@ ALTER TABLE tags AUTO_INCREMENT = 1;
 ALTER TABLE tagselections AUTO_INCREMENT = 1;
 
 -- Adding attractions
-INSERT INTO `mitt-feriested`.`attractions` (name, pagefile, previewimg, weather) VALUES ('test', 'test.php', 'res/main_logo.png', 'Færøyene/Annet/Færøyene'),
-                                                                                        ('test2', 'test2.php', 'res/placeholder.jpg', 'Norge/Møre_og_Romsdal/Ålesund/Ålesund');
+INSERT INTO `mitt-feriested`.`attractions` (name, pagefile, previewimg, weather) VALUES ('test', 'attr/test.php', 'res/main_logo.png', 'Færøyene/Annet/Færøyene'),
+                                                                                        ('test2', 'attr/test2.php', 'res/placeholder.jpg', 'Norge/Møre_og_Romsdal/Ålesund/Ålesund');
 
 -- Adding tags
 INSERT INTO `mitt-feriested`.`tags` (name) VALUES ('Restaurants'), ('Mountains');
