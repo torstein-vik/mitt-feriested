@@ -7,6 +7,7 @@
         return;
     }
 
+    $conn -> set_charset("utf8");
 
     $pages = [
         "home" => [
