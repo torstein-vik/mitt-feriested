@@ -28,7 +28,6 @@
 
         if($query){
             echo "success! ";
-            $conn->close();
             include("login.php");
 
         } else {
