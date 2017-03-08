@@ -1,10 +1,4 @@
 <?php
-    $conn = new mysqli("localhost", "root", "");
-
-    if ($conn->connect_errno) {
-        printf("Connect failed: %s\n", $mysqli->connect_error);
-        return;
-    }
 
     $query = $conn->query("SELECT * FROM `mitt-feriested`.`attractions`");
 
@@ -69,6 +63,4 @@
             echo "<a href='?page=".$redir."&a=".($key + 1)."'>".$attraction["name"]."</a>";
         }
     }
-
-    $conn->close();
 ?>

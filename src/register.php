@@ -1,12 +1,5 @@
 <?php
     if(isset($_POST["username"]) and isset($_POST["password"]) and isset($_POST["conf_password"])){
-        $conn = new mysqli("localhost", "root", "");
-
-        if ($conn->connect_errno) {
-            printf("Connect failed: %s\n", $mysqli->connect_error);
-            return;
-        }
-
         $username = $conn->real_escape_string($_POST["username"]);
         $password = $conn->real_escape_string($_POST["password"]);
         $password_conf = $conn->real_escape_string($_POST["conf_password"]);
@@ -42,8 +35,6 @@
             echo "failure!";
             print $conn->error;
         }
-
-        $conn->close();
 
     } else {
         ?>

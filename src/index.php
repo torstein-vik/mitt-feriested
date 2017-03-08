@@ -1,6 +1,13 @@
 <?php
     session_start();
 
+    $conn = new mysqli("localhost", "root", "");
+    if ($conn->connect_errno) {
+        printf("Connect failed: %s\n", $mysqli->connect_error);
+        return;
+    }
+
+
     $pages = [
         "home" => [
             "page" => "home.php",
@@ -114,3 +121,6 @@
         </div>
     </body>
 </html>
+<?php
+    $conn->close();
+?>

@@ -4,13 +4,6 @@
     } else {
 
         if(isset($_POST["username"]) and isset($_POST["password"])){
-            $conn = new mysqli("localhost", "root", "");
-
-            if ($conn->connect_errno) {
-                printf("Connect failed: %s\n", $mysqli->connect_error);
-                return;
-            }
-
             $username = $conn->real_escape_string($_POST["username"]);
             $password = $conn->real_escape_string($_POST["password"]);
 
@@ -22,8 +15,6 @@
             }
 
             $user = $username_find->fetch_assoc();
-
-            $conn->close();
 
             $salt = bin2hex($user['passsalt']);
 

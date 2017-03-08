@@ -1,9 +1,4 @@
 <?php
-    $conn = new mysqli("localhost", "root", "");
-    if ($conn->connect_errno) {
-        printf("Connect failed: %s\n", $mysqli->connect_error);
-        return;
-    }
 
     if(!$auth){
         header("Location: ?page=login&redir=addcomment");
@@ -61,5 +56,4 @@
         </div>
         <?php
     }
-    $conn->close();
 ?>
