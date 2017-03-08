@@ -84,7 +84,7 @@
                 <nav>
                     <ul>
                         <li><a href="?page=home"> Home </a></li>
-                        <li><a href="?page=attractions"> Attractions </a></li>
+                        <li><a href="?page=attractions"> Attractions & Travel </a></li>
                         <?php
                         if($auth) {
                             ?>
