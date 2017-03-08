@@ -25,7 +25,27 @@ CREATE TABLE IF NOT EXISTS `mitt-feriested`.`attractions` (
   `attractionid` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `pagefile` VARCHAR(45) NOT NULL,
+  `previewimg` VARCHAR(45) NOT NULL,
+  `weather` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`attractionid`))
+ENGINE = InnoDB;
+
+-- Tags table
+CREATE TABLE IF NOT EXISTS `mitt-feriested`.`tags` (
+  `tagid` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`tagid`))
+ENGINE = InnoDB;
+
+-- Tag Selection table
+CREATE TABLE IF NOT EXISTS `mitt-feriested`.`tagselections` (
+  `attractionid` INT NOT NULL,
+  `tagid` INT NOT NULL,
+  PRIMARY KEY (`attractionid`, `tagid`),
+  FOREIGN KEY (`attractionid`)
+    REFERENCES `mitt-feriested`.`attractions` (`attractionid`),
+  FOREIGN KEY (`tagid`)
+    REFERENCES `mitt-feriested`.`tags` (`tagid`))
 ENGINE = InnoDB;
 
 -- Tip table
