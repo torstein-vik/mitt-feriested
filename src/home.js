@@ -11,18 +11,21 @@ function init() {
         slide.css('display', 'block');
     }
 
-    function autoSlide() {
-        slideIndex += 1;
-        if (slideIndex > slideAmt - 1) {
-            slideIndex = 0;
-        }
-        slideShow();
-    }
+    var interval;
+    var autoSlide = function() {
+        interval = setInterval(function() {
+            slideIndex += 1;
+            if (slideIndex > slideAmt - 1) {
+                slideIndex = 0;
+            }
+            slideShow();
+        }, 3000);
+    };
 
-    var autoSlide2 = setInterval(autoSlide, 3000);
+    autoSlide();
 
     $('#prev').click(function() {
-        clearInterval(autoSlide2);
+        clearInterval(interval);
         slideIndex -= 1;
         if (slideIndex > slideAmt - 1) {
             slideIndex = 0;
@@ -30,11 +33,11 @@ function init() {
             slideIndex = slideAmt - 1;
         }
         slideShow();
-        setInterval(autoSlide, 3000);
+        autoSlide();
     });
 
     $('#next').click(function() {
-        clearInterval(autoSlide);
+        clearInterval(interval);
         slideIndex += 1;
         if (slideIndex > slideAmt - 1) {
             slideIndex = 0;
@@ -42,7 +45,7 @@ function init() {
             slideIndex = slideAmt - 1;
         }
         slideShow();
-        setInterval(autoSlide, 3000);
+        autoSlide();
     });
 
 }
