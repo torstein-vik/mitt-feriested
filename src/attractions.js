@@ -8,9 +8,23 @@ function init(){
 }
 
 function updateContent(){
-    var flags = 0;
-
     $("#attractions").html("Please wait...");
+
+    var flags = getCurrentFlags();
+
+    $.ajax({
+        url:("data?type=attractions&redir=" + $("#redir").html() + "&flags="+flags)
+    }).done(function(data){
+        setTimeout(function(){
+            if(flags == getCurrentFlags()){
+                $("#attractions").html(data);
+            }
+        }, 500);
+    })
+}
+
+function getCurrentFlags(){
+    var flags = 0;
 
     $(".tagselector.active").each(function(){
         var tagid = $(this).attr('tagid');
@@ -18,12 +32,5 @@ function updateContent(){
         flags |= (1 << (tagid - 1))
     });
 
-
-    $.ajax({
-        url:("data?type=attractions&redir=" + $("#redir").html() + "&flags="+flags)
-    }).done(function(data){
-        setTimeout(function(){
-            $("#attractions").html(data);
-        }, 500);
-    })
+    return flags;
 }
