@@ -5,6 +5,6 @@
         unset($_SESSION["admin"]);
         header("Refresh:0");
     } else {
-        echo 'You\'re logged out!';
+        header("Location: ?page=login");
     }
 ?>
