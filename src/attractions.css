@@ -6,11 +6,11 @@
 .tagselector{
     display: inline;
     margin: 20px;
-    background-color: aqua;
+    background-color: red;
     user-select: none;
     cursor: pointer;
 }
 
-.tagselector.up{
-    background-color: red;
+.tagselector.active{
+    background-color: aqua;
 }
