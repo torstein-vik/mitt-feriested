@@ -81,14 +81,7 @@
 
         ?>
         <div id="attractions">
-            <?php
-            foreach($attractions as $key => $attraction){
-                echo "<a class='attraction' href='?page=".$redir."&a=".($key + 1)."'>";
-                echo "<img style='width:60; height:60;' class='attractionpreview' src='".$attraction["previewimg"]."'/>";
-                echo $attraction["name"];
-                echo "</a>";
-            }
-            ?>
+
         </div>
         <?php
     }
