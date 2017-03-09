@@ -42,7 +42,7 @@
 
         if($auth){
             ?>
-                <form method="POST" action="data?type=addcomment&a=<?php echo $_GET["a"]; ?>">
+                <form method="POST" action="api?type=addcomment&a=<?php echo $_GET["a"]; ?>">
                     <input name="title" type="text" placeholder="title">
                     <input name="comment" type="text" placeholder="comment">
                     <input type="submit" value="Add comment">
