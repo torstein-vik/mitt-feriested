@@ -30,9 +30,6 @@
             "scriptinit" => "init",
             "css" => "attractions.css"
         ],
-        "addcomment" => [
-            "page" => "addcomment.php"
-        ],
         "mypage" => [
             "page" => "mypage.php"
         ],
@@ -95,7 +92,6 @@
                         if($auth) {
                             ?>
                             <li><a href='?page=mypage'> My page </a></li>
-                            <li><a href='?page=addcomment'> Add comment </a></li>
                             <li><a href='?page=logout'> Log out </a></li>
                             <?php
                         } else {

@@ -5,6 +5,6 @@
         unset($_SESSION["admin"]);
         header("Refresh:0");
     } else {
-        header("Location: ?page=login");
+        header("Location: ?page=home");
     }
 ?>

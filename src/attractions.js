@@ -35,7 +35,7 @@ function updateContent(){
     var flags = getCurrentFlags();
 
     $.ajax({
-        url:("data?type=attractions&redir=" + $("#redir").html() + "&flags="+flags)
+        url:("api?type=attractions&redir=" + $("#redir").html() + "&flags="+flags)
     }).done(function(data){
         setTimeout(function(){
             if(flags == getCurrentFlags()){
