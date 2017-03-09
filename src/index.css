@@ -117,7 +117,9 @@ main {
     margin-top: -90px;
 }
 
-
+#attractionsHeader {
+    clip-path: polygon(60% 0, 70% 40px, 85% 50px, 100% 100%, 0 100%, 70px 15px, 30% 35px);
+}
 
 
 
