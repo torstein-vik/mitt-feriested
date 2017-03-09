@@ -57,10 +57,36 @@
             $redir = "attractions";
         }
 
-        echo "<h1> Pick an attraction! </h1>";
+        $query2 = $conn->query("SELECT * FROM `mitt-feriested`.`tags`");
 
-        foreach($attractions as $key => $attraction){
-            echo "<a href='?page=".$redir."&a=".($key + 1)."'>".$attraction["name"]."</a>";
+        $tags = [];
+        while($row = $query2->fetch_assoc()){
+            $tags[] = $row;
         }
+
+        echo "<h1> Pick an attraction! Filter by types! </h1>";
+
+        ?>
+        <div id="#tags">
+            <?php
+            foreach($tags as $key => $tag){
+                echo "<div class='tagselector'>".$tag["name"]."</div>";
+            }
+            ?>
+        </div>
+        <?php
+
+        ?>
+        <div id="#attractions">
+            <?php
+            foreach($attractions as $key => $attraction){
+                echo "<a class='attraction' href='?page=".$redir."&a=".($key + 1)."'>";
+                echo "<img style='width:60; height:60;' class='attractionpreview' src='".$attraction["previewimg"]."'/>";
+                echo $attraction["name"];
+                echo "</a>";
+            }
+            ?>
+        </div>
+        <?php
     }
 ?>
