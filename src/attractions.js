@@ -20,7 +20,7 @@ function updateContent(){
 
 
     $.ajax({
-        url:("data?type=attractions&redir=" + $("#redir").html() + "%tags="+flags)
+        url:("data?type=attractions&redir=" + $("#redir").html() + "%flags="+flags)
     }).done(function(data){
         setTimeout(function(){
             $("#attractions").html(data);
