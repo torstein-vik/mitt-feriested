@@ -71,7 +71,7 @@
 
         ?>
 
-        <div id="redir" hidden> <?php echo $redir; ?></div>
+        <div id="redir" hidden><?php echo $redir; ?></div>
 
         <div id="#tags">
             <?php
