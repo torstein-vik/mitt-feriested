@@ -9,11 +9,11 @@
 
     $attractions = [];
     while($row = $query->fetch_assoc()){
-        $attractions[] = $row;
+        $attractions[$row["attractionid"]] = $row;
     }
 
-    if(isset($_GET["a"]) and sizeof($attractions) > $_GET["a"] - 1){
-        $attraction = $attractions[$_GET["a"] - 1];
+    if(isset($_GET["a"]) and $_GET["a"] > 0 and sizeof($attractions) > $_GET["a"] - 1){
+        $attraction = $attractions[$_GET["a"]];
         include($attraction["pagefile"]);
 
         echo "<h1> Comments about ".$attraction["name"].": </h1>";
