@@ -69,7 +69,34 @@
 
 
 
+    } else if($type == "addcomment"){
+
+        $a = $conn->real_escape_string($_GET["a"]);
+        $attraction_name = $conn->query("SELECT name FROM `mitt-feriested`.`attractions` WHERE attractionid=".$a.";")->fetch_assoc()["name"];
+
+        if(isset($_POST["title"]) and isset($_POST["comment"])){
+
+            $title = $conn->real_escape_string($_POST["title"]);
+            $comment = $conn->real_escape_string($_POST["comment"]);
+            $userid = $_SESSION["userid"];
+
+            $query = $conn->query("INSERT INTO `mitt-feriested`.`tips` (userid, attractionid, title, content) VALUES ('".$userid."',".$a.",'".$title."','".$comment."');");
+
+            if($query){
+                echo "success! ";
+                header("Location: /?page=attractions&a=".$_GET["a"]);
+
+            } else {
+                echo "failure!";
+                print $conn->error;
+            }
+
+        } else {
+            echo "System error. Are you sure you entered a title and comment?";
+        }
+
     } else {
+        echo "what do you think you're doing?";
         return;
     }
 ?>

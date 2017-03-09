@@ -41,7 +41,13 @@
         }
 
         if($auth){
-            echo "<a href='?page=addcomment&a=".$_GET["a"]."'> Click to add comment! </a>";
+            ?>
+                <form method="POST" action="data?type=addcomment&a=<?php echo $_GET["a"]; ?>">
+                    <input name="title" type="text" placeholder="title">
+                    <input name="comment" type="text" placeholder="comment">
+                    <input type="submit" value="Add comment">
+                </form>
+            <?php
         } else {
             echo "<a href='?page=login'> Log in</a> or <a href='?page=register'> Register</a> to leave comments!";
         }
