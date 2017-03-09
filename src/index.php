@@ -25,7 +25,9 @@
             "page" => "register.php"
         ],
         "attractions" => [
-            "page" => "attractions.php"
+            "page" => "attractions.php",
+            "script" => "attractions.js",
+            "scriptinit" => "init"
         ],
         "addcomment" => [
             "page" => "addcomment.php"
