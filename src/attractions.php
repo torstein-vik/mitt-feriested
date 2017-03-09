@@ -70,6 +70,9 @@
         echo "<h1> Pick an attraction! Filter by types! </h1>";
 
         ?>
+
+        <div id="redir" hidden> <?php echo $redir; ?></div>
+
         <div id="#tags">
             <?php
             foreach($tags as $key => $tag){
