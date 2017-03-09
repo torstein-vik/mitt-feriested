@@ -73,7 +73,7 @@
         <div id="#tags">
             <?php
             foreach($tags as $key => $tag){
-                echo "<div class='tagselector'>".$tag["name"]."</div>";
+                echo "<div class='tagselector' tagid='".$tag["tagid"]."'>".$tag["name"]."</div>";
             }
             ?>
         </div>
