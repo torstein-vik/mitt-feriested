@@ -89,3 +89,18 @@
         <?php
     }
 ?>
+
+<div class="contentBody">
+    <header id="attractionsHeader" class="contentHeader">
+        <h1>The Faroe Islands!</h1>
+        <svg id="attractionsHeaderSvg1" width="220px" height="55px">
+            <polygon points="0,55 60,0 220,55" style="fill:#3f5e10;" />
+        </svg>
+        <svg id="attractionsHeaderSvg2" width="200px" height="125px">
+            <polygon points="0,125 200,0 200,125" style="fill:#7C7972;" />
+        </svg>
+    </header>
+    <main class="mainContent">
+
+    </main>
+</div>
