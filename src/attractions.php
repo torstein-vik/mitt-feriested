@@ -46,6 +46,9 @@
             echo "<a href='?page=login'> Log in</a> or <a href='?page=register'> Register</a> to leave comments!";
         }
 
+
+        echo "<h1> Weather near ".$attraction["name"].": </h1>";
+
         echo '<script src="http://www.yr.no/sted/'.$attraction["weather"].'/ekstern_boks_tre_dager.js"></script>';
         echo '<noscript><a href="http://www.yr.no/sted/'.$attraction["weather"].'/">Klikk her for å se værvarsel.</a></noscript>';
 
