@@ -80,7 +80,7 @@
         <?php
 
         ?>
-        <div id="#attractions">
+        <div id="attractions">
             <?php
             foreach($attractions as $key => $attraction){
                 echo "<a class='attraction' href='?page=".$redir."&a=".($key + 1)."'>";
