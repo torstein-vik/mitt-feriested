@@ -1,0 +1,16 @@
+.tags{
+    display:flex;
+    flex-direction: row;
+}
+
+.tagselector{
+    display: inline;
+    margin: 20px;
+    background-color: aqua;
+    user-select: none;
+    cursor: pointer;
+}
+
+.tagselector.up{
+    background-color: red;
+}
