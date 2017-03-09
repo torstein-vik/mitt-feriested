@@ -1,6 +1,6 @@
 <?php
     if ($auth){
-        echo 'You\'re logged in!';
+        header("Location: ?page=mypage");
     } else {
 
         if(isset($_POST["username"]) and isset($_POST["password"])){
@@ -10,7 +10,7 @@
             $username_find = $conn->query("SELECT * FROM `mitt-feriested`.`users` WHERE username = '".$username."'");
 
             if($username_find->num_rows == 0){
-                echo 'No such username!';
+                ?>Wrong username<?php
                 return;
             }
 
