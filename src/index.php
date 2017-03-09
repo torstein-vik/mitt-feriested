@@ -27,7 +27,8 @@
         "attractions" => [
             "page" => "attractions.php",
             "script" => "attractions.js",
-            "scriptinit" => "init"
+            "scriptinit" => "init",
+            "css" => "attractions.css"
         ],
         "addcomment" => [
             "page" => "addcomment.php"
@@ -59,12 +60,11 @@
         <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
 
         <link rel="stylesheet" href="index.css"/>
-        <script src="home.js"></script>
 
 
         <?php
             if(isset($pages[$page]) and isset($pages[$page]["script"])){
-                echo "<script src=".$pages[$page]["script"]."></script>";
+                echo "<script src='".$pages[$page]["script"]."'></script>";
             }
 
             if(isset($pages[$page]) and isset($pages[$page]["scriptinit"])){
@@ -73,6 +73,10 @@
                     $(<?php echo $pages[$page]["scriptinit"];?>);
                 </script>
                 <?php
+            }
+
+            if(isset($pages[$page]) and isset($pages[$page]["css"])){
+                echo "<link rel='stylesheet' href='".$pages[$page]["css"]."'/>";
             }
         ?>
 
