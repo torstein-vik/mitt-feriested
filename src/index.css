@@ -60,12 +60,10 @@ nav a {
 #mainNav a {
     font-size: 20px;
     line-height: 100px;
-    width: 260px;
+    width: 230px;
     background-color: aliceblue;
     color: #333;
-    clip-path: polygon(17% 24%, 84% 28%, 94% 70%, 13% 75%);
-    -webkit-clip-path: polygon(17% 24%, 84% 28%, 94% 70%, 13% 75%);
-
+    clip-path: polygon(5% 30%, 90% 25%, 100% 80%, 0 75%);
 }
 
 #mainNav a:hover {
@@ -248,7 +246,7 @@ footer div {
     text-align: center;
     color: aliceblue;
     background-color: #306682;
-    padding: 5px;
+    padding: 10px;
 }
 
 #bottomCorner_logo {
