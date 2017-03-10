@@ -59,16 +59,18 @@ nav a {
 
 #mainNav a {
     font-size: 20px;
-    line-height: 100px;
+    line-height: 70px;
     width: 230px;
     background-color: aliceblue;
     color: #333;
-    clip-path: polygon(5% 30%, 90% 25%, 100% 80%, 0 75%);
+    border: 15px solid aliceblue;
 }
 
 #mainNav a:hover {
-    background-color: 6F961B;
-    color: aliceblue;
+    font-weight: 500;
+    color: black;
+    font-size: 21px;
+    border-bottom-color: #6F961B;
 }
 
 #userNav {
@@ -269,7 +271,6 @@ footer div {
 .slide {
     display: none;
     width: 100%;
-    height: 400px;
 }
 
 #slide1 {
@@ -306,4 +307,10 @@ footer div {
 #next {
     right: 0;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+}
+
+@media screen and (max-width: 1160px) {
+    .contentBody {
+       margin-top: 100px;
+    }
 }

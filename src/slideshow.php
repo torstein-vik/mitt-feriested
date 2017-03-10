@@ -1,12 +1,12 @@
 <div id="slideShow">
     <div id="slide1" class="slide">
-        hei
+        <img src="res/logo_transparent_text.png">
     </div>
     <div id="slide2" class="slide">
-        på
+        <img src="res/logo_transparent_text.png">
     </div>
     <div id="slide3" class="slide">
-        deg
+        <img src="res/logo_transparent_text.png">
     </div>
 
     <div id="prev">
