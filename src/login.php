@@ -60,11 +60,10 @@
                 <main class="mainContent">
                     <form method="POST" action=<?php echo "?page=login&redir=".$redir;?>>
                         <input name="username" type="text" placeholder="username">
-                        <input name="password" type="password" placeholder="password">
+                        <input class="grey" name="password" type="password" placeholder="password">
                         <input type="submit" value="Log in">
                     </form>
-                    <br>
-                    <a href="?page=register"> Click here to register </a>
+                    <p>Don't have a user? <a href="?page=register">Register here.</a></p>
                 </main>
             </div>
             <?php
