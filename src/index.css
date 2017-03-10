@@ -78,12 +78,12 @@ main {
 }
 
 .contentHeader {
-
     background-color: #6F961B;
     height: 125px;
 }
 
 .contentHeader h1 {
+    font-size: 40px;
     z-index: 1;
     color: aliceblue;
     line-height: 150px;
@@ -131,6 +131,20 @@ main {
     float: right;
 }
 
+#registerHeader {
+    clip-path: polygon(53% 13%, 78% 34%, 98% 71%, 100% 100%, 0 100%, 115px 60px, 150px 0);
+}
+
+#registerHeaderSvg1 {
+    float: left;
+    margin-top: -90px;
+}
+
+#registerHeaderSvg2 {
+    float: right;
+    margin-top: -100px;
+}
+
 
 
 .mainContent {
@@ -138,6 +152,55 @@ main {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
     min-height: 100px;
 }
+
+.mainContent form {
+    padding: 50px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 15px 20px;
+    font-size: 20px;
+    border: white solid 5px;
+    transition: 200ms;
+    outline: none;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-bottom-color: #6f961b !important;
+}
+
+.grey {
+    background-color: #e6e6e6;
+    border-color: #e6e6e6 !important;
+}
+
+input[type="submit"] {
+    padding: 20px;
+    font-size: 25px;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    background-color: #539bc1;
+    color: aliceblue;
+    transition: 200ms;
+    outline: none;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+    background-color: #3d83a9;
+}
+
+.mainContent p {
+    padding-bottom: 50px;
+    font-size: 20px;
+}
+
 
 footer {
     position: absolute;
