@@ -9,10 +9,11 @@
 
     $conn -> set_charset("utf8");
 
-    $name = $_SESSION["user"];
-    $userid = $_SESSION["userid"];
-    $admin = $_SESSION["admin"];
-
+    if(isset($_SESSION["user"])){
+        $name = $_SESSION["user"];
+        $userid = $_SESSION["userid"];
+        $admin = $_SESSION["admin"];
+    }
 
 
     if(isset($_GET["type"])){
