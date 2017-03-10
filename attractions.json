@@ -1,0 +1,21 @@
+{
+    "tags":[
+        "Restaurants", "Mountains"
+    ],
+    "attractions":[
+        {
+            "name":       "test",
+            "pagefile":   "attr/test.php",
+            "previewimg": "res/main_logo.png",
+            "weather":    "Færøyene/Annet/Færøyene",
+            "tags": ["Restaurants"]
+        },
+        {
+            "name":       "test2",
+            "pagefile":   "attr/test2.php",
+            "previewimg": "res/placeholder.jpg",
+            "weather":    "Norge/Møre_og_Romsdal/Ålesund/Ålesund",
+            "tags": ["Restaurants", "Mountains"]
+        }
+    ]
+}
