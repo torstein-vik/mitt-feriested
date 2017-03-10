@@ -69,7 +69,7 @@
 
 
 
-    } else if($type == "addcomment"){
+    } else if($type == "addcomment" and isset($_SESSION["userid"])){
 
         $a = $conn->real_escape_string($_GET["a"]);
         $attraction_name = $conn->query("SELECT name FROM `mitt-feriested`.`attractions` WHERE attractionid=".$a.";")->fetch_assoc()["name"];
