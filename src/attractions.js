@@ -29,19 +29,14 @@ function init(){
     });
 }
 
-function updateContent(){
-    $("#attractions").html("Please wait...");
-
-    var flags = getCurrentFlags();
+function updateContent(){var flags = getCurrentFlags();
 
     $.ajax({
         url:("api?type=attractions&redir=" + $("#redir").html() + "&flags="+flags)
     }).done(function(data){
-        setTimeout(function(){
-            if(flags == getCurrentFlags()){
-                $("#attractions").html(data);
-            }
-        }, 500);
+        if(flags == getCurrentFlags()){
+            $("#attractions").html(data);
+        }
     })
 }
 
