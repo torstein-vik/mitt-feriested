@@ -39,22 +39,23 @@
         ?>
 
         <div class="contentBody">
-            <header class="contentHeader">
-                <h1>Register for free today!</h1>
-                <svg id="grey-triangle1" width="190px" height="50px">
-                    <polygon points="0,50 190,0 190,50" style="fill:#A8A5A4;">
+            <header id="registerHeader" class="contentHeader">
+                <h1>Register</h1>
+                <svg id="registerHeaderSvg1" width="250px" height="65px">
+                    <polygon points="0,65 115,0 250,65" style="fill:#7C7972;">
                 </svg>
-                <svg id="grey-triangle2" width="220px" height="65px">
-                    <polygon points="0,65 19,0 220,65" style="fill:#7C7972;">
+                <svg id="registerHeaderSvg2" width="220px" height="75px">
+                    <polygon points="0,75 220,0 220,75" style="fill:#3f5e10;">
                 </svg>
             </header>
             <main class="mainContent">
                 <form method="POST" action="?page=register">
                     <input name="username" type="text" placeholder="username">
-                    <input name="password" type="password" placeholder="password">
+                    <input class="grey" name="password" type="password" placeholder="password">
                     <input name="conf_password" type="password" placeholder="confirm password">
                     <input type="submit" value="Register">
                 </form>
+                <p>Already have a user? <a href="?page=login">Login here.</a></p>
             </main>
         </div>
 
