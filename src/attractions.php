@@ -98,12 +98,12 @@
 
 <div class="contentBody">
     <header id="attractionsHeader" class="contentHeader">
-        <h1>The Faroe Islands!</h1>
-        <svg id="attractionsHeaderSvg1" width="220px" height="55px">
-            <polygon points="0,55 60,0 220,55" style="fill:#3f5e10;" />
+        <h1>Attractions & Travel</h1>
+        <svg id="attractionsHeaderSvg1" width="250px" height="110px">
+            <polygon points="70,0 250,110 0,110" style="fill:#7C7972;" />
         </svg>
-        <svg id="attractionsHeaderSvg2" width="200px" height="125px">
-            <polygon points="0,125 200,0 200,125" style="fill:#7C7972;" />
+        <svg id="attractionsHeaderSvg2" width="230px" height="110px">
+            <polygon points="0,110 230,0 230,110" style="fill:#3f5e10;" />
         </svg>
     </header>
     <main class="mainContent">
