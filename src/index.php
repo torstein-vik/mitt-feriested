@@ -14,28 +14,35 @@
             "page" => "home.php",
             "script" => "home.js",
             "scriptinit" => "init",
-            "external" => "slideshow.php"
+            "external" => "slideshow.php",
+            "title" => "The Faroe Islands!"
         ],
         "login" => [
-            "page" => "login.php"
+            "page" => "login.php",
+            "title" => "Login"
         ],
         "logout" => [
-            "page" => "logout.php"
+            "page" => "logout.php",
+            "title" => "Log out"
         ],
         "register" => [
-            "page" => "register.php"
+            "page" => "register.php",
+            "title" => "Register"
         ],
         "attractions" => [
             "page" => "attractions.php",
             "script" => "attractions.js",
             "scriptinit" => "init",
-            "css" => "attractions.css"
+            "css" => "attractions.css",
+            "title" => "Attractions & Travel"
         ],
         "mypage" => [
-            "page" => "mypage.php"
+            "page" => "mypage.php",
+            "title" => "My page"
         ],
         "404" => [
-            "page" => "notfound.php"
+            "page" => "notfound.php",
+            "title" => "Not found!"
         ]
     ];
 
@@ -114,7 +121,7 @@
 
                 <div class="contentBody">
                     <header id="homeHeader" class="contentHeader">
-                        <h1>The Faroe Islands!</h1>
+                        <h1><?php echo $pages[$page]["title"];?> </h1>
                         <svg id="homeHeaderSvg1" width="220px" height="55px">
                             <polygon points="0,55 60,0 220,55" style="fill:#3f5e10;" />
                         </svg>
