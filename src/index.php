@@ -63,6 +63,17 @@
             "polygon1spec" => 'points="70,0 250,110 0,110" style="fill:#7C7972;"',
             "polygon2spec" => 'points="0,110 230,0 230,110" style="fill:#3f5e10;"',
         ],
+        "contact" => [
+            "page" => "contact.php",
+            "title" => "Contact",
+            "headerid" => "homeHeader",
+            "headerSvg1width" => 220,
+            "headerSvg1height" => 55,
+            "headerSvg2width" => 200,
+            "headerSvg2height" => 125,
+            "polygon1spec" => 'points="0,55 60,0 220,55" style="fill:#3f5e10;"',
+            "polygon2spec" => 'points="0,125 200,0 200,125" style="fill:#7C7972;"',
+        ],
         "mypage" => [
             "page" => "mypage.php",
             "title" => "Welcome, ".(isset($_SESSION["user"]) ? $_SESSION["user"] : "Anonymous")."!",
