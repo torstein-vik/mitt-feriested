@@ -114,9 +114,7 @@
                 ?>
             </main>
             <footer>
-                <copyright>
-                    Johannes Hansen Aas, Torstein Vik 2017
-                </copyright>
+                <p>&copy;Johannes Hansen Aas, Torstein Vik 2017</p>
             </footer>
             <div id="bottomCorner_logo">
                 <img src="res/black_logo.png">

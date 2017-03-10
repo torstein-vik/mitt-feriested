@@ -50,9 +50,9 @@
             </header>
             <main class="mainContent">
                 <form method="POST" action="?page=register">
-                    <input name="username" type="text" placeholder="username">
-                    <input class="grey" name="password" type="password" placeholder="password">
-                    <input name="conf_password" type="password" placeholder="confirm password">
+                    <input class="grey" style="border-radius: 5px 5px 0 0" name="username" type="text" placeholder="username">
+                    <input  name="password" type="password" placeholder="password">
+                    <input class="grey" name="conf_password" type="password" placeholder="confirm password">
                     <input type="submit" value="Register">
                 </form>
                 <p>Already have a user? <a href="?page=login">Login here.</a></p>
