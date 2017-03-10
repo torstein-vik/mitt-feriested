@@ -139,10 +139,15 @@
                 <div id="logo">
                     <a href='?page=home'><img src="res/logo_transparent_text.png" alt="Faroe Adventures"></a>
                 </div>
-                <nav>
+                <nav id="mainNav">
                     <ul>
                         <li><a href="?page=home"> Home </a></li>
                         <li><a href="?page=attractions"> Attractions & Travel </a></li>
+                        <li><a href="?page=contact"> Contact </a></li>
+                    </ul>
+                </nav>
+                <nav id="userNav">
+                    <ul>
                         <?php
                         if($auth) {
                             ?>

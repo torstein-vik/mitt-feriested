@@ -40,7 +40,6 @@ nav ul {
     display: flex;
     flex-wrap: nowrap;
     list-style: none;
-
     text-align: center;
 }
 
@@ -51,17 +50,38 @@ nav li {
 nav a {
     display: block;
     text-decoration: none;
+    transition: 300ms;
+}
+
+#mainNav {
+    float: left;
+}
+
+#mainNav a {
     font-size: 20px;
     line-height: 100px;
     background-color: aliceblue;
     color: #333;
     clip-path: polygon(17% 24%, 84% 28%, 94% 70%, 13% 75%);
     -webkit-clip-path: polygon(17% 24%, 84% 28%, 94% 70%, 13% 75%);
-    transition: 300ms;
+
 }
 
-nav a:hover {
+#mainNav a:hover {
     background-color: 6F961B;
+    color: aliceblue;
+}
+
+#userNav {
+    float: right;
+    background-color: #A8A5A4;
+    height: 100px;
+}
+
+#userNav a {
+    line-height: 50px;
+    padding: 0 20px;
+    background-color: #A8A5A4;
     color: aliceblue;
 }
 
