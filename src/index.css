@@ -121,6 +121,16 @@ main {
     clip-path: polygon(60% 0, 70% 40px, 85% 50px, 100% 100%, 0 100%, 70px 15px, 30% 35px);
 }
 
+#attractionsHeaderSvg1 {
+    float: left;
+    margin-top: -135px;
+}
+
+#attractionsHeaderSvg2 {
+    margin-top: -135px;
+    float: right;
+}
+
 
 
 .mainContent {
