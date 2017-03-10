@@ -65,8 +65,8 @@
         ],
         "mypage" => [
             "page" => "mypage.php",
-            "title" => "My page",
-            "headerid" => "mypageHeader",
+            "title" => "Welcome, ".(isset($_SESSION["user"]) ? $_SESSION["user"] : "Anonymous")."!",
+            "headerid" => "loginHeader",
             "headerSvg1width" => 190,
             "headerSvg1height" => 50,
             "headerSvg2width" => 220,
@@ -155,31 +155,35 @@
             </header>
             <main>
                 <?php
-                    if(isset($pages[$page]) and isset($pages[$page]["external"]) ){
-                        include $pages[$page]["external"];
-                    }
-                ?>
+                if(isset($pages[$page]) and isset($pages[$page]["external"]) ){
+                    include $pages[$page]["external"];
+                }
 
-                <div class="contentBody">
-                    <header id="<?php echo $pages[$page]["headerid"];?>" class="contentHeader">
-                        <h1><?php echo $pages[$page]["title"];?> </h1>
-                        <svg id="<?php echo $pages[$page]["headerid"];?>Svg1" width="<?php echo $pages[$page]["headerSvg1width"];?>px" height="<?php echo $pages[$page]["headerSvg1height"];?>px">
-                            <polygon <?php echo $pages[$page]["polygon1spec"];?>>
-                        </svg>
-                        <svg id="<?php echo $pages[$page]["headerid"];?>Svg2" width="<?php echo $pages[$page]["headerSvg2width"];?>px" height="<?php echo $pages[$page]["headerSvg2height"];?>px">
-                            <polygon <?php echo $pages[$page]["polygon2spec"];?>>
-                        </svg>
-                    </header>
-                    <main class="mainContent">
-                        <?php
-                            if(isset($pages[$page]) ){
-                                include $pages[$page]["page"];
-                            } else {
-                                include $pages["404"]["page"];
-                            }
-                        ?>
-                    </main>
-                </div>
+                if(isset($pages[$page]) and isset($pages[$page]["page"])){
+                ?>
+                    <div class="contentBody">
+                        <header id="<?php echo $pages[$page]["headerid"];?>" class="contentHeader">
+                            <h1><?php echo $pages[$page]["title"];?> </h1>
+                            <svg id="<?php echo $pages[$page]["headerid"];?>Svg1" width="<?php echo $pages[$page]["headerSvg1width"];?>px" height="<?php echo $pages[$page]["headerSvg1height"];?>px">
+                                <polygon <?php echo $pages[$page]["polygon1spec"];?>>
+                            </svg>
+                            <svg id="<?php echo $pages[$page]["headerid"];?>Svg2" width="<?php echo $pages[$page]["headerSvg2width"];?>px" height="<?php echo $pages[$page]["headerSvg2height"];?>px">
+                                <polygon <?php echo $pages[$page]["polygon2spec"];?>>
+                            </svg>
+                        </header>
+                        <main class="mainContent">
+                            <?php
+                                if(isset($pages[$page]) ){
+                                    include $pages[$page]["page"];
+                                } else {
+                                    include $pages["404"]["page"];
+                                }
+                            ?>
+                        </main>
+                    </div>
+                <?php
+                }
+                ?>
             </main>
             <footer>
                 <div>&copy; Johannes Hansen Aas, Torstein Vik 2017</div>
