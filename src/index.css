@@ -174,6 +174,7 @@ input[type="password"]:hover,
 input[type="text"]:focus,
 input[type="password"]:focus {
     border-bottom-color: #6f961b !important;
+    font-size: 30px;
 }
 
 .grey {
@@ -210,13 +211,18 @@ footer {
     bottom: 0;
     background-color: #539BC1;
     clip-path: polygon(50% 30px, 75% 0, 100% 30px, 100% 100%, 0 100%, 0 30px, 25% 0);
-
-    text-align: center;
 }
 
-footer p {
+footer div {
+    position: absolute;
+    width: 100%;
     bottom: 0;
-    padding-top: 100px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    background-color: #306682;
+    padding: 5px;
 }
 
 #bottomCorner_logo {

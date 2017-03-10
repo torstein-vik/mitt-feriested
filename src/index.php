@@ -114,7 +114,7 @@
                 ?>
             </main>
             <footer>
-                <p>&copy;Johannes Hansen Aas, Torstein Vik 2017</p>
+                <div>&copy;Johannes Hansen Aas, Torstein Vik 2017</div>
             </footer>
             <div id="bottomCorner_logo">
                 <img src="res/black_logo.png">
