@@ -9,7 +9,9 @@
 
     $conn -> set_charset("utf8");
 
-
+    $name = $_SESSION["user"];
+    $userid = $_SESSION["userid"];
+    $admin = $_SESSION["admin"];
 
 
 
@@ -93,6 +95,26 @@
 
         } else {
             echo "System error. Are you sure you entered a title and comment?";
+        }
+
+    } else if($type == "deletecomment" and isset($_SESSION["userid"])){
+
+        $tipid = $conn->real_escape_string($_GET["tipid"]);
+
+        if ($admin){
+            $queryDelSQL = "DELETE FROM `mitt-feriested`.`tips` WHERE tips.tipid=".$tipid;
+        } else {
+            $queryDelSQL = "DELETE FROM `mitt-feriested`.`tips` WHERE tips.tipid=".$tipid." AND tips.userid=".$userid;
+        }
+
+        $queryDel = $conn->query($queryDelSQL);
+
+        if(!$queryDel){
+            echo $conn->error;
+            return;
+        } else {
+            header("Location: /?page=mypage");
+            return;
         }
 
     } else {
