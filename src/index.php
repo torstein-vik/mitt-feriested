@@ -153,12 +153,12 @@
                         <?php
                         if($auth) {
                             ?>
-                            <li><a href='?page=mypage'> My page </a></li>
+                            <li><a style="padding-left: 60px;" href='?page=mypage'> My page </a></li>
                             <li><a href='?page=logout'> Log out </a></li>
                             <?php
                         } else {
                             ?>
-                            <li><a href='?page=register'> Register </a></li>
+                            <li><a style="padding-left: 60px;" href='?page=register'> Register </a></li>
                             <li><a href='?page=login'> Log in </a></li>
                             <?php
                         }
