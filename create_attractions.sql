@@ -1,3 +1,6 @@
+
+-- SQL script for adding attractions
+
 -- If you get Error Code 1175, Go to Edit -> Preferences -> "SQL Editor" -> "Other" -> uncheck "Safe Updates". Then go to Query -> Reconnect to Server
 -- Deleting all previous entries
 SET FOREIGN_KEY_CHECKS=0;
