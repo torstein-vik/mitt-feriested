@@ -60,6 +60,7 @@ nav a {
 #mainNav a {
     font-size: 20px;
     line-height: 100px;
+    width: 260px;
     background-color: aliceblue;
     color: #333;
     clip-path: polygon(17% 24%, 84% 28%, 94% 70%, 13% 75%);
@@ -76,13 +77,21 @@ nav a {
     float: right;
     background-color: #A8A5A4;
     height: 100px;
+    padding-left: 50px;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 20% 55%);
 }
 
 #userNav a {
     line-height: 50px;
-    padding: 0 20px;
+    height: 100px;
+    padding: 0 30px;
     background-color: #A8A5A4;
     color: aliceblue;
+    font-size: 20px;
+}
+
+#userNav a:hover {
+    background-color: #7C7972;
 }
 
 main {
