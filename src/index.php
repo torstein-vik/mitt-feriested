@@ -15,34 +15,41 @@
             "script" => "home.js",
             "scriptinit" => "init",
             "external" => "slideshow.php",
-            "title" => "The Faroe Islands!"
+            "title" => "The Faroe Islands!",
+            "headerid" => "homeHeader"
         ],
         "login" => [
             "page" => "login.php",
-            "title" => "Login"
+            "title" => "Login",
+            "headerid" => "loginHeader"
         ],
         "logout" => [
             "page" => "logout.php",
-            "title" => "Log out"
+            "title" => "Log out",
+            "headerid" => "logoutHeader"
         ],
         "register" => [
             "page" => "register.php",
-            "title" => "Register"
+            "title" => "Register",
+            "headerid" => "registerHeader"
         ],
         "attractions" => [
             "page" => "attractions.php",
             "script" => "attractions.js",
             "scriptinit" => "init",
             "css" => "attractions.css",
-            "title" => "Attractions & Travel"
+            "title" => "Attractions & Travel",
+            "headerid" => "attractionsHeader"
         ],
         "mypage" => [
             "page" => "mypage.php",
-            "title" => "My page"
+            "title" => "My page",
+            "headerid" => "mypageHeader"
         ],
         "404" => [
             "page" => "notfound.php",
-            "title" => "Not found!"
+            "title" => "Not found!",
+            "headerid" => "notfoundHeader"
         ]
     ];
 
@@ -120,12 +127,12 @@
                 ?>
 
                 <div class="contentBody">
-                    <header id="homeHeader" class="contentHeader">
+                    <header id="<?php echo $pages[$page]["headerid"];?>" class="contentHeader">
                         <h1><?php echo $pages[$page]["title"];?> </h1>
-                        <svg id="homeHeaderSvg1" width="220px" height="55px">
+                        <svg id="<?php echo $pages[$page]["headerid"];?>Svg1" width="220px" height="55px">
                             <polygon points="0,55 60,0 220,55" style="fill:#3f5e10;" />
                         </svg>
-                        <svg id="homeHeaderSvg2" width="200px" height="125px">
+                        <svg id="<?php echo $pages[$page]["headerid"];?>Svg2" width="200px" height="125px">
                             <polygon points="0,125 200,0 200,125" style="fill:#7C7972;" />
                         </svg>
                     </header>
