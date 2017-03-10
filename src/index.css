@@ -169,8 +169,6 @@ input[type="text"], input[type="password"] {
     outline: none;
 }
 
-input[type="text"]:hover,
-input[type="password"]:hover,
 input[type="text"]:focus,
 input[type="password"]:focus {
     border-bottom-color: #6f961b !important;
