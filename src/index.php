@@ -77,7 +77,7 @@
         "404" => [
             "page" => "notfound.php",
             "title" => "Not found!",
-            "headerid" => "mypageHeader",
+            "headerid" => "loginHeader",
             "headerSvg1width" => 190,
             "headerSvg1height" => 50,
             "headerSvg2width" => 220,
@@ -91,6 +91,12 @@
         $page = $_GET["page"];
     } else {
         $page = "home";
+    }
+
+    if (isset($pages[$page])){
+        $pageo = $pages[$page];
+    } else {
+        $pageo = $pages[404];
     }
 
     $auth = isset($_SESSION["user"])
@@ -109,20 +115,20 @@
 
 
         <?php
-            if(isset($pages[$page]) and isset($pages[$page]["script"])){
-                echo "<script src='".$pages[$page]["script"]."'></script>";
+            if(isset($pageo["script"])){
+                echo "<script src='".$pageo["script"]."'></script>";
             }
 
-            if(isset($pages[$page]) and isset($pages[$page]["scriptinit"])){
+            if(isset($pageo["scriptinit"])){
                 ?>
                 <script>
-                    $(<?php echo $pages[$page]["scriptinit"];?>);
+                    $(<?php echo $pageo["scriptinit"];?>);
                 </script>
                 <?php
             }
 
-            if(isset($pages[$page]) and isset($pages[$page]["css"])){
-                echo "<link rel='stylesheet' href='".$pages[$page]["css"]."'/>";
+            if(isset($pageo) and isset($pageo["css"])){
+                echo "<link rel='stylesheet' href='".$pageo["css"]."'/>";
             }
         ?>
 
@@ -155,29 +161,25 @@
             </header>
             <main>
                 <?php
-                if(isset($pages[$page]) and isset($pages[$page]["external"]) ){
-                    include $pages[$page]["external"];
+                if(isset($pageo["external"]) ){
+                    include $pageo["external"];
                 }
 
-                if(isset($pages[$page]) and isset($pages[$page]["page"])){
+                if(isset($pageo["page"])){
                 ?>
                     <div class="contentBody">
-                        <header id="<?php echo $pages[$page]["headerid"];?>" class="contentHeader">
-                            <h1><?php echo $pages[$page]["title"];?> </h1>
-                            <svg id="<?php echo $pages[$page]["headerid"];?>Svg1" width="<?php echo $pages[$page]["headerSvg1width"];?>px" height="<?php echo $pages[$page]["headerSvg1height"];?>px">
-                                <polygon <?php echo $pages[$page]["polygon1spec"];?>>
+                        <header id="<?php echo $pageo["headerid"];?>" class="contentHeader">
+                            <h1><?php echo $pageo["title"];?> </h1>
+                            <svg id="<?php echo $pageo["headerid"];?>Svg1" width="<?php echo $pageo["headerSvg1width"];?>px" height="<?php echo $pageo["headerSvg1height"];?>px">
+                                <polygon <?php echo $pageo["polygon1spec"];?>>
                             </svg>
-                            <svg id="<?php echo $pages[$page]["headerid"];?>Svg2" width="<?php echo $pages[$page]["headerSvg2width"];?>px" height="<?php echo $pages[$page]["headerSvg2height"];?>px">
-                                <polygon <?php echo $pages[$page]["polygon2spec"];?>>
+                            <svg id="<?php echo $pageo["headerid"];?>Svg2" width="<?php echo $pageo["headerSvg2width"];?>px" height="<?php echo $pageo["headerSvg2height"];?>px">
+                                <polygon <?php echo $pageo["polygon2spec"];?>>
                             </svg>
                         </header>
                         <main class="mainContent">
                             <?php
-                                if(isset($pages[$page]) ){
-                                    include $pages[$page]["page"];
-                                } else {
-                                    include $pages["404"]["page"];
-                                }
+                             include $pageo["page"];
                             ?>
                         </main>
                     </div>
