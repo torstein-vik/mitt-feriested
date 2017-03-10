@@ -46,26 +46,12 @@
             }
 
             ?>
-
-            <div class="contentBody">
-                <header id="loginHeader" class="contentHeader">
-                    <h1>Login</h1>
-                    <svg id="loginHeaderSvg1" width="190px" height="50px">
-                        <polygon points="0,50 190,0 190,50" style="fill:#A8A5A4;">
-                    </svg>
-                    <svg id="loginHeaderSvg2" width="220px" height="65px">
-                        <polygon points="0,65 19,0 220,65" style="fill:#7C7972;">
-                    </svg>
-                </header>
-                <main class="mainContent">
-                    <form method="POST" action=<?php echo "?page=login&redir=".$redir;?>>
-                        <input class="grey" style="border-radius: 5px 5px 0 0" name="username" type="text" placeholder="username">
-                        <input name="password" type="password" placeholder="password">
-                        <input class="grey" type="submit" value="Log in">
-                    </form>
-                    <p>Don't have a user? <a href="?page=register">Register here.</a></p>
-                </main>
-            </div>
+            <form method="POST" action=<?php echo "?page=login&redir=".$redir;?>>
+                <input class="grey" style="border-radius: 5px 5px 0 0" name="username" type="text" placeholder="username">
+                <input name="password" type="password" placeholder="password">
+                <input class="grey" type="submit" value="Log in">
+            </form>
+            <p>Don't have a user? <a href="?page=register">Register here.</a></p>
             <?php
         }
 

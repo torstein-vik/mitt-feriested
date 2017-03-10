@@ -95,18 +95,3 @@
         <?php
     }
 ?>
-
-<div class="contentBody">
-    <header id="attractionsHeader" class="contentHeader">
-        <h1>Attractions & Travel</h1>
-        <svg id="attractionsHeaderSvg1" width="250px" height="110px">
-            <polygon points="70,0 250,110 0,110" style="fill:#7C7972;" />
-        </svg>
-        <svg id="attractionsHeaderSvg2" width="230px" height="110px">
-            <polygon points="0,110 230,0 230,110" style="fill:#3f5e10;" />
-        </svg>
-    </header>
-    <main class="mainContent">
-
-    </main>
-</div>

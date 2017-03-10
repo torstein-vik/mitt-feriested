@@ -37,27 +37,14 @@
 
     } else {
         ?>
+        <form method="POST" action="?page=register">
+            <input class="grey" style="border-radius: 5px 5px 0 0" name="username" type="text" placeholder="username">
+            <input  name="password" type="password" placeholder="password">
+            <input class="grey" name="conf_password" type="password" placeholder="confirm password">
+            <input type="submit" value="Register">
+        </form>
 
-        <div class="contentBody">
-            <header id="registerHeader" class="contentHeader">
-                <h1>Register</h1>
-                <svg id="registerHeaderSvg1" width="250px" height="65px">
-                    <polygon points="0,65 115,0 250,65" style="fill:#7C7972;">
-                </svg>
-                <svg id="registerHeaderSvg2" width="220px" height="75px">
-                    <polygon points="0,75 220,0 220,75" style="fill:#3f5e10;">
-                </svg>
-            </header>
-            <main class="mainContent">
-                <form method="POST" action="?page=register">
-                    <input class="grey" style="border-radius: 5px 5px 0 0" name="username" type="text" placeholder="username">
-                    <input  name="password" type="password" placeholder="password">
-                    <input class="grey" name="conf_password" type="password" placeholder="confirm password">
-                    <input type="submit" value="Register">
-                </form>
-                <p>Already have a user? <a href="?page=login">Login here.</a></p>
-            </main>
-        </div>
+        <p>Already have a user? <a href="?page=login">Login here.</a></p>
 
         <?php
     }
