@@ -16,22 +16,38 @@
             "scriptinit" => "init",
             "external" => "slideshow.php",
             "title" => "The Faroe Islands!",
-            "headerid" => "homeHeader"
+            "headerid" => "homeHeader",
+            "headerSvg1width" => 220,
+            "headerSvg1height" => 55,
+            "headerSvg2width" => 200,
+            "headerSvg2height" => 125,
+            "polygon1spec" => 'points="0,55 60,0 220,55" style="fill:#3f5e10;"',
+            "polygon2spec" => 'points="0,125 200,0 200,125" style="fill:#7C7972;"',
         ],
         "login" => [
             "page" => "login.php",
             "title" => "Login",
-            "headerid" => "loginHeader"
+            "headerid" => "loginHeader",
+            "headerSvg1width" => 190,
+            "headerSvg1height" => 50,
+            "headerSvg2width" => 220,
+            "headerSvg2height" => 65,
+            "polygon1spec" => 'points="0,50 190,0 190,50" style="fill:#A8A5A4;"',
+            "polygon2spec" => 'points="0,65 19,0 220,65" style="fill:#7C7972;"',
         ],
         "logout" => [
-            "page" => "logout.php",
-            "title" => "Log out",
-            "headerid" => "logoutHeader"
+            "external" => "logout.php"
         ],
         "register" => [
             "page" => "register.php",
             "title" => "Register",
-            "headerid" => "registerHeader"
+            "headerid" => "registerHeader",
+            "headerSvg1width" => 250,
+            "headerSvg1height" => 65,
+            "headerSvg2width" => 220,
+            "headerSvg2height" => 75,
+            "polygon1spec" => 'points="0,65 115,0 250,65" style="fill:#7C7972;"',
+            "polygon2spec" => 'points="0,75 220,0 220,75" style="fill:#3f5e10;"',
         ],
         "attractions" => [
             "page" => "attractions.php",
@@ -39,17 +55,35 @@
             "scriptinit" => "init",
             "css" => "attractions.css",
             "title" => "Attractions & Travel",
-            "headerid" => "attractionsHeader"
+            "headerid" => "attractionsHeader",
+            "headerSvg1width" => 250,
+            "headerSvg1height" => 110,
+            "headerSvg2width" => 230,
+            "headerSvg2height" => 110,
+            "polygon1spec" => 'points="70,0 250,110 0,110" style="fill:#7C7972;"',
+            "polygon2spec" => 'points="0,110 230,0 230,110" style="fill:#3f5e10;"',
         ],
         "mypage" => [
             "page" => "mypage.php",
             "title" => "My page",
-            "headerid" => "mypageHeader"
+            "headerid" => "mypageHeader",
+            "headerSvg1width" => 190,
+            "headerSvg1height" => 50,
+            "headerSvg2width" => 220,
+            "headerSvg2height" => 65,
+            "polygon1spec" => 'points="0,50 190,0 190,50" style="fill:#A8A5A4;"',
+            "polygon2spec" => 'points="0,65 19,0 220,65" style="fill:#7C7972;"',
         ],
         "404" => [
             "page" => "notfound.php",
             "title" => "Not found!",
-            "headerid" => "notfoundHeader"
+            "headerid" => "mypageHeader",
+            "headerSvg1width" => 190,
+            "headerSvg1height" => 50,
+            "headerSvg2width" => 220,
+            "headerSvg2height" => 65,
+            "polygon1spec" => 'points="0,50 190,0 190,50" style="fill:#A8A5A4;"',
+            "polygon2spec" => 'points="0,65 19,0 220,65" style="fill:#7C7972;"',
         ]
     ];
 
@@ -129,11 +163,11 @@
                 <div class="contentBody">
                     <header id="<?php echo $pages[$page]["headerid"];?>" class="contentHeader">
                         <h1><?php echo $pages[$page]["title"];?> </h1>
-                        <svg id="<?php echo $pages[$page]["headerid"];?>Svg1" width="220px" height="55px">
-                            <polygon points="0,55 60,0 220,55" style="fill:#3f5e10;" />
+                        <svg id="<?php echo $pages[$page]["headerid"];?>Svg1" width="<?php echo $pages[$page]["headerSvg1width"];?>px" height="<?php echo $pages[$page]["headerSvg1height"];?>px">
+                            <polygon <?php echo $pages[$page]["polygon1spec"];?>>
                         </svg>
-                        <svg id="<?php echo $pages[$page]["headerid"];?>Svg2" width="200px" height="125px">
-                            <polygon points="0,125 200,0 200,125" style="fill:#7C7972;" />
+                        <svg id="<?php echo $pages[$page]["headerid"];?>Svg2" width="<?php echo $pages[$page]["headerSvg2width"];?>px" height="<?php echo $pages[$page]["headerSvg2height"];?>px">
+                            <polygon <?php echo $pages[$page]["polygon2spec"];?>>
                         </svg>
                     </header>
                     <main class="mainContent">
