@@ -2,6 +2,7 @@
 -- SQL script for adding attractions
 
 -- If you get Error Code 1175, Go to Edit -> Preferences -> "SQL Editor" -> "Other" -> uncheck "Safe Updates". Then go to Query -> Reconnect to Server
+
 -- Deleting all previous entries
 SET FOREIGN_KEY_CHECKS=0;
 DELETE FROM `mitt-feriested`.`attractions`;
@@ -27,3 +28,4 @@ WHERE attractions.name = 'test' AND (tags.name = 'Restaurants');
 
 INSERT INTO `mitt-feriested`.`tagselections` (attractionid, tagid) SELECT attractionid, tagid FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tags`
 WHERE attractions.name = 'test2' AND (tags.name = 'Restaurants' OR tags.name = 'Mountains');
+
