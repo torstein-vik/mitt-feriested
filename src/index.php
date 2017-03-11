@@ -80,7 +80,7 @@
             "title" => "Welcome, ".(isset($_SESSION["user"]) ? $_SESSION["user"] : "Anonymous")."!",
             "script" => "mypage.js",
             "scriptinit" => "init",
-            "css" => "mypage.css"
+            "css" => "mypage.css",
             "headerid" => "loginHeader",
             "headerSvg1width" => 190,
             "headerSvg1height" => 50,
