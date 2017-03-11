@@ -16,7 +16,7 @@ ALTER TABLE tags AUTO_INCREMENT = 1;
 ALTER TABLE tagselections AUTO_INCREMENT = 1;
 
 -- Adding tags
-INSERT INTO `mitt-feriested`.`tags` (name, previewimg) VALUES ('Restaurants', 'res/placeholder.jpg'), ('Mountains', 'res/placeholder.jpg');
+INSERT INTO `mitt-feriested`.`tags` (name, previewimg) VALUES ('Things to do', 'res/placeholder.jpg'), ('Hotel', 'res/placeholder.jpg'), ('Food', 'res/placeholder.jpg'), ('Travel', 'res/placeholder.jpg');
 
 -- Adding attractions
 INSERT INTO `mitt-feriested`.`attractions` (name, pagefile, previewimg, weather) VALUES ('test', 'attr/test.php', 'res/main_logo.png', 'Færøyene/Annet/Færøyene'),
