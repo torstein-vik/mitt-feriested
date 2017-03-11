@@ -27,8 +27,14 @@ if(attractions.tags.length == 0){
     return;
 }
 
+pTags = []
+
+attractions.tags.forEach(function(tag){
+    pTags.push([tag.name, tag.previewimg].join("', '"));
+});
+
 sql += "\n-- Adding tags\n";
-sql += "INSERT INTO `mitt-feriested`.`tags` (name) VALUES ('" + attractions.tags.join("'), ('") + "');\n";
+sql += "INSERT INTO `mitt-feriested`.`tags` (name, previewimg) VALUES ('" + pTags.join("'), ('") + "');\n";
 
 if(attractions.attractions.length == 0){
     console.log("Error! Must have at least one attraction!");

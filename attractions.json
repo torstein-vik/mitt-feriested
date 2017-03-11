@@ -1,6 +1,13 @@
 {
     "tags":[
-        "Restaurants", "Mountains"
+        {
+            "name":       "Restaurants",
+            "previewimg": "res/placeholder.jpg"
+        },
+        {
+            "name":       "Mountains",
+            "previewimg": "res/placeholder.jpg"
+        }
     ],
     "attractions":[
         {
