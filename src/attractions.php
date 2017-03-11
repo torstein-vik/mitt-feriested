@@ -16,6 +16,13 @@
         $attraction = $attractions[$_GET["a"]];
         include($attraction["pagefile"]);
 
+
+        echo "<h1> Weather near ".$attraction["name"].": </h1>";
+
+        echo '<script src="http://www.yr.no/sted/'.$attraction["weather"].'/ekstern_boks_tre_dager.js"></script>';
+        echo '<noscript><a href="http://www.yr.no/sted/'.$attraction["weather"].'/">Klikk her for å se værvarsel.</a></noscript>';
+
+
         echo "<h1> Comments about ".$attraction["name"].": </h1>";
 
         $comment_query = $conn->query("SELECT users.username, users.privilege, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title FROM `mitt-feriested`.`users`, `mitt-feriested`.`tips` WHERE users.userid=tips.userid AND tips.attractionid=".$attraction["attractionid"]." ORDER BY tips.timestamp DESC;");
@@ -51,13 +58,6 @@
         } else {
             echo "<a href='?page=login'> Log in</a> or <a href='?page=register'> Register</a> to leave comments!";
         }
-
-
-        echo "<h1> Weather near ".$attraction["name"].": </h1>";
-
-        echo '<script src="http://www.yr.no/sted/'.$attraction["weather"].'/ekstern_boks_tre_dager.js"></script>';
-        echo '<noscript><a href="http://www.yr.no/sted/'.$attraction["weather"].'/">Klikk her for å se værvarsel.</a></noscript>';
-
 
     } else {
         if (isset($_GET["redir"])){
