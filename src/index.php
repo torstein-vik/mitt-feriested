@@ -14,6 +14,7 @@
             "page" => "home.php",
             "script" => "home.js",
             "scriptinit" => "init",
+            "css" => "home.css",
             "external" => "slideshow.php",
             "title" => "The Faroe Islands!",
             "headerid" => "homeHeader",
@@ -79,6 +80,7 @@
             "title" => "Welcome, ".(isset($_SESSION["user"]) ? $_SESSION["user"] : "Anonymous")."!",
             "script" => "mypage.js",
             "scriptinit" => "init",
+            "css" => "mypage.css"
             "headerid" => "loginHeader",
             "headerSvg1width" => 190,
             "headerSvg1height" => 50,
