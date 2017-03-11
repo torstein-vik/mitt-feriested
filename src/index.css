@@ -40,15 +40,11 @@ nav ul {
     display: flex;
     flex-wrap: nowrap;
     list-style: none;
-    text-align: center;
-}
-
-nav li {
-    flex: auto;
 }
 
 nav a {
     display: block;
+    text-align: center;
     text-decoration: none;
     transition: 300ms;
 }
@@ -67,9 +63,7 @@ nav a {
 }
 
 #mainNav a:hover {
-    font-weight: 500;
     color: black;
-    font-size: 21px;
     border-bottom-color: #6F961B;
 }
 
@@ -96,7 +90,6 @@ nav a {
 main {
     flex: 1;
     width: 100%;
-    text-align: center;
     margin: 0 auto 100px auto;
 }
 
@@ -115,6 +108,7 @@ main {
     z-index: 1;
     color: aliceblue;
     line-height: 150px;
+    text-align: center;
 }
 
 #homeHeader {
@@ -173,22 +167,24 @@ main {
     margin-top: -100px;
 }
 
-
-
 .mainContent {
     background-color: aliceblue;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
     min-height: 100px;
-    text-align: left;
     padding: 50px;
 }
 
 .mainContent form {
-    padding: 50px;
     max-width: 500px;
     display: flex;
     flex-direction: column;
     margin: auto;
+}
+
+.mainContent form p {
+    padding-top: 40px;
+    font-size: 20px;
+    text-align: center;
 }
 
 input[type="text"], input[type="password"] {
@@ -225,10 +221,6 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     background-color: #3d83a9;
 }
 
-.mainContent p {
-    padding-bottom: 50px;
-    font-size: 20px;
-}
 
 
 footer {

@@ -42,9 +42,11 @@
             <input  name="password" type="password" placeholder="password">
             <input class="grey" name="conf_password" type="password" placeholder="confirm password">
             <input type="submit" value="Register">
+
+            <p>Already have a user? <a href="?page=login">Login here.</a></p>
         </form>
 
-        <p>Already have a user? <a href="?page=login">Login here.</a></p>
+
 
         <?php
     }

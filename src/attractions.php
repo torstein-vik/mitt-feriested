@@ -39,17 +39,21 @@
 
         foreach($comments as $comment){
             ?>
-                <h3> <?php echo($comment['title']." - ".$comment["username"].($comment['privilege'] == 'admin' ? " [admin]" : "").' (posted '.date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"]).")"); ?></h3>
-                <p>
-                    <?php echo($comment["content"]);?>
-                </p>
-
+                <div class="comment">
+                    <h3> <?php echo($comment['title']); ?></h3>
+                    <h4><?php echo($comment["username"].($comment['privilege'] == 'admin' ? " [admin]" : "")." - ".date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"])); ?></h4>
+                    <p>
+                        <?php echo($comment["content"]);?>
+                    </p>
+                </div>
             <?php
         }
 
         if($auth){
             ?>
+
                 <form method="POST" action="api?type=addcomment&a=<?php echo $_GET["a"]; ?>">
+                    <h2>Leave a comment!</h2>
                     <input class="grey" name="title" type="text" placeholder="title">
                     <input name="comment" type="text" placeholder="comment">
                     <input type="submit" value="Add comment">
@@ -98,3 +102,21 @@
         <?php
     }
 ?>
+<style>
+
+    #attractionsCategories {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    #attractionsCategories div {
+        width: 200px;
+        height: 150px;
+    }
+
+    .comment {
+        background-color: #7C7972;
+    }
+
+</style>
