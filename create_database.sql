@@ -34,6 +34,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mitt-feriested`.`tags` (
   `tagid` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
+  `previewimg` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`tagid`))
 ENGINE = InnoDB;
 
