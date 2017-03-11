@@ -73,7 +73,7 @@
             $tags[] = $row;
         }
 
-        echo "<h1> Pick an attraction! Filter by types! </h1>";
+        echo "<h1> Pick an attraction or travel option! </h1>";
 
         ?>
 
@@ -82,7 +82,10 @@
         <div id="#tags">
             <?php
             foreach($tags as $key => $tag){
-                echo "<div class='tagselector active' tagid='".$tag["tagid"]."'>".$tag["name"]."</div>";
+                echo "<div class='tagselector' tagid='".$tag["tagid"]."'>";
+                echo "<img class='tagthumb' style='width:60px; height:60px;' src='".$tag["previewimg"]."'> </img>";
+                echo $tag["name"];
+                echo "</div>";
             }
             ?>
         </div>
@@ -95,21 +98,3 @@
         <?php
     }
 ?>
-
-<div id="attractionsCategories">
-    <div id="hiking">
-        <h2>Hiking</h2>
-    </div>
-    <div id="hotels">
-        <h2>Hotels</h2>
-    </div>
-    <div id="hotels">
-        <h2>Diving</h2>
-    </div>
-    <div id="Food">
-        <h2>Food</h2>
-    </div>
-    <div id="helicopter">
-        <h2>Helicopter Tours</h2>
-    </div>
-</div>

@@ -6,7 +6,6 @@
 .tagselector{
     display: inline;
     margin: 20px;
-    background-color: red;
     user-select: none;
     cursor: pointer;
 }

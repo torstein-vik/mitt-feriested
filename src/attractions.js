@@ -1,35 +1,21 @@
 function init(){
-    updateContent();
-
-    var caught = 0;
 
     $(".tagselector").click(function(){
-        setTimeout(function(){
-            if(caught > 0){
-                caught--;
-            } else {
-                $(this).toggleClass("active");
-                updateContent();
-            }
-        }.bind(this), 20);
-    });
+        $(".tagselector.active").removeClass("active");
+        $(this).addClass("active");
 
-
-    $(".tagselector").dblclick(function(){
-        caught += 1;
-
-        if($(this).hasClass("active")){
-            $(".tagselector").addClass("active");
-            $(this).removeClass("active");
-        } else {
-            $(".tagselector").removeClass("active");
-            $(this).addClass("active");
-        }
         updateContent();
+        removeImages();
     });
+
 }
 
-function updateContent(){var flags = getCurrentFlags();
+function removeImages(){
+    $(".tagselector img").animate({height: 0, width: 0}, 500)
+}
+
+function updateContent(){
+    var flags = getCurrentFlags();
 
     $.ajax({
         url:("api?type=attractions&redir=" + $("#redir").html() + "&flags="+flags)
