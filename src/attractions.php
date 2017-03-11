@@ -102,21 +102,3 @@
         <?php
     }
 ?>
-<style>
-
-    #attractionsCategories {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-
-    #attractionsCategories div {
-        width: 200px;
-        height: 150px;
-    }
-
-    .comment {
-        background-color: #7C7972;
-    }
-
-</style>
