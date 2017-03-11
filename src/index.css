@@ -179,6 +179,8 @@ main {
     background-color: aliceblue;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
     min-height: 100px;
+    text-align: left;
+    padding: 50px;
 }
 
 .mainContent form {
@@ -313,4 +315,15 @@ footer div {
     .contentBody {
        margin-top: 100px;
     }
+}
+
+
+
+#attractionsCategories {
+    background-color: blue;
+}
+
+#attractionsCategories div {
+    width: 200px;
+    height: 150px;
 }

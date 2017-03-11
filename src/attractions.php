@@ -95,3 +95,23 @@
         <?php
     }
 ?>
+
+<h1>Attraksjon tittel</h1>
+
+<div id="attractionsCategories">
+    <div id="hiking">
+        <h2>Hiking</h2>
+    </div>
+    <div id="hotels">
+        <h2>Hotels</h2>
+    </div>
+    <div id="hotels">
+        <h2>Diving</h2>
+    </div>
+    <div id="Food">
+        <h2>Food</h2>
+    </div>
+    <div id="helicopter">
+        <h2>Helicopter Tours</h2>
+    </div>
+</div>
