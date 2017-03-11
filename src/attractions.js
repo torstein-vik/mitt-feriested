@@ -11,7 +11,7 @@ function init(){
 }
 
 function removeImages(){
-    $(".tagselector img").animate({height: 0, width: 0}, 500)
+    //$(".tagselector img").animate({height: 0, width: 0}, 500)
 }
 
 function updateContent(){
