@@ -1,11 +1,19 @@
 {
     "tags":[
         {
-            "name":       "Restaurants",
+            "name":       "Things to do",
             "previewimg": "res/placeholder.jpg"
         },
         {
-            "name":       "Mountains",
+            "name":       "Hotel",
+            "previewimg": "res/placeholder.jpg"
+        },
+        {
+            "name":       "Food",
+            "previewimg": "res/placeholder.jpg"
+        },
+        {
+            "name":       "Travel",
             "previewimg": "res/placeholder.jpg"
         }
     ],

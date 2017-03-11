@@ -6,7 +6,6 @@
 .tagselector{
     display: inline;
     margin: 20px;
-    user-select: none;
     cursor: pointer;
 }
 
@@ -20,11 +19,7 @@
     flex-wrap: nowrap;
 }
 
-#attractionsCategories div {
-    width: 200px;
-    height: 150px;
-}
-
 .comment {
     background-color: #7C7972;
+    padding: 20px;
 }
