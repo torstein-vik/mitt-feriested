@@ -58,6 +58,7 @@
                     <input name="comment" type="text" placeholder="comment">
                     <input type="submit" value="Add comment">
                 </form>
+
             <?php
         } else {
             echo "<a href='?page=login'> Log in</a> or <a href='?page=register'> Register</a> to leave comments!";
