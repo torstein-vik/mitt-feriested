@@ -96,8 +96,6 @@
     }
 ?>
 
-<h1>Attraksjon tittel</h1>
-
 <div id="attractionsCategories">
     <div id="hiking">
         <h2>Hiking</h2>
