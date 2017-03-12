@@ -1,14 +1,13 @@
 .tags{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .tagselector {
-    display: inline;
-    margin: 20px;
-    cursor: pointer;
-    width: 300px;
+    width: 200px;
+    background: blue;
+    margin: 10px;;
 }
 
 .tagselector.active{
@@ -18,4 +17,17 @@
 .comment {
     background-color: #7C7972;
     padding: 20px;
+}
+
+
+#per {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hei {
+    width: 200px;
+    background: blue;
+    margin: 10px;
 }
