@@ -89,7 +89,7 @@
             foreach($tags as $key => $tag){
                 echo "<div class='tagselector' tagid='".$tag["tagid"]."'>";
                 //echo "<img class='tagthumb' style='width:60px; height:60px;' src='".$tag["previewimg"]."'> </img>";
-                echo $tag["name"];
+                echo "<h2>".$tag["name"]."</h2>";
                 echo "</div>";
             }
             ?>
