@@ -1,22 +1,18 @@
 .tags{
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-.tagselector{
+.tagselector {
     display: inline;
     margin: 20px;
     cursor: pointer;
+    width: 300px;
 }
 
 .tagselector.active{
     background-color: aqua;
-}
-
-#attractionsCategories {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
 }
 
 .comment {
