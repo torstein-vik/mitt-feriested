@@ -1,4 +1,4 @@
-.tags{
+#tags{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -6,28 +6,26 @@
 
 .tagselector {
     width: 200px;
-    background: blue;
-    margin: 10px;;
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px lightgrey;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tagselector:hover {
+    box-shadow: 0 0 5px lightgrey;
+    background-color: lightblue;
 }
 
 .tagselector.active{
-    background-color: aqua;
+    background-color: lightblue;
 }
 
 .comment {
     background-color: #7C7972;
+    color: white;
     padding: 20px;
-}
-
-
-#per {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.hei {
-    width: 200px;
-    background: blue;
-    margin: 10px;
 }

@@ -89,7 +89,7 @@
 
         <div id="redir" hidden><?php echo $redir; ?></div>
 
-        <div id="#tags">
+        <div id="tags">
             <?php
             foreach($tags as $key => $tag){
                 echo "<div class='tagselector' tagid='".$tag["tagid"]."'>";
@@ -107,18 +107,3 @@
         <?php
     }
 ?>
-
-<div id="per">
-    <div class="hei">
-        <span>hei</span>
-    </div>
-    <div class="hei">
-        <span>hei</span>
-    </div>
-    <div class="hei">
-        <span>hei</span>
-    </div>
-    <div class="hei">
-        <span>hei</span>
-    </div>
-</div>
