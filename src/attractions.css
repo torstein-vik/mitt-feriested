@@ -22,6 +22,14 @@
 }
 
 .tagselector[tagid="2"] {
+    clip-path: polygon(0 10%, 95% 0, 100% 95%, 5% 100%);
+}
+
+.tagselector[tagid="3"] {
+    clip-path: polygon(10% 0, 100% 10%, 95% 90%, 5% 100%);
+}
+
+.tagselector[tagid="4"] {
     clip-path: polygon(5% 10%, 95% 5%, 100% 95%, 5% 100%);
 }
 
