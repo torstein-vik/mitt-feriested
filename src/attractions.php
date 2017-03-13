@@ -73,6 +73,11 @@
 
         $query2 = $conn->query("SELECT * FROM `mitt-feriested`.`tags`");
 
+        if(!$query2){
+            $conn->error;
+            return;
+        }
+
         $tags = [];
         while($row = $query2->fetch_assoc()){
             $tags[] = $row;
