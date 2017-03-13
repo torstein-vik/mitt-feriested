@@ -31,8 +31,10 @@ function updateContent(){
 function testEmpty(){
     if($(".attraction").length != 0){
         $('.tagselector').animate({padding: 10});
+        $('#tags').animate({marginTop: 0});
     } else {
         $('.tagselector').animate({padding: 30});
+        $('#tags').animate({marginTop: 20});
     }
 }
 
