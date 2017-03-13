@@ -10,8 +10,6 @@ function init(){
 
 }
 
-$('.tagselector[tagid=1]').css({"clip-path": "polygon(10% 5%, 100% 0, 95% 100%, 0 95%)"});
-
 function removeImages(){
     //$(".tagselector img").animate({height: 0, width: 0}, 500)
 }
@@ -32,7 +30,7 @@ function updateContent(){
 
 function testEmpty(){
     if($(".tagselector").length == 0){
-
+        $('.tagselector').css('padding', '10px');
     }
 }
 

@@ -17,9 +17,12 @@
     color: aliceblue;
 }
 
-.tagselector[tagid=1] {
+.tagselector[tagid="1"] {
     clip-path: polygon(10% 5%, 100% 0, 95% 100%, 0 95%);
-    color: blue;
+}
+
+.tagselector[tagid="2"] {
+    clip-path: polygon(5% 10%, 95% 5%, 100% 95%, 5% 100%);
 }
 
 
