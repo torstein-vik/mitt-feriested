@@ -25,7 +25,15 @@ function updateContent(){
         if(flags == getCurrentFlags()){
             $("#attractions").html(data);
         }
+
+        testEmpty();
     })
+}
+
+function testEmpty(){
+    if($(".tagselector").length == 0){
+
+    }
 }
 
 function getCurrentFlags(){
