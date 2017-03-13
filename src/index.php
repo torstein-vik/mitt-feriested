@@ -24,6 +24,7 @@
             "headerSvg2height" => 125,
             "polygon1spec" => 'points="0,55 60,0 220,55" style="fill:#3f5e10;"',
             "polygon2spec" => 'points="0,125 200,0 200,125" style="fill:#7C7972;"',
+            "navid" => 0
         ],
         "login" => [
             "page" => "login.php",
@@ -35,9 +36,11 @@
             "headerSvg2height" => 65,
             "polygon1spec" => 'points="0,50 190,0 190,50" style="fill:#A8A5A4;"',
             "polygon2spec" => 'points="0,65 19,0 220,65" style="fill:#7C7972;"',
+            "navid" => 6
         ],
         "logout" => [
-            "external" => "logout.php"
+            "external" => "logout.php",
+            "navid" => 4
         ],
         "register" => [
             "page" => "register.php",
@@ -49,6 +52,7 @@
             "headerSvg2height" => 75,
             "polygon1spec" => 'points="0,65 115,0 250,65" style="fill:#7C7972;"',
             "polygon2spec" => 'points="0,75 220,0 220,75" style="fill:#3f5e10;"',
+            "navid" => 5
         ],
         "attractions" => [
             "page" => "attractions.php",
@@ -63,6 +67,7 @@
             "headerSvg2height" => 110,
             "polygon1spec" => 'points="70,0 250,110 0,110" style="fill:#7C7972;"',
             "polygon2spec" => 'points="0,110 230,0 230,110" style="fill:#3f5e10;"',
+            "navid" => 1
         ],
         "contact" => [
             "page" => "contact.php",
@@ -74,6 +79,7 @@
             "headerSvg2height" => 125,
             "polygon1spec" => 'points="0,55 60,0 220,55" style="fill:#3f5e10;"',
             "polygon2spec" => 'points="0,125 200,0 200,125" style="fill:#7C7972;"',
+            "navid" => 2
         ],
         "mypage" => [
             "page" => "mypage.php",
@@ -88,6 +94,7 @@
             "headerSvg2height" => 65,
             "polygon1spec" => 'points="0,50 190,0 190,50" style="fill:#A8A5A4;"',
             "polygon2spec" => 'points="0,65 19,0 220,65" style="fill:#7C7972;"',
+            "navid" => 3
         ],
         "404" => [
             "page" => "notfound.php",
@@ -99,6 +106,7 @@
             "headerSvg2height" => 65,
             "polygon1spec" => 'points="0,50 190,0 190,50" style="fill:#A8A5A4;"',
             "polygon2spec" => 'points="0,65 19,0 220,65" style="fill:#7C7972;"',
+            "navid" => -1
         ]
     ];
 
@@ -156,9 +164,9 @@
                 </div>
                 <nav id="mainNav">
                     <ul>
-                        <li><a href="?page=home"> Home </a></li>
-                        <li><a href="?page=attractions"> Attractions & Travel </a></li>
-                        <li><a href="?page=contact"> Contact </a></li>
+                        <li navid=0><a href="?page=home"> Home </a></li>
+                        <li navid=1><a href="?page=attractions"> Attractions & Travel </a></li>
+                        <li navid=2><a href="?page=contact"> Contact </a></li>
                     </ul>
                 </nav>
                 <nav id="userNav">
@@ -166,18 +174,24 @@
                         <?php
                         if($auth) {
                             ?>
-                            <li><a style="padding-left: 60px;" href='?page=mypage'> My page </a></li>
-                            <li><a href='?page=logout'> Log out </a></li>
+                            <li navid=3><a style="padding-left: 60px;" href='?page=mypage'> My page </a></li>
+                            <li navid=4><a href='?page=logout'> Log out </a></li>
                             <?php
                         } else {
                             ?>
-                            <li><a style="padding-left: 60px;" href='?page=register'> Register </a></li>
-                            <li><a href='?page=login'> Log in </a></li>
+                            <li navid=5><a style="padding-left: 60px;" href='?page=register'> Register </a></li>
+                            <li navid=6><a href='?page=login'> Log in </a></li>
                             <?php
                         }
                         ?>
                     </ul>
                 </nav>
+
+                <script>
+                    var navid = <?php echo $pageo["navid"];?>;
+
+                    $("ul > li[navid='" + navid + "'] > a").addClass('active');
+                </script>
             </header>
             <main>
                 <?php
