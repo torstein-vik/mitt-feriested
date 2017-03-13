@@ -46,7 +46,6 @@
                     </div>
                 <?php
             }
-        echo '</div>';
 
         if($auth){
             ?>
@@ -60,6 +59,7 @@
         } else {
             echo "<a href='?page=login'>Log in</a> or <a href='?page=register'>Register</a> to leave comments!";
         }
+        echo '</div>';
 
     } else {
         if (isset($_GET["redir"])){
