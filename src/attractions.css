@@ -33,7 +33,6 @@
     clip-path: polygon(5% 10%, 95% 5%, 100% 95%, 5% 100%);
 }
 
-
 .tagselector:hover {
     background-color: #6F961B;
 }
@@ -42,8 +41,33 @@
     background-color: #6F961B;
 }
 
-.comment {
-    background-color: #7C7972;
-    color: white;
-    padding: 20px;
+
+
+
+#comments {
+    max-width: 600px;
+    margin: auto;
 }
+
+.comment {
+    background-color: #e6e6e6;
+    padding: 15px 20px;
+    margin: 20px 0;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.comment p {
+    padding: 10px 20px;
+}
+
+.comment h3 {
+    font-size: 35px;
+    color: #6F961B;
+}
+
+.comment h4 {
+    color: grey;
+}
+
+
