@@ -30,7 +30,9 @@ function updateContent(){
 
 function testEmpty(){
     if($(".attraction").length != 0){
-        $('.attraction').css('padding', '10px');
+        $('.tagselector').animate({padding: 10});
+    } else {
+        $('.tagselector').animate({padding: 30});
     }
 }
 
