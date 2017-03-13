@@ -83,8 +83,6 @@
             $tags[] = $row;
         }
 
-        echo "<h1> Pick an attraction or travel option! </h1>";
-
         ?>
 
         <div id="redir" hidden><?php echo $redir; ?></div>
