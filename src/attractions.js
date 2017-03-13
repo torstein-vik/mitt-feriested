@@ -29,8 +29,8 @@ function updateContent(){
 }
 
 function testEmpty(){
-    if($(".tagselector").length == 0){
-        $('.tagselector').css('padding', '10px');
+    if($(".attraction").length != 0){
+        $('.attraction').css('padding', '10px');
     }
 }
 
