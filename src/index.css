@@ -62,9 +62,9 @@ nav a {
     border: 15px solid aliceblue;
 }
 
-#mainNav a:hover {
+#mainNav a:hover, #mainNav a.active {
     color: black;
-    border-bottom-color: #6F961B;
+    border-bottom-color: #6F961B !important;
 }
 
 #userNav {
@@ -83,7 +83,7 @@ nav a {
     font-size: 20px;
 }
 
-#userNav a:hover {
+#userNav a:hover , #userNav a.active{
     background-color: #A8A5A4;
 }
 
