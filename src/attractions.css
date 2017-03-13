@@ -1,4 +1,6 @@
 #tags{
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -13,10 +15,12 @@
     margin: 10px;
     text-align: center;
     cursor: pointer;
+
+    transition: all 500ms;
 }
 
 .tagselector:hover {
-    box-shadow: 0 0 5px lightgrey;
+    box-shadow: 0 0 8px lightgrey;
     background-color: lightblue;
 }
 
