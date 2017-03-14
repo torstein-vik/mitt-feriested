@@ -175,7 +175,7 @@ main {
 }
 
 .mainContent form {
-    max-width: 400px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     margin: 50px auto;
