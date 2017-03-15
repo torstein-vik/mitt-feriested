@@ -1,15 +1,39 @@
+/* Header */
+
+#attractionsHeader {
+    clip-path: polygon(60% 0, 70% 40px, 85% 50px, 100% 100%, 0 100%, 70px 15px, 30% 35px);
+}
+
+#attractionsHeaderSvg1 {
+    float: left;
+    margin-top: -135px;
+}
+
+#attractionsHeaderSvg2 {
+    margin-top: -135px;
+    float: right;
+}
+
+
+/* Categories */
+
 #tags {
-    margin: 20px 0;
+    margin: 50px 0 20px 0;
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
+    width: 100%:
+}
+
+#tags.tabs {
+    margin-top: 0;
 }
 
 .tagselector {
+    max-width: 200px;
     width: 100%;
     background-color: #A8A5A4;
     padding: 30px 0;
-    margin: 10px;
     text-align: center;
     cursor: pointer;
     transition: all 300ms;
@@ -26,15 +50,19 @@
 }
 
 .tagselector[tagid="3"] {
-    clip-path: polygon(5% 0, 100% 10%, 95% 90%, 5% 100%);
+    clip-path: polygon(0 0, 100% 5%, 95% 90%, 5% 100%);
 }
 
 .tagselector[tagid="4"] {
-    clip-path: polygon(5% 10%, 95% 5%, 100% 95%, 5% 100%);
+    clip-path: polygon(5% 10%, 95% 0, 100% 95%, 0 100%);
 }
 
 .tagselector:hover {
     background-color: #6F961B;
+}
+
+.tagselector.tabs {
+    padding: 10px 0;
 }
 
 .tagselector.active{
@@ -42,7 +70,14 @@
 }
 
 
+/* Attractions */
 
+#attractions {
+
+}
+
+
+/* Comments */
 
 #comments {
     max-width: 600px;

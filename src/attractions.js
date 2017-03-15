@@ -30,11 +30,11 @@ function updateContent(){
 
 function testEmpty(){
     if($(".attraction").length != 0){
-        $('.tagselector').animate({padding: 10});
-        $('#tags').animate({marginTop: 0});
+        $('#tags').addClass('tabs');
+        $('.tagselector').addClass('tabs');
     } else {
-        $('.tagselector').animate({padding: 30});
-        $('#tags').animate({marginTop: 20});
+        $('#tags').removeClass('tabs');
+        $('.tagselector').removeClass('tabs');
     }
 }
 

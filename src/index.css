@@ -139,20 +139,6 @@ main {
     margin-top: -90px;
 }
 
-#attractionsHeader {
-    clip-path: polygon(60% 0, 70% 40px, 85% 50px, 100% 100%, 0 100%, 70px 15px, 30% 35px);
-}
-
-#attractionsHeaderSvg1 {
-    float: left;
-    margin-top: -135px;
-}
-
-#attractionsHeaderSvg2 {
-    margin-top: -135px;
-    float: right;
-}
-
 #registerHeader {
     clip-path: polygon(53% 13%, 78% 34%, 98% 71%, 100% 100%, 0 100%, 115px 60px, 150px 0);
 }
@@ -171,7 +157,7 @@ main {
     background-color: aliceblue;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
     min-height: 100px;
-    padding: 10px 50px;
+    padding: 20px 50px 50px 50px;
 }
 
 .mainContent form {
@@ -259,52 +245,16 @@ footer div {
 }
 
 
-
-
-/* slideshow test */
-.slide {
-    display: none;
-    width: 100%;
-}
-
-#slide1 {
-    background-color: coral;
-    display: block;
-}
-#slide2 {
-    background-color: #0c9;
-}
-#slide3 {
-    background-color: #333;
-}
-
-#prev, #next {
-    height: 160px;
-    width: 60px;
-    display: block;
-    background-color: rgba(240, 248, 255, 0.5);
-    position: absolute;
-    z-index: 1;
-    margin-top: -275px;
-    transition: 300ms;
-}
-
-#prev:hover, #next:hover {
-    background-color: aliceblue;
-}
-
-#prev {
-    left: 0;
-    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
-}
-
-#next {
-    right: 0;
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
-}
+/* Responsive designe */
 
 @media screen and (max-width: 1160px) {
     .contentBody {
        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #mainNav a {
+        width: auto;
     }
 }
