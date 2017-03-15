@@ -22,7 +22,8 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
-    width: 100%:
+    width: 100%;
+    transition: 300ms;
 }
 
 #tags.tabs {
@@ -73,7 +74,26 @@
 /* Attractions */
 
 #attractions {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
 
+#attractions div {
+    width: 100px;
+}
+
+#attractions div a {
+    display: block;
+
+}
+
+#attractions div img {
+    width: 100px;
+}
+
+img.attractionpreview {
+    width: 100px;
 }
 
 

@@ -5,13 +5,8 @@ function init(){
         $(this).addClass("active");
 
         updateContent();
-        removeImages();
     });
 
-}
-
-function removeImages(){
-    //$(".tagselector img").animate({height: 0, width: 0}, 500)
 }
 
 function updateContent(){
