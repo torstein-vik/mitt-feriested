@@ -66,7 +66,7 @@
             foreach($attractions as $attraction){
                 echo "<div>";
                 echo "<a class='attraction' href='?page=".($_GET["redir"])."&a=".($attraction["attractionid"])."'>";
-                echo "<img style='width:60; height:60;' class='attractionpreview' src='".$attraction["previewimg"]."'/>";
+                echo "<img class='attractionpreview' src='".$attraction["previewimg"]."'/>";
                 echo $attraction["name"];
                 echo "</a>";
                 echo "</div>";
