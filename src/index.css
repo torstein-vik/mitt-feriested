@@ -157,7 +157,7 @@ main {
     background-color: aliceblue;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
     min-height: 100px;
-    padding: 20px 50px 50px 50px;
+    padding: 20px 50px;
 }
 
 .mainContent form {
@@ -207,6 +207,34 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     background-color: #3d83a9;
 }
 
+
+/* Comments */
+
+#comments {
+    max-width: 600px;
+    margin: auto;
+}
+
+.comment {
+    background-color: #e6e6e6;
+    padding: 15px 20px;
+    margin: 20px 0;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.comment p {
+    padding: 10px 20px;
+}
+
+.comment h3 {
+    font-size: 35px;
+    color: #6F961B;
+}
+
+.comment h4 {
+    color: grey;
+}
 
 
 footer {

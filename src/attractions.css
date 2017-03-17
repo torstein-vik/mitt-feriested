@@ -18,7 +18,7 @@
 /* Categories */
 
 #tags {
-    margin: 50px 0 20px 0;
+    margin: 50px 0;
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -27,7 +27,7 @@
 }
 
 #tags.tabs {
-    margin-top: 0;
+    margin: 0 auto 20px auto;
 }
 
 .tagselector {
@@ -80,20 +80,20 @@
 }
 
 #attractions div {
-    width: 100px;
+    width: 150px;
+    padding: 10px;
 }
 
 #attractions div a {
-    display: block;
+    text-decoration: none;
+    color: black;
+    background: white;
+    font-size: 20px;
 
 }
 
 #attractions div img {
-    width: 100px;
-}
-
-img.attractionpreview {
-    width: 100px;
+    width: 100%;
 }
 
 
