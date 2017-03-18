@@ -77,52 +77,22 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
+    padding: 20px 0;
 }
 
 #attractions div {
-    width: 150px;
+    width: 180px;
     padding: 10px;
+    background-color: #e6e6e6;
 }
 
 #attractions div a {
     text-decoration: none;
     color: black;
-    background: white;
-    font-size: 20px;
-
+    font-size: 25px;
+    text-align: center;
 }
 
 #attractions div img {
     width: 100%;
 }
-
-
-/* Comments */
-
-#comments {
-    max-width: 600px;
-    margin: auto;
-}
-
-.comment {
-    background-color: #e6e6e6;
-    padding: 15px 20px;
-    margin: 20px 0;
-    max-width: 600px;
-    border-radius: 5px;
-}
-
-.comment p {
-    padding: 10px 20px;
-}
-
-.comment h3 {
-    font-size: 35px;
-    color: #6F961B;
-}
-
-.comment h4 {
-    color: grey;
-}
-
-

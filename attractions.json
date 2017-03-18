@@ -21,14 +21,14 @@
         {
             "name":       "test",
             "pagefile":   "attr/test.php",
-            "previewimg": "res/main_logo.png",
+            "previewimg": "res/logo_transparent_text.png",
             "weather":    "Færøyene/Annet/Færøyene",
             "tags":       ["Travel"]
         },
         {
             "name":       "test2",
             "pagefile":   "attr/test2.php",
-            "previewimg": "res/placeholder.jpg",
+            "previewimg": "res/logo_transparent_text.png",
             "weather":    "Norge/Møre_og_Romsdal/Ålesund/Ålesund",
             "tags":       ["Hotel", "Food"]
         }

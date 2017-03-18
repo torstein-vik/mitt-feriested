@@ -51,7 +51,7 @@
             ?>
                 <form method="POST" action="api?type=addcomment&a=<?php echo $_GET["a"]; ?>">
                     <h2>Leave a comment!</h2>
-                    <input class="grey" name="title" type="text" placeholder="title">
+                    <input class="grey" style="border-radius: 5px 5px 0 0" name="title" type="text" placeholder="title">
                     <input name="comment" type="text" placeholder="comment">
                     <input type="submit" value="Add comment">
                 </form>
