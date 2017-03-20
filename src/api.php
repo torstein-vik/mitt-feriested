@@ -120,6 +120,37 @@
             return;
         }
 
+    } else if($type == "login"){
+        if(isset($_POST["username"]) and isset($_POST["password"])){
+            $username = $conn->real_escape_string($_POST["username"]);
+            $password = $conn->real_escape_string($_POST["password"]);
+
+            $username_find = $conn->query("SELECT * FROM `mitt-feriested`.`users` WHERE username = '".$username."'");
+
+            if($username_find->num_rows == 0){
+                ?>USERNAME_ERR<?php
+                return;
+            }
+
+            $user = $username_find->fetch_assoc();
+
+            $salt = bin2hex($user['passsalt']);
+
+            $hash = hash('sha256', $password.$salt);
+
+            if($hash == bin2hex($user["passhash"])){
+                $_SESSION['userid'] = $user["userid"];
+                $_SESSION['user'] = $username;
+                $_SESSION['admin'] = ($user['privilege'] == 'admin');
+
+                ?>SUCCESS<?php
+                return;
+
+            } else {
+                ?>PASSWORD_ERR<?php
+                return;
+            }
+        }
     } else {
         echo "what do you think you're doing?";
         return;
