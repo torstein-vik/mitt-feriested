@@ -17,10 +17,14 @@
         include($attraction["pagefile"]);
 
 
-        echo "<h2> Weather near ".$attraction["name"].": </h2>";
+        if($attraction["weather"] != "NONE"){
 
-        echo '<script src="http://www.yr.no/sted/'.$attraction["weather"].'/ekstern_boks_tre_dager.js"></script>';
-        echo '<noscript><a href="http://www.yr.no/sted/'.$attraction["weather"].'/">Klikk her for å se værvarsel.</a></noscript>';
+            echo "<h2> Weather near ".$attraction["name"].": </h2>";
+
+            echo '<script src="http://www.yr.no/sted/'.$attraction["weather"].'/ekstern_boks_tre_dager.js"></script>';
+            echo '<noscript><a href="http://www.yr.no/sted/'.$attraction["weather"].'/">Klikk her for å se værvarsel.</a></noscript>';
+
+        }
 
         $comment_query = $conn->query("SELECT users.username, users.privilege, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title FROM `mitt-feriested`.`users`, `mitt-feriested`.`tips` WHERE users.userid=tips.userid AND tips.attractionid=".$attraction["attractionid"]." ORDER BY tips.timestamp DESC;");
 
