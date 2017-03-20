@@ -28,6 +28,8 @@
         ],
         "login" => [
             "page" => "login.php",
+            "script" => "login.js",
+            "scriptinit" => "init",
             "title" => "Login",
             "headerid" => "loginHeader",
             "headerSvg1width" => 190,
