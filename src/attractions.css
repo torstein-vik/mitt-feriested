@@ -84,6 +84,7 @@
     width: 180px;
     padding: 10px;
     background-color: #e6e6e6;
+    cursor: pointer;
 }
 
 #attractions div a {

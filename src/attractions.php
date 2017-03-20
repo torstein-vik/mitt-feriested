@@ -88,7 +88,7 @@
             <?php
             foreach($tags as $key => $tag){
                 echo "<div class='tagselector' tagid='".$tag["tagid"]."'>";
-                echo "<span>".$tag["name"]."</span>";
+                echo "<h3>".$tag["name"]."</h3>";
                 echo "</div>";
             }
             ?>
