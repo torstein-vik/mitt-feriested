@@ -30,6 +30,7 @@
             "page" => "login.php",
             "script" => "login.js",
             "scriptinit" => "init",
+            "css" => "login.css",
             "title" => "Login",
             "headerid" => "loginHeader",
             "headerSvg1width" => 190,
