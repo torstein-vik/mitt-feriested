@@ -5,6 +5,10 @@
         unset($_SESSION["admin"]);
         header("Refresh:0");
     } else {
-        header("Location: ?page=home");
+        if(isset($_GET["redir"]){
+            header("Location: ?page=".$_GET["redir"]);
+        } else {
+            header("Location: ?page=home");
+        }
     }
 ?>
