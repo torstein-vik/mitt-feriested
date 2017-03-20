@@ -6,7 +6,7 @@
         if (isset($_GET['redir'])){
             $redir = $_GET['redir'];
         } else {
-            $redir = 'mypage';
+            $redir = 'home';
         }
 
         ?>
