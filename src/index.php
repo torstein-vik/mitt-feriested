@@ -47,6 +47,9 @@
         ],
         "register" => [
             "page" => "register.php",
+            "script" => "register.js",
+            "scriptinit" => "init",
+            "css" => "errormessage.css",
             "title" => "Register",
             "headerid" => "registerHeader",
             "headerSvg1width" => 250,
