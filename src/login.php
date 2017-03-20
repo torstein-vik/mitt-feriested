@@ -1,6 +1,6 @@
 <?php
     if ($auth){
-        header("Location: ?page=mypage");
+        header("Location: ?page=logout&redir=login");
     } else {
 
         if (isset($_GET['redir'])){
