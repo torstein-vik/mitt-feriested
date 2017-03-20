@@ -151,6 +151,43 @@
                 return;
             }
         }
+    } else if($type == "register"){
+        if(isset($_POST["username"]) and isset($_POST["password"]) and isset($_POST["conf_password"])){
+            $username = $conn->real_escape_string($_POST["username"]);
+            $password = $conn->real_escape_string($_POST["password"]);
+            $password_conf = $conn->real_escape_string($_POST["conf_password"]);
+
+            if($password != $password_conf){
+                ?>PASSWD_MISMATCH_ERR<?php
+                return;
+            }
+
+            $username_conflict = $conn->query("SELECT * FROM `mitt-feriested`.`users` WHERE username = '".$username."'");
+
+            if($username_conflict->num_rows > 0){
+                ?>USERNAME_USED_ERR<?php
+                return;
+            }
+
+            print $conn->error;
+
+            $salt = bin2hex(random_bytes(32));
+
+            $hash = hash('sha256', $password.$salt);
+
+            $privilege = "'user'";
+
+            $query = $conn->query("INSERT INTO `mitt-feriested`.`users`  (username, passhash, passsalt, privilege) VALUES ('".$username."',0x".$hash.",0x".$salt.",".$privilege.");");
+
+            if($query){
+                ?>SUCCESS<?php
+
+            } else {
+                ?>UNKNOWN_ERR<?php
+                print $conn->error;
+            }
+
+        }
     } else {
         echo "what do you think you're doing?";
         return;
