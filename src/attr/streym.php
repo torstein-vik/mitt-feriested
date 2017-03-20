@@ -1,0 +1,1 @@
+Hotel Streym Hotell!

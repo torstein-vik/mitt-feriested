@@ -19,18 +19,109 @@
     ],
     "attractions":[
         {
-            "name":       "test",
-            "pagefile":   "attr/test.php",
-            "previewimg": "res/logo_transparent_text.png",
-            "weather":    "Færøyene/Annet/Færøyene",
+            "name":       "Koks Restaurant",
+            "pagefile":   "attr/koks.php",
+            "previewimg": "attr/koks.jpg",
+            "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "tags":       ["Food"]
+        },
+        {
+            "name":       "Áarstova",
+            "pagefile":   "attr/aarstova.php",
+            "previewimg": "attr/aarstova.jpg",
+            "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "tags":       ["Food"]
+        },
+        {
+            "name":       "Ræst",
+            "pagefile":   "attr/ræst.php",
+            "previewimg": "attr/ræst.jpg",
+            "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "tags":       ["Food"]
+        },
+        {
+            "name":       "Barbara Fishhouse",
+            "pagefile":   "attr/barbara.php",
+            "previewimg": "attr/barbara.jpg",
+            "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "tags":       ["Food"]
+        },
+        {
+            "name":       "Kirkjubøargarður",
+            "pagefile":   "attr/kirkjubøargarður.php",
+            "previewimg": "attr/kirkjubøargarður.jpg",
+            "weather":    "Færøyene/Sandoy/Kirkjubøur/",
+            "tags":       ["Things to do"]
+        },
+        {
+            "name":       "Gásadalur",
+            "pagefile":   "attr/gásadalur.php",
+            "previewimg": "attr/gásadalur.jpg",
+            "weather":    "Færøyene/Vágar/Gásadalur/",
+            "tags":       ["Things to do"]
+        },
+        {
+            "name":       "Slættaratindur",
+            "pagefile":   "attr/slættaratindur.php",
+            "previewimg": "attr/slættaratindur.jpg",
+            "weather":    "Færøyene/Eysturoy/Slættaratindur/",
+            "tags":       ["Things to do"]
+        },
+        {
+            "name":       "Birdwatching",
+            "pagefile":   "attr/birdwatching.php",
+            "previewimg": "attr/birdwatching.jpg",
+            "weather":    "NONE",
+            "tags":       ["Things to do"]
+        },
+        {
+            "name":       "Diving",
+            "pagefile":   "attr/diving.php",
+            "previewimg": "attr/diving.jpg",
+            "weather":    "NONE",
+            "tags":       ["Things to do"]
+        },
+        {
+            "name":       "Plane",
+            "pagefile":   "attr/plane.php",
+            "previewimg": "attr/plane.jpg",
+            "weather":    "NONE",
             "tags":       ["Travel"]
         },
         {
-            "name":       "test2",
-            "pagefile":   "attr/test2.php",
-            "previewimg": "res/logo_transparent_text.png",
-            "weather":    "Norge/Møre_og_Romsdal/Ålesund/Ålesund",
+            "name":       "Boat",
+            "pagefile":   "attr/plane.php",
+            "previewimg": "attr/boat.jpg",
+            "weather":    "NONE",
+            "tags":       ["Travel"]
+        },
+        {
+            "name":       "Hotel Føroyar",
+            "pagefile":   "attr/hotelføroyar.php",
+            "previewimg": "attr/hotelføroyar.jpeg",
+            "weather":    "Færøyene/Streymoy/Tórshavn/",
             "tags":       ["Hotel", "Food"]
+        },
+        {
+            "name":       "Hotel Streym Hotell",
+            "pagefile":   "attr/streym.php",
+            "previewimg": "attr/streym.jpeg",
+            "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "tags":       ["Hotel"]
+        },
+        {
+            "name":       "Hotel Tórshavn",
+            "pagefile":   "attr/hoteltorshavn.php",
+            "previewimg": "attr/hoteltorshavn.jpg",
+            "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "tags":       ["Hotel", "Food"]
+        },
+        {
+            "name":       "Hotel Vagar",
+            "pagefile":   "attr/vagar.php",
+            "previewimg": "attr/vagar.jpg",
+            "weather":    "Færøyene/Vágar/Vagar/",
+            "tags":       ["Hotel"]
         }
     ]
 }
