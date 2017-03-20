@@ -17,9 +17,9 @@ DELETE FROM \`mitt-feriested\`.\`tagselections\`;
 SET FOREIGN_KEY_CHECKS=1;
 
 -- Reseting auto_increment
-ALTER TABLE attractions AUTO_INCREMENT = 1;
-ALTER TABLE tags AUTO_INCREMENT = 1;
-ALTER TABLE tagselections AUTO_INCREMENT = 1;
+ALTER TABLE \`mitt-feriested\`.\`attractions\` AUTO_INCREMENT = 1;
+ALTER TABLE \`mitt-feriested\`.\`tags\` AUTO_INCREMENT = 1;
+ALTER TABLE \`mitt-feriested\`.\`tagselections\` AUTO_INCREMENT = 1;
 `
 
 if(attractions.tags.length == 0){
