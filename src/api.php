@@ -181,10 +181,10 @@
 
             if($query){
                 ?>SUCCESS<?php
-
+                return;
             } else {
                 ?>UNKNOWN_ERR<?php
-                print $conn->error;
+                return;
             }
 
         }
