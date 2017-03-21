@@ -15,7 +15,10 @@ function init(){
             if (result == "SUCCESS"){
                 location.href = "?page=" + $("#loginform").attr("redir");
             } else {
-                $("#errmsg p").html({USERNAME_ERR: "No such username!", PASSWORD_ERR: "Wrong password!"}[result]);
+                $("#errmsg p").html({
+                    USERNAME_ERR: "No such username!",
+                    PASSWORD_ERR: "Wrong password!"
+                }[result]);
                 $("#errmsg").animate({height: "100px"});
 
             }

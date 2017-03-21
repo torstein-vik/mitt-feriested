@@ -15,9 +15,9 @@
             <input  name="password" type="password" placeholder="password">
             <input class="grey" name="conf_password" type="password" placeholder="confirm password">
             <input type="submit" value="Register">
+            <div id="errmsg"> <p></p></div>
 
             <p>Already have a user? <a href="?page=login">Login here.</a></p>
-            <div id="errmsg"> </div>
         </form>
 
         <?php
