@@ -15,11 +15,7 @@ $comment_query = $conn->query("SELECT tips.tipid, attractions.name, UNIX_TIMESTA
             return;
         }
 
-        if($comment_query->num_rows > 0){
-            ?><h1>Your comments:</h1><?php
-        } else {
-            ?> You may now leave comments on <a href="?page=attractions"> attractions</a>!<?php
-        }
+
 
         $comments = [];
         while($row = $comment_query->fetch_assoc()){
@@ -27,18 +23,22 @@ $comment_query = $conn->query("SELECT tips.tipid, attractions.name, UNIX_TIMESTA
         }
 
         echo '<div id="comments">';
-
-        foreach($comments as $comment){
-            ?>
-                <div class="comment">
-                    <h3> <?php echo($comment['title']) ?></h3>
-                    <h4><?php echo $comment["name"].' - '.date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"]); ?></h4>
-                    <p>
-                        <?php echo($comment["content"]);?>
-                    </p>
-                    <p><a class="deletecomment" href="/api?type=deletecomment&tipid=<?php echo $comment["tipid"];?>">Click here to delete this comment</a></p>
-                </div>
-            <?php
-        }
+            if($comment_query->num_rows > 0){
+                ?><h1>Your comments:</h1><?php
+            } else {
+                ?><h3>You may now leave comments on <a href="?page=attractions">attractions</a>!</h3><?php
+            }
+            foreach($comments as $comment){
+                ?>
+                    <div class="comment">
+                        <h3> <?php echo($comment['title']) ?></h3>
+                        <h4><?php echo $comment["name"].' - '.date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"]); ?></h4>
+                        <p>
+                            <?php echo($comment["content"]);?>
+                        </p>
+                        <p><a class="deletecomment" href="/api?type=deletecomment&tipid=<?php echo $comment["tipid"];?>">Click here to delete this comment</a></p>
+                    </div>
+                <?php
+            }
         echo '</div>';
 ?>

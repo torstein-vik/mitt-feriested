@@ -13,9 +13,9 @@
 
     </div>
     <div id="slide2" class="slide">
-        <img src="attr/g%C3%A1sadalur.jpg">
+
     </div>
     <div id="slide3" class="slide">
-        <img src="attr/kirkjub%C3%B8argar%C3%B0ur.jpg">
+
     </div>
 </div>
