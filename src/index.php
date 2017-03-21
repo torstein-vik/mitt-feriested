@@ -78,6 +78,7 @@
         "contact" => [
             "page" => "contact.php",
             "title" => "Contact",
+            "css" => "contact.css",
             "headerid" => "homeHeader",
             "headerSvg1width" => 220,
             "headerSvg1height" => 55,
