@@ -7,13 +7,18 @@
     $userid = $_SESSION["userid"];
     $admin = $_SESSION["admin"];
 ?>
-    <h1>Your comments:</h1>
 <?php
 $comment_query = $conn->query("SELECT tips.tipid, attractions.name, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tips` WHERE attractions.attractionid=tips.attractionid AND tips.userid=".$userid." ORDER BY tips.timestamp DESC;");
 
         if(!$comment_query){
             echo $conn->error;
             return;
+        }
+
+        if($comment_query->num_rows > 0){
+            ?><h1>Your comments:</h1><?php
+        } else {
+            ?> You may now leave comments on <a href="?page=attractions"> attractions</a>!<?php
         }
 
         $comments = [];
