@@ -67,7 +67,7 @@
                 echo "<div>";
                 echo "<a class='attraction' href='?page=".($_GET["redir"])."&a=".($attraction["attractionid"])."'>";
                 echo "<img class='attractionpreview' src='".$attraction["previewimg"]."'/>";
-                echo $attraction["name"];
+                echo "<h3>".$attraction["name"]."</h3>";
                 echo "</a>";
                 echo "</div>";
             }
