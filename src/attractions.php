@@ -100,7 +100,9 @@
 
         ?>
         <div id="attractions">
+            <div id="attrctionsContent">
 
+            </div>
         </div>
         <?php
     }
