@@ -104,10 +104,8 @@
         <?php
 
         ?>
-        <div style="margin: 0 45px;">
-            <div id="attractions">
+        <div id="attractions">
 
-            </div>
         </div>
         <?php
     }

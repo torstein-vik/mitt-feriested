@@ -78,6 +78,8 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     padding: 20px 0;
+    max-width: 870px;
+    margin: auto;
 }
 
 #attractions div {
@@ -123,4 +125,12 @@
 #weather > h2{
     text-align: left;
     margin-bottom: 20px;
+}
+
+/* Responsive designe */
+
+@media screen and (max-width: 1000px) {
+    #attractions {
+        width: 580px;
+    }
 }

@@ -135,13 +135,10 @@
         <title>Faroe Adventures</title>
         <meta charset="utf-8" />
         <link rel="icon" href="res/favicon.png">
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
         <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-
         <link rel="stylesheet" href="index.css"/>
-
 
         <?php
             if(isset($pageo["script"])){
@@ -160,7 +157,6 @@
                 echo "<link rel='stylesheet' href='".$pageo["css"]."'/>";
             }
         ?>
-
     </head>
     <body>
         <div id="content">
@@ -171,7 +167,7 @@
                 <nav id="mainNav">
                     <ul>
                         <li navid=0><a href="?page=home"> Home </a></li>
-                        <li navid=1><a href="?page=attractions"> Attractions & Travel </a></li>
+                        <li navid=1><a href="?page=attractions"> Attractions &amp; Travel </a></li>
                         <li navid=2><a href="?page=contact"> Contact </a></li>
                     </ul>
                 </nav>
