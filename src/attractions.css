@@ -76,21 +76,21 @@
 #attractions {
     display: flex;
     justify-content: space-around;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 20px 0;
 }
 
 #attractions div {
-    width: 180px;
-    padding: 10px;
+    width: 240px;
     background-color: #e6e6e6;
     cursor: pointer;
 }
 
-#attractions div a {
+#attractions div p {
+    padding: 10px;
     text-decoration: none;
     color: black;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
 }
 
