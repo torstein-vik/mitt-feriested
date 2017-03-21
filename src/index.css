@@ -277,13 +277,28 @@ footer div {
 
 #contact {
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#contactText {
+    width: 450px;
 }
 
 #contact p {
     padding: 10px;
-    font-size: 25px;
+    font-size: 15px;
 }
 
+#contactImg {
+    margin: auto;
+    padding: 10px;
+}
+
+#contactImg img {
+    width: 300px;
+}
 
 /* Responsive designe */
 
