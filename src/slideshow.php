@@ -10,7 +10,7 @@
         </svg>
     </div>
     <div id="slide1" class="slide">
-        <img src="attr/birdwatching.jpg">
+
     </div>
     <div id="slide2" class="slide">
         <img src="attr/g%C3%A1sadalur.jpg">
