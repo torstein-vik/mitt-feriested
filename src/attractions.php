@@ -38,7 +38,9 @@
         }
 
         echo '<div id="comments">';
-            echo "<h2> Comments about ".$attraction["name"].": </h2>";
+            if($comment_query->num_rows > 0){
+                echo "<h2> Comments about ".$attraction["name"].": </h2>";
+            }
 
             foreach($comments as $comment){
                 ?>
@@ -53,7 +55,7 @@
         if($auth){
             ?>
                 <form method="POST" action="api?type=addcomment&a=<?php echo $_GET["a"]; ?>">
-                    <h2>Leave a comment!</h2>
+                    <h2>Leave a comment!</h2><br>
                     <input class="grey" style="border-radius: 5px 5px 0 0" name="title" type="text" placeholder="title">
                     <input name="comment" type="text" placeholder="comment">
                     <input type="submit" value="Add comment">
@@ -100,9 +102,7 @@
 
         ?>
         <div id="attractions">
-            <div id="attrctionsContent">
 
-            </div>
         </div>
         <?php
     }
