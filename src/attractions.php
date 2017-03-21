@@ -21,8 +21,7 @@
 
             echo "<h2> Weather near ".$attraction["name"].": </h2>";
 
-            echo '<script src="http://www.yr.no/sted/'.$attraction["weather"].'/ekstern_boks_tre_dager.js"></script>';
-            echo '<noscript><a href="http://www.yr.no/sted/'.$attraction["weather"].'/">Klikk her for å se værvarsel.</a></noscript>';
+            echo '<script src="http://www.yr.no/place/'.$attraction["weather"].'/external_box_three_days.js"></script>';
 
         }
 
