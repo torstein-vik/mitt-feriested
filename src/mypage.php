@@ -26,9 +26,12 @@ $comment_query = $conn->query("SELECT tips.tipid, attractions.name, UNIX_TIMESTA
         foreach($comments as $comment){
             ?>
                 <div class="comment">
-                    <h3> <?php echo($comment['title']); ?></h3>
-                    <h4><?php echo($comment["username"].($comment['privilege'] == 'admin' ? " [admin]" : "")." - ".date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"])); ?></h4>
-                    <p><?php echo($comment["content"]);?></p>
+                    <h3> <?php echo($comment['title']) ?></h3>
+                    <h4><?php echo $comment["name"].' - '.date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"]); ?></h4>
+                    <p>
+                        <?php echo($comment["content"]);?>
+                    </p>
+                    <p><a class="deletecomment" href="/api?type=deletecomment&tipid=<?php echo $comment["tipid"];?>">Click here to delete this comment</a></p>
                 </div>
             <?php
         }
