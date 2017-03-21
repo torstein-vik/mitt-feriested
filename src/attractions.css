@@ -105,3 +105,11 @@
     width: 100%;
     height: 100px;
 }
+
+/* Attraction page */
+
+.pagecontent{
+    line-height: 2;
+    margin: 0 auto;
+    max-width: 600;
+}

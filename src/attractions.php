@@ -14,8 +14,10 @@
 
     if(isset($_GET["a"]) and $_GET["a"] > 0 and sizeof($attractions) > $_GET["a"] - 1){
         $attraction = $attractions[$_GET["a"]];
-        include($attraction["pagefile"]);
 
+        echo "<div class='pagecontent'>";
+        include($attraction["pagefile"]);
+        echo "</div>";
 
         if($attraction["weather"] != "NONE"){
 
@@ -101,8 +103,10 @@
         <?php
 
         ?>
-        <div id="attractions">
+        <div style="margin: 0 45px;">
+            <div id="attractions">
 
+            </div>
         </div>
         <?php
     }
