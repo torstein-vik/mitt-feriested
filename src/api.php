@@ -157,6 +157,17 @@
             $password = $conn->real_escape_string($_POST["password"]);
             $password_conf = $conn->real_escape_string($_POST["conf_password"]);
 
+
+            if($username == ""){
+                ?>USERNAME_EMPTY<?php
+                return;
+            }
+
+            if($password == ""){
+                ?>PASSWORD_EMPTY<?php
+                return;
+            }
+
             if($password != $password_conf){
                 ?>PASSWD_MISMATCH_ERR<?php
                 return;
