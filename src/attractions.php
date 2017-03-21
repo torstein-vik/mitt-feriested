@@ -20,10 +20,11 @@
         echo "</div>";
 
         if($attraction["weather"] != "NONE"){
-
+            echo "<div id='weather'>";
             echo "<h2> Weather near ".$attraction["name"].": </h2>";
 
             echo '<script src="http://www.yr.no/place/'.$attraction["weather"].'/external_box_three_days.js"></script>';
+            echo "</div>";
 
         }
 

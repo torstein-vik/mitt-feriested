@@ -113,3 +113,14 @@
     margin: 0 auto;
     max-width: 600;
 }
+
+#weather{
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+#weather > h2{
+    text-align: left;
+    margin-bottom: 20px;
+}
