@@ -1,7 +1,8 @@
-#errmsg{
-    width: 0;
-    height: 100px;
-
-    background-color: red;
+#errmsg {
+    border-radius: 0 0 5px 5px;
+    height: 0;
+    min-width: 600px;
+    background-color: #ff3131;
     color: white;
+    margin-top: -5px;
 }

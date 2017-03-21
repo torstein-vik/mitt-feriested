@@ -15,8 +15,11 @@
             <input name="password" type="password" placeholder="password">
             <input class="grey" type="submit" value="Log in">
 
+            <div id="errmsg">
+                <p></p>
+            </div>
+
             <p>Don't have a user? <a href="?page=register">Register here.</a></p>
-            <div id="errmsg"> </div>
         </form>
 
 
