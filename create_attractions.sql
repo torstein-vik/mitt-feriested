@@ -29,7 +29,7 @@ INSERT INTO `mitt-feriested`.`attractions` (name, pagefile, previewimg, weather)
                                                                                         ('Birdwatching', 'attr/birdwatching.php', 'attr/birdwatching.jpg', 'NONE'),
                                                                                         ('Diving', 'attr/diving.php', 'attr/diving.jpg', 'NONE'),
                                                                                         ('Plane', 'attr/plane.php', 'attr/plane.jpg', 'NONE'),
-                                                                                        ('Boat', 'attr/plane.php', 'attr/boat.jpg', 'NONE'),
+                                                                                        ('Boat', 'attr/boat.php', 'attr/boat.jpg', 'NONE'),
                                                                                         ('Hotel Føroyar', 'attr/hotelføroyar.php', 'attr/hotelføroyar.jpeg', 'Færøyene/Streymoy/Tórshavn/'),
                                                                                         ('Hotel Streym Hotell', 'attr/streym.php', 'attr/streym.jpeg', 'Færøyene/Streymoy/Tórshavn/'),
                                                                                         ('Hotel Tórshavn', 'attr/hoteltorshavn.php', 'attr/hoteltorshavn.jpg', 'Færøyene/Streymoy/Tórshavn/'),

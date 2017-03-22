@@ -90,7 +90,7 @@
         },
         {
             "name":       "Boat",
-            "pagefile":   "attr/plane.php",
+            "pagefile":   "attr/boat.php",
             "previewimg": "attr/boat.jpg",
             "weather":    "NONE",
             "tags":       ["Travel"]
