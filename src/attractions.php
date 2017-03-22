@@ -65,7 +65,7 @@
                 </form>
             <?php
         } else {
-            echo "<a href='?page=login'>Log in</a> or <a href='?page=register'>Register</a> to leave comments!";
+            echo "<p style='padding:20px;font-size:20px;'><a href='?page=login'>Log in</a> or <a href='?page=register'>Register</a> to leave comments!</p>";
         }
         echo '</div>';
 

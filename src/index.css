@@ -208,6 +208,25 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 }
 
 
+/* Error message */
+
+#errmsg {
+    border-radius: 0 0 5px 5px;
+    height: 0;
+    min-width: 600px;
+    background-color: #f44336;
+    color: white;
+    margin-top: -5px;
+    line-height: 100px;
+}
+
+#errmsg p {
+    line-height: 100px;
+    padding: 0;
+    font-size: 25px;
+}
+
+
 /* Comments */
 
 #comments {
@@ -236,6 +255,8 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     color: grey;
 }
 
+
+/* Footer */
 
 footer {
     position: absolute;
@@ -273,43 +294,16 @@ footer div {
 }
 
 
-/* Contact */
-
-#contact {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-#contactText {
-    width: 450px;
-}
-
-#contact p {
-    padding: 10px;
-    font-size: 15px;
-}
-
-#contactImg {
-    margin: auto;
-    padding: 10px;
-}
-
-#contactImg img {
-    width: 300px;
-}
-
 /* Responsive designe */
 
-@media screen and (max-width: 1160px) {
-    .contentBody {
-       margin-top: 100px;
+@media screen and (max-width: 1165px) {
+    #mainNav a {
+        width: auto;
     }
 }
 
 @media screen and (max-width: 900px) {
-    #mainNav a {
-        width: auto;
+    .contentBody {
+       margin-top: 100px;
     }
 }

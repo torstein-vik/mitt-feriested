@@ -1,0 +1,19 @@
+.deletecomment {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.deletecomment div {
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+    transition: 200ms;
+    margin-top: -25px;
+    background-color: grey;
+}
+
+.deletecomment div:hover {
+    background-color: #f44336;
+}
+
+
+

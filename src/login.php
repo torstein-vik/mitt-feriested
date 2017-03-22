@@ -22,9 +22,6 @@
             <p>Don't have a user? <a href="?page=register">Register here.</a></p>
         </form>
 
-
         <?php
-
-
     }
 ?>
