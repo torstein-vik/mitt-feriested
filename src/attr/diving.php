@@ -7,3 +7,4 @@ The temperature of the water around the Faroes varies from four to 10 degrees Ce
 It is of great importance that you never dive alone. Make sure you are always dive with someone else. We recommend that a qualified leader with local knowledge supervises every dive. There are diving courses for beginners available around the islands. Certified divers can hire equipment.
 <br><br>
 Make sure to bring a torch for every dive, so that you can explore cracks and look under rocks and fully appreciate the splendid colours and nuances of the flora and fauna. Who knows, you might even end up diving with seals!
+<br><br>
