@@ -34,7 +34,7 @@
         },
         {
             "name":       "Ræst",
-            "pagefile":   "attr/ræst.php",
+            "pagefile":   "attr/raest.php",
             "previewimg": "attr/ræst.jpg",
             "weather":    "Færøyene/Streymoy/Tórshavn/",
             "tags":       ["Food"]
@@ -48,21 +48,21 @@
         },
         {
             "name":       "Kirkjubøargarður",
-            "pagefile":   "attr/kirkjubøargarður.php",
+            "pagefile":   "attr/kirkjuboeargarthur.php",
             "previewimg": "attr/kirkjubøargarður.jpg",
             "weather":    "Færøyene/Sandoy/Kirkjubøur/",
             "tags":       ["Things to do"]
         },
         {
             "name":       "Gásadalur",
-            "pagefile":   "attr/gásadalur.php",
+            "pagefile":   "attr/gasadalur.php",
             "previewimg": "attr/gásadalur.jpg",
             "weather":    "Færøyene/Vágar/Gásadalur/",
             "tags":       ["Things to do"]
         },
         {
             "name":       "Slættaratindur",
-            "pagefile":   "attr/slættaratindur.php",
+            "pagefile":   "attr/slaettaratindur.php",
             "previewimg": "attr/slættaratindur.jpg",
             "weather":    "Færøyene/Eysturoy/Slættaratindur/",
             "tags":       ["Things to do"]
@@ -97,7 +97,7 @@
         },
         {
             "name":       "Hotel Føroyar",
-            "pagefile":   "attr/hotelføroyar.php",
+            "pagefile":   "attr/hotelfoeroyar.php",
             "previewimg": "attr/hotelføroyar.jpeg",
             "weather":    "Færøyene/Streymoy/Tórshavn/",
             "tags":       ["Hotel", "Food"]
