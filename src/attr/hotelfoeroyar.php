@@ -1,15 +1,61 @@
-<h1> HOTEL FØROYAR </h1>
-
-<img src="attr/hotelf%C3%B8royar.jpeg" style="float: right"/>
-
-Hotel Føroyar (formerly Hotel Borg) is a four-star hotel above the Faroese capital of Tórshavn. Next to the Hotel Hafnia, it is the only four-star hotel in the country as well as its largest hotel with 216 beds.
+<h1>HOTEL FØROYAR</h1>
+This stunning 4-star hotel is located on a hillside with impressive views of the capital. It includes a restaurant and a cosy lobby bar, and provides 5-star conference facilities.
 <br><br>
-A hotel of the same name existed at least before 1968, when it was used for local conferences and meetings by the Viking Congress. The current hotel was established in May 1983 as Hotel Føroyar, later named Hotel Borg, when shipowner Jákup Joensen (also called Jákup í Lopra) bought the hotel. The distinct building, a flat construction with a traditional grass roof and 216 beds, was designed by architects Friis & Moltke from Denmark.
+Hotel Føroyar has plenty of well-equipped conference rooms suitable for small and large meetings and conferences. It offers conference rooms from 2-400 guests.
 <br><br>
-In 1991, the shipping company Smyril Line purchased the hotel and changed its name back to Hotel Føroyar. However the hotel was sold to a group of the hotel's staff in 2005, it was sold for the benefit of refinancing the modern ferry line Norröna. The hotel restaurant, Restaurant KOKS, run by chef Leif Sørensen, serves international and Faroese cuisine, and has been cited by the Nordic Council of Ministers as the "best restaurant on the Faroe Islands". The buffet of the restaurant regularly serves traditional Faroese meat dishes such as skerpikjøt (dried mutton), dried whale meat, dried fish and blubber. The hotel is also regularly used for local and international conferences and events conferences, particularly by organizations operating between the Nordic countries, and weddings. It also organizes horse riding trips into the countryside for its guests.
+Hotel Føroyar has 106 rooms, all with the same splendid panoramic view over the capital Tórshavn, the island Nólsoy and the North Atlantic Ocean.
 <br><br>
+In 2009 all guest rooms were refurbished. The design is harmonic with the nature and scenery outside every window. The hotel has chosen to use Montana and Philippe Starck design and welcomes you to the only design hotel in the Faroe Islands. The rooms are light with big windows. All double rooms are the same size and are equally equipped.
+<br><br>
+<h3>MEETING FACILITIES</h3>
+<ul>
+9 rooms with capacity for 2 – 400 pax
+Plenum room: 4
+Break-out room: 2
+Group room: 9
+WIFI: Yes – Free
+Other: 0 km to nature
+Services for people with physical handicap: Yes
+Parking your car in the Hotel Føroyar car park is free of charge. The car park has 100 parking spaces.
+</ul>
 
-<h4>Address:</h4>
-Hotel Føroyar<br>
-Oyggjarvegur 45<br>
-FO-100 Tórshavn<br>
+<br><br>
+<h3>ROOMS AT HOTEL FØROYAR</h3>
+<ul>
+<li>Clinton Suite</li>
+<li>Prime Minister’s Suite</li>
+<li>2 Wedding Suites</li>
+<li>98 Double rooms</li>
+<li>2 Family rooms</li>
+<li>2 Combined family/handicap rooms</li>
+</ul>
+
+<br><br>
+<h3>ROOM EQUIPMENT</h3>
+<ul>
+<li>Free Internet</li>
+<li>Private toilet with bathtub</li>
+<li>Hairdryer</li>
+<li>Minibar</li>
+<li>Telephone</li>
+<li>Radio</li>
+<li>Bed / table / chair</li>
+<li>Iron / Ironing board</li>
+<li>Digital TV (10 channels) / Satelite TV / Pay</li>
+</ul>
+
+<br><br>
+<h3>QUICK FACTS</h3>
+<ul>
+<li>Airport: 49 km</li>
+<li>City Centre: 1, 65 km</li>
+<li>Hotel classification: 4 star</li>
+<li>Conference classification: 5 star</li>
+<li>Room capacity: 106</li>
+<li>Bed capacity: 212</li>
+<li>Restaurants: 1 (+ 1 café)</li>
+<li>Fitness area: 1</li>
+<li>Coffee and tea facilities</li>
+<li>Opened: 1983</li>
+</ul>
+<br><br>
