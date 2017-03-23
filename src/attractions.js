@@ -6,7 +6,6 @@ function init(){
 
         updateContent();
     });
-
 }
 
 function updateContent(){
