@@ -10,14 +10,14 @@
 }
 
 #slide1 {
-    background-image: url("attr/birdwatching.jpg");
+    background-image: url("attr/birdwatching.ss.jpg");
     display: block;
 }
 #slide2 {
-    background-image: url("attr/g%C3%A1sadalur.jpg");
+    background-image: url("attr/g%C3%A1sadalur.ss.jpg");
 }
 #slide3 {
-    background-image: url("attr/kirkjub%C3%B8argar%C3%B0ur.jpg");
+    background-image: url("attr/kirkjub%C3%B8argar%C3%B0ur.ss.jpg");
 }
 
 #prev, #next {
