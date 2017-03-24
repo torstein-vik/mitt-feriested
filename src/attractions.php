@@ -50,7 +50,7 @@
                     <div class="comment">
                         <h3> <?php echo($comment['title']); ?></h3>
                         <h4><?php echo($comment["username"].($comment['privilege'] == 'admin' ? " [admin]" : "")." - ".date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"])); ?></h4>
-                        <p><?php echo($comment["content"]);?></p>
+                        <p><?php echo(nl2br($comment["content"]));?></p>
                     </div>
                 <?php
             }
@@ -60,7 +60,7 @@
                 <form method="POST" action="api?type=addcomment&a=<?php echo $_GET["a"]; ?>">
                     <h2>Leave a comment!</h2><br>
                     <input class="grey" style="border-radius: 5px 5px 0 0" name="title" type="text" placeholder="title">
-                    <textarea name="comment" placeholder="comment"> </textarea>
+                    <textarea name="comment" placeholder="comment"></textarea>
                     <input type="submit" value="Add comment">
                 </form>
             <?php
