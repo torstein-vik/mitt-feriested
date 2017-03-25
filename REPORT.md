@@ -77,3 +77,171 @@ Tags er de kategoriene attraksjonene kan være i. Vi tilater at en attraksjon ka
 #### tagselections
 
 Tagselections er databasen over 'utvalg' av kategorier (siden vi tilater flere). Denne tabellen sin primærnøkkel er bygd opp av attractionid og tagid, som også er fremmednøkler til attractions og tags henholdsvis.
+
+# Mappe- og filstruktur:
+
+### Mapper
+
+##### /
+Dette er rootmappa. Den inneholder noen grunnleggende beskrivelsesfiler
+
+##### /database
+Inneholder filer relatert til beskrivelse, fornying, og opprettholding av databasen
+
+##### /domain name
+Inneholder filer relatert til valg av domenenavn
+
+##### /palette
+Inneholder fargepaletten
+
+##### /ssl certificate
+Inneholder filer relatert til ssl-sertfikat
+
+##### /src/
+Denne mappa inneholder selve kildekoden. src er også mappa som virtual host-en peker til
+
+##### /src/res/
+Denne mappa inneholder bilder og logoer
+
+##### /src/attr/
+Denne mappa inneholder php-filer med innhold og en preview image for alle attraksjonene. Vi lister ikke opp disse filene under, siden det er veldig mange
+
+### Filer
+
+##### LICENSE
+Lisensfil. Dette prosjektet er under GPL 3.0
+
+##### README.md
+Readme fil, kort beskrivelse og installeringsintruksjoner
+
+##### REPORT.md
+Rapportfil. Altså denne filen
+
+##### database/attractions.json
+Json fil av attraksjoner og kategorier
+
+##### database/create_attractions.sql
+SQL fil som legger in alle attraksjonene
+
+##### database/create_attractions_sql_file.js
+Javascript (Nodejs) fil som gjør attractions.json om til create_attractions.sql
+
+##### database/create_database.sql
+SQL fil som lager databasen
+
+##### database/database_model.mwb
+Databasemodellfil
+
+##### database/database_model.mwb.bak
+Backup av databasemodellfilen
+
+##### domain name/domain.md
+Inneholder domenenavnet
+
+##### domain name/domain.png
+Bilde av at domenet var ledig
+
+##### palette/palette.pdf
+Fargepaletten vår
+
+##### src/api.php
+API-en for å interagere med databasen. Brukes til login/registrering, legge til/slette kommentarer, hente inn attraksjoner gitt kategorier
+
+##### src/attractions.css
+CSS-fil for attractions-siden
+
+##### src/attractions.js
+Javascript for å hente inn attractions med ajax og for å få kategoriknappene til å fungere
+
+##### src/attractions.php
+Siden som lar deg browse attraksjoner
+
+##### src/contact.css
+Stylesheet for contact-siden
+
+##### src/contact.php
+En liten kontakt-side, med github og fake mailadresser
+
+##### src/home.css
+Stylesheet for home
+
+##### src/home.js
+Javascript for slideshow
+
+##### src/home.php
+Hjemmesida, med litt fakta og bilde
+
+##### src/index.css
+Stylesheet for alle sidene
+
+##### src/index.php
+Hovedfila som alle andre sider går gjennom, unntatt api. Legger til nav, boksen i midten, og mye annet backend
+
+##### src/login.js
+Javascript for loginsida, sender ajax når man logger inn, og viser feilmeldinger. Omdirigerer også etter suksess
+
+##### src/login.php
+Sida hvor man kan logge seg inn
+
+##### src/logout.php
+Side som logger deg ut
+
+##### src/mypage.css
+Stylesheet for mypage
+
+##### src/mypage.js
+Javascript for mypage som setter ut en bekreftelsesboks for å slette kommentarer
+
+##### src/mypage.php
+Mypage, som lar deg se over og slette kommentarer
+
+##### src/notfound.php
+Notfound, som kommer opp når man går til en side som ikke finnes (både på ?page= og ellers)
+
+##### src/register.js
+Javascript for å kjøre ajax og vise feilmeldinger på registrering
+
+##### src/register.php
+Side for å registrere seg som bruker
+
+##### src/res/birdwatching.ss.jpg
+Slideshowbilde av fugler
+
+##### src/res/black_logo.png
+En svart logo/vannmerke å ha i høyre bunn av nettsida
+
+##### src/res/favicon.png
+icon-et til nettsida
+
+##### src/res/gásadalur.ss.jpg
+Slideshowbilde av gásadulur
+
+##### src/res/kirkjubøargarður.ss.jpg
+Slideshowbilde av kirkjubøargarður
+
+##### src/res/logo_transparent_text.png
+Hovedlogoen, som er i øvre ventre hjørne
+
+##### src/slideshow.php
+Slideshow, del av hjemmesida utenfor boksen (loada inn som external i index.php)
+
+##### ssl certificate/faroeadventures.com.crt
+ssl-serfikat for nettsida
+
+##### ssl certificate/faroeadventures.com.csr
+ssl-sertfikat signerings-forespørsel, klart for godkjenning av en CA, samt public key
+
+##### ssl certificate/faroeadventures.com.key
+Kryptert RSA privatnøkkel for nettsida
+
+##### ssl certificate/faroeadventures.com.nopass.key
+Ukryptert RSA privatnøkkel for nettsida
+
+##### ssl certificate/root.ca.crt
+ssl-serfikat for oss som bedrift
+
+##### ssl certificate/root.ca.key
+Kryptert RSA privatnøkkel for oss som bedrift
+
+##### ssl certificate/root.srl
+Serienummer for vår certificate request
