@@ -47,9 +47,9 @@
 
 function commentField($conn, $userid, $header, $emptymsg, $allcomments){
     if($allcomments){
-        $comment_sql = "SELECT tips.tipid, attractions.name, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title, users.username, users.privilege, users.userid FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tips`, `mitt-feriested`.`users` WHERE attractions.attractionid=tips.attractionid AND users.userid=tips.userid ORDER BY tips.timestamp DESC;";
+        $comment_sql = "SELECT tips.tipid, attractions.attractionid, attractions.name, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title, users.username, users.privilege, users.userid FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tips`, `mitt-feriested`.`users` WHERE attractions.attractionid=tips.attractionid AND users.userid=tips.userid ORDER BY tips.timestamp DESC;";
     } else {
-        $comment_sql = "SELECT tips.tipid, attractions.name, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tips` WHERE attractions.attractionid=tips.attractionid AND tips.userid=".$userid." ORDER BY tips.timestamp DESC;";
+        $comment_sql = "SELECT tips.tipid, attractions.attractionid, attractions.name, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tips` WHERE attractions.attractionid=tips.attractionid AND tips.userid=".$userid." ORDER BY tips.timestamp DESC;";
     }
 
     $comment_query = $conn->query($comment_sql);
@@ -74,7 +74,7 @@ function commentField($conn, $userid, $header, $emptymsg, $allcomments){
         foreach($comments as $comment){
             ?>
                 <div class="comment">
-                    <h3> <?php echo($comment['title']) ?></h3>
+                    <h3> <a href='/?page=attractions&a=<?php echo $comment["attractionid"];?>#comment<?php echo $comment["tipid"];?>'><?php echo($comment['title']) ?></a></h3>
                     <?php
                     if($allcomments){
                         $userlink = "<a href='?page=mypage&userid=".$comment["userid"]."'> ".$comment["username"].($comment['privilege'] == 'admin' ? " [admin]" : "")."</a>";
