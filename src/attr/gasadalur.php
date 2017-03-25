@@ -4,13 +4,11 @@
         Hike along the old village path to the beautiful village of gásadalur, which was one of the
         most isolated villages in the faroe islands until a few years ago.
     </p>
-    <br>
     <p>
         The route starts in the valley about three kilometres west of the village of Bøur. The path
         begins about one kilometre south (or left) of the tunnel entrance. You can see the path,
         which meanders up the Gásadalsbrekkan.
     </p>
-    <br>
     <p>
         Gásadalur has been one of the most isolated villages in the Faroes. It is difficult to get
         to the village by sea and it was not until 2004 that the village was connected to the rest
@@ -18,14 +16,12 @@
         path when they had to go to the neighbouring villages to trade or for other errands. The
         helicopter service began in 1983.
     </p>
-    <br>
     <p>
         The first stretch of the path is steep and runs close to the edge of the mountain. Therefore,
         walk extremely carefully, but do not forget to enjoy the outstanding view over Sørvágsfjørður,
         Tindhólmur, Gáshólmur and Mykines. In 2014, two men managed to climb all fives peaks of
         Tindhólmur.
     </p>
-    <br>
     <p>
         There is no church in Gásadalur so the school is used for services. The cemetery is from 1873.
         Before then, people were burried in Bøur and so the coffin had to be carried over the mountain
@@ -37,7 +33,6 @@
         not gain salvation if you die unbaptised. Therefore, the priest, who was travelling with them,
         quickly blessed the spring and baptised the baby.
     </p>
-    <br>
     <p>
         When you continue, you will see Risasporið. There is a legend about two giants. One lived
         in Gásadalur and the other in Mykines. Once, they quarrelled and the Gásadalur giant wanted
@@ -45,7 +40,6 @@
         and with one leap, he landed on Mykines. He took off so hard that you can see his footprint
         to this day.
     </p>
-    <br>
     <p>
         From Skarði, the path twists down the mountainside to the village. Beware of loose stones!
         The view down to Gásadalur is one of the most beautiful sights you can experience. The small,
@@ -53,13 +47,22 @@
         Árnafjall, which, with its 722 metres, is the tallest mountain on Vágar. In the village,
         there are ruins from the Middle Ages, called Uppi við Garð and Gæsutoftir.
     </p>
-    <br>
     <h2>Facts</h2>
-    <strong>Duration:</strong> 2t 30min<br>
-
-    <strong>Distance:</strong> 3,5 km<br>
-
-    <strong>Maximum height:</strong> 434 m<br>
-
-    <strong>Special comments:</strong> Be extra careful on the way down towards Gásadalur, as there are many loose stones, especially if you travel in a group<br>
+    <table>
+        <tr class="grey">
+            <th>Duration</th>
+            <td>2t 30min</td>
+        </tr>
+            <th>Distance</th>
+            <td>3,5 km</td>
+        </tr>
+        <tr class="grey">
+            <th>Maximum height</th>
+            <td>434 m</td>
+        </tr>
+        <tr>
+            <th>Tip</th>
+            <td>Be extra careful on the way down towards Gásadalur, as there are many loose stones</td>
+        </tr>
+    </table>
 </div>
