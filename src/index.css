@@ -207,6 +207,10 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     background-color: #3d83a9;
 }
 
+textarea {
+    font-family: sans-serif;
+}
+
 
 /* Error message */
 

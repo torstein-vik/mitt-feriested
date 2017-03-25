@@ -1,13 +1,11 @@
 <div class="attractionsText">
     <h1>Bøur Gásadalur</h1>
+    <?php
+        echo "<img style='width:100%;margin: 20px 0' src='".$attraction["previewimg"]."'> </img>";
+    php?>
     <p>
         Hike along the old village path to the beautiful village of gásadalur, which was one of the
         most isolated villages in the faroe islands until a few years ago.
-    </p>
-    <p>
-        The route starts in the valley about three kilometres west of the village of Bøur. The path
-        begins about one kilometre south (or left) of the tunnel entrance. You can see the path,
-        which meanders up the Gásadalsbrekkan.
     </p>
     <p>
         Gásadalur has been one of the most isolated villages in the Faroes. It is difficult to get
@@ -33,25 +31,11 @@
         not gain salvation if you die unbaptised. Therefore, the priest, who was travelling with them,
         quickly blessed the spring and baptised the baby.
     </p>
-    <p>
-        When you continue, you will see Risasporið. There is a legend about two giants. One lived
-        in Gásadalur and the other in Mykines. Once, they quarrelled and the Gásadalur giant wanted
-        to go to Mykines to settle the dispute. He took running leaps along the mountain, took off,
-        and with one leap, he landed on Mykines. He took off so hard that you can see his footprint
-        to this day.
-    </p>
-    <p>
-        From Skarði, the path twists down the mountainside to the village. Beware of loose stones!
-        The view down to Gásadalur is one of the most beautiful sights you can experience. The small,
-        beautiful village is surrounded by green infield with harsh high mountains. One of them is
-        Árnafjall, which, with its 722 metres, is the tallest mountain on Vágar. In the village,
-        there are ruins from the Middle Ages, called Uppi við Garð and Gæsutoftir.
-    </p>
     <h2>Facts</h2>
     <table>
         <tr class="grey">
-            <th>Duration</th>
-            <td>2t 30min</td>
+            <th style="border-radius: 5px 0 0 0;">Duration</th>
+            <td style="border-radius: 0 5px 0 0;">2t 30min</td>
         </tr>
             <th>Distance</th>
             <td>3,5 km</td>
@@ -61,8 +45,8 @@
             <td>434 m</td>
         </tr>
         <tr>
-            <th>Tip</th>
-            <td>Be extra careful on the way down towards Gásadalur, as there are many loose stones</td>
+            <th style="border-radius: 0 0 0 5px;">Tip</th>
+            <td style="border-radius: 0 0 5px 0;">Be extra careful on the way down towards Gásadalur, as there are many loose stones</td>
         </tr>
     </table>
 </div>

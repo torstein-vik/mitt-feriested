@@ -71,7 +71,7 @@
 }
 
 
-/* Attractions */
+/* Attractions menu */
 
 #attractions {
     display: flex;
@@ -116,8 +116,21 @@
     max-width: 600;
 }
 
+h1, h2 {
+    padding: 20px 0 10px;
+}
+
+.pagecontent p {
+    padding: 15px 0;
+}
+
 table {
     border-collapse: collapse;
+    font-size: 20px;
+}
+
+th, td {
+    padding: 10px;
 }
 
 tr {
@@ -126,6 +139,7 @@ tr {
 
 th {
     width: 200px;
+    text-align: left;
 }
 
 td {
