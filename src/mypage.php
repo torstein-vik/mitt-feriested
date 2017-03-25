@@ -36,7 +36,7 @@ $comment_query = $conn->query("SELECT tips.tipid, attractions.name, UNIX_TIMESTA
                         </p>
                     </div>
 
-                    <a  class="deletecomment" href="/api?type=deletecomment&tipid=<?php echo $comment["tipid"];?>">
+                    <a  class="deletecomment" tipid="<?php echo $comment["tipid"];?>">
                         <div>
                             Click here to delete this comment
                         </div>
