@@ -40,7 +40,7 @@
             $comments[] = $row;
         }
 
-        echo '<div id="comments">';
+        echo '<div class="comments">';
             if($comment_query->num_rows > 0){
                 echo "<h2> Comments about ".$attraction["name"].": </h2>";
             }
