@@ -110,11 +110,25 @@
 
 /* Attraction page */
 
-.pagecontent{
+.pagecontent {
     line-height: 2;
     margin: 0 auto;
     max-width: 600;
 }
+
+table {
+    border: none;
+}
+
+tr {
+    background-color: white;
+}
+
+tr th, tr td {
+    max-width: 300px;
+}
+
+
 
 #weather{
     margin: 0 auto;
@@ -126,6 +140,7 @@
     text-align: left;
     margin-bottom: 20px;
 }
+
 
 /* Responsive designe */
 

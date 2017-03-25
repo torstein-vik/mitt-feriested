@@ -15,7 +15,6 @@
         $admin = $_SESSION["admin"];
     }
 
-
     if(isset($_GET["type"])){
         $type = $_GET["type"];
     } else {
@@ -24,55 +23,50 @@
 
     if($type == "attractions"){
 
-            $query = $conn->query("SELECT * FROM `mitt-feriested`.`tags`");
+        $query = $conn->query("SELECT * FROM `mitt-feriested`.`tags`");
 
-            $tags = [];
-            while($row = $query->fetch_assoc()){
-                $tags[] = $row;
+        $tags = [];
+        while($row = $query->fetch_assoc()){
+            $tags[] = $row;
+        }
+
+        $flags = $_GET["flags"];
+
+        $ntags = [];
+
+        foreach($tags as $tag){
+            if($flags >> ($tag["tagid"] - 1) & 1 == 1){
+                $ntags[] = $tag;
             }
+        }
 
+        $query2string = "SELECT attractions.attractionid, attractions.previewimg, attractions.name FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tagselections` WHERE attractions.attractionid = tagselections.attractionid AND ( ";
 
+        foreach($ntags as $tag){
+            $query2string .= "tagselections.tagid=".$tag["tagid"]." OR ";
+        }
 
-            $flags = $_GET["flags"];
+        $query2string .= "1 = 0 ) GROUP BY attractions.attractionid";
 
-            $ntags = [];
+        $query2 = $conn->query($query2string);
 
-            foreach($tags as $tag){
-                if($flags >> ($tag["tagid"] - 1) & 1 == 1){
-                    $ntags[] = $tag;
-                }
-            }
+        if(!$query2){
+            echo $conn->error;
+        }
 
-            $query2string = "SELECT attractions.attractionid, attractions.previewimg, attractions.name FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tagselections` WHERE attractions.attractionid = tagselections.attractionid AND ( ";
+        $attractions = [];
+        while($row = $query2->fetch_assoc()){
+            $attractions[] = $row;
+        }
 
-
-            foreach($ntags as $tag){
-                $query2string .= "tagselections.tagid=".$tag["tagid"]." OR ";
-            }
-
-            $query2string .= "1 = 0 ) GROUP BY attractions.attractionid";
-
-            $query2 = $conn->query($query2string);
-
-            if(!$query2){
-                echo $conn->error;
-            }
-
-            $attractions = [];
-            while($row = $query2->fetch_assoc()){
-                $attractions[] = $row;
-            }
-
-            foreach($attractions as $attraction){
-                echo "<div>";
-                echo "<a class='attraction' href='?page=".($_GET["redir"])."&a=".($attraction["attractionid"])."'>";
-                echo "<img class='attractionpreview' src='".$attraction["previewimg"]."'/>";
-                echo "<h3>".$attraction["name"]."</h3>";
-                echo "</a>";
-                echo "</div>";
-            }
-
-
+        foreach($attractions as $attraction){
+            echo "<div>";
+            echo "<a class='attraction' href='?page=".($_GET["redir"])."&a=".($attraction["attractionid"])."'>";
+            echo "<img class='attractionpreview' src='".$attraction["previewimg"]."'/>";
+            echo "<h3>".$attraction["name"]."</h3>";
+            echo "</a>";
+            echo "</div>";
+        }
 
     } else if($type == "addcomment" and isset($_SESSION["userid"])){
 

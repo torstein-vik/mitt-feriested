@@ -1,13 +1,11 @@
 <div class="attractionsText">
     <h1>Diving - a magnificent underwater world</h1>
-    <br>
     <p>
         Diving as an activity is becoming more and more popular in the Faroe Islands. The beautiful,
         varied and unspoilt seabed found in the crystal clear water surrounding the 18 islands is
         simply very special. The excellent diving sites provide a great platform for exploring seaweed
         forests, fantastic drop-offs and grottos with exciting animal life.
     </p>
-    <br>
     <p>
         The temperature of the water around the Faroes varies from four to 10 degrees Celsius,
         depending on the season. Visibility is best in the winter months, when the water temperature
@@ -18,7 +16,6 @@
         flare up. However, visibility in general varies a great deal and even during the summer, it
         can reach 15-20 metres.
     </p>
-    <br>
     <h2>Never dive alone</h2>
     <p>
         It is of great importance that you never dive alone. Make sure you are always dive with
@@ -26,7 +23,6 @@
         dive. There are diving courses for beginners available around the islands. Certified divers
         can hire equipment.
     </p>
-    <br>
     <p>
         Make sure to bring a torch for every dive, so that you can explore cracks and look under
         rocks and fully appreciate the splendid colours and nuances of the flora and fauna. Who knows,
