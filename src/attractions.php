@@ -16,6 +16,8 @@
         $attraction = $attractions[$_GET["a"]];
 
         echo "<div class='pagecontent'>";
+        echo "<img style='width:100%;margin: 20px 0' src='".$attraction["previewimg"]."'> </img>";
+
         include($attraction["pagefile"]);
         echo "</div>";
 
