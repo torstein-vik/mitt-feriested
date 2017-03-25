@@ -12,13 +12,13 @@
         <h1> Congrats </h1>
     <?php
     } else {
-        commentField($conn, $userid, "Your comments:");
+        commentField($conn, $userid, "Your comments:", '<p style="padding:20px;font-size:20px;">You may now leave comments on <a href="?page=attractions">attractions</a>!</p>');
     }
 ?>
 
 <?php
 
-function commentField($conn, $userid, $header){
+function commentField($conn, $userid, $header, $emptymsg){
     $comment_query = $conn->query("SELECT tips.tipid, attractions.name, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tips` WHERE attractions.attractionid=tips.attractionid AND tips.userid=".$userid." ORDER BY tips.timestamp DESC;");
 
     if(!$comment_query){
@@ -32,10 +32,10 @@ function commentField($conn, $userid, $header){
     }
 
     echo '<div id="comments">';
-        echo "<h1>$header</h1>";
-        if($comment_query->num_rows > 0){
+        if($comment_query->num_rows == 0){
+            echo $emptymsg;
         } else {
-            ?><p style="padding:20px;font-size:20px;">You may now leave comments on <a href="?page=attractions">attractions</a>!</p><?php
+            echo "<h1>$header</h1>";
         }
 
         foreach($comments as $comment){
