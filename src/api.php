@@ -114,6 +114,45 @@
             return;
         }
 
+    } else if($type == "ban" and isset($_GET["userid"])){
+
+        $subUserid = $conn->real_escape_string($_GET["userid"]);
+
+        if ($admin){
+            $queryDelSQL = "DELETE FROM `mitt-feriested`.`users` WHERE userid=".$subUserid;
+            $queryDelSQL = "DELETE FROM `mitt-feriested`.`tips` WHERE userid=".$subUserid;
+
+            $queryDel = $conn->query($queryDelSQL);
+
+            if(!$queryDel){
+                echo $conn->error;
+            } else {
+                echo "success";
+            }
+
+            return;
+        }
+
+
+    } else if($type == "regrade" and isset($_GET["userid"]) and isset($_GET["npriv"])){
+
+        $subUserid = $conn->real_escape_string($_GET["userid"]);
+        $npriv = $conn->real_escape_string($_GET["npriv"]);
+
+        if ($admin){
+            $queryRegradeSQL = "UPDATE `mitt-feriested`.`users` SET privilege = '".$npriv."' WHERE userid=".$subUserid;
+
+            $queryRegradeSQL = $conn->query($queryRegradeSQL);
+
+            if(!$queryRegradeSQL){
+                echo $conn->error;
+            } else {
+                echo "success";
+            }
+
+            return;
+        }
+
     } else if($type == "login"){
         if(isset($_POST["username"]) and isset($_POST["password"])){
             $username = $conn->real_escape_string($_POST["username"]);
@@ -198,6 +237,9 @@
                 return;
             }
 
+        } else {
+            echo "unrecognized";
+            return;
         }
     } else {
         echo "what do you think you're doing?";
