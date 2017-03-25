@@ -167,9 +167,9 @@
                 </div>
                 <nav id="mainNav">
                     <ul>
-                        <li navid=0><a href="?page=home"> Home </a></li>
-                        <li navid=1><a href="?page=attractions"> Attractions &amp; Travel </a></li>
-                        <li navid=2><a href="?page=contact"> Contact </a></li>
+                        <li navid=0><a href="/?page=home"> Home </a></li>
+                        <li navid=1><a href="/?page=attractions"> Attractions &amp; Travel </a></li>
+                        <li navid=2><a href="/?page=contact"> Contact </a></li>
                     </ul>
                 </nav>
                 <nav id="userNav">
@@ -177,13 +177,13 @@
                         <?php
                         if($auth) {
                             ?>
-                            <li navid=3><a style="padding-left: 60px;" href='?page=mypage'> My page </a></li>
-                            <li navid=4><a href='?page=logout'> Log out </a></li>
+                            <li navid=3><a style="padding-left: 60px;" href='/?page=mypage'> My page </a></li>
+                            <li navid=4><a href='/?page=logout'> Log out </a></li>
                             <?php
                         } else {
                             ?>
-                            <li navid=5><a style="padding-left: 60px;" href='?page=register'> Register </a></li>
-                            <li navid=6><a href='?page=login'> Log in </a></li>
+                            <li navid=5><a style="padding-left: 60px;" href='/?page=register'> Register </a></li>
+                            <li navid=6><a href='/?page=login'> Log in </a></li>
                             <?php
                         }
                         ?>

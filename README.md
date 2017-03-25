@@ -10,6 +10,7 @@ School project in IT1 with Johannes Hansen Aas
 * Run create_database.sql to create the database
 * Make sure your sql editor of choice allows you to delete all rows in a table (For MySQLWorkbench, Go to Edit -> Preferences -> "SQL Editor" -> "Other" -> uncheck "Safe Updates". Then go to Query -> Reconnect to Server)
 * Run create_attractions.sql
+* In httpd.conf, set "ErrorDocument 404 /?page=notfound". (Find line and uncomment)
 
 ## To create SSL sertificate (HTTPS):
 

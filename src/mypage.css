@@ -1,6 +1,7 @@
 .deletecomment {
     text-decoration: none;
     color: aliceblue;
+    cursor: pointer;
 }
 
 .deletecomment div {
