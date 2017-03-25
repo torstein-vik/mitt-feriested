@@ -15,3 +15,13 @@
 .deletecomment div:hover {
     background-color: #f44336;
 }
+
+#users{
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#users h1{
+    margin-bottom: 20px;
+}
