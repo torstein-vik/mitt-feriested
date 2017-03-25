@@ -8,7 +8,7 @@ html {
     position: relative;
 }
 
-body{
+body {
     font-family: 'Open Sans', sans-serif;
     background-color: lightgrey;
 }
@@ -24,7 +24,6 @@ header {
     background-color: aliceblue;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
-
 
 #logo {
     height: 100px;
@@ -173,7 +172,7 @@ main {
     text-align: center;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], textarea {
     padding: 15px 20px;
     font-size: 20px;
     border: white solid 5px;
@@ -182,7 +181,8 @@ input[type="text"], input[type="password"] {
 }
 
 input[type="text"]:focus,
-input[type="password"]:focus {
+input[type="password"]:focus,
+textarea:focus {
     border-bottom-color: #6f961b !important;
     font-size: 30px;
 }
