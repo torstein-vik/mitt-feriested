@@ -2,11 +2,11 @@
 
 ### Goals
 
-Målet er å fremme færøyene som et aktuellt reisemål for naturinterreserte i alderen fra 15 til 25.
+Målet er å fremme Færøyene som et aktuelt reisemål for Naturinteresserte i alderen fra 15 til 25.
 
 ### Audience
 
-Naturinterreserte i alderen fra 15 til 25.
+Naturinteresserte i alderen fra 15 til 25.
 
 ### Scope
 
@@ -17,9 +17,9 @@ vet da fan....
 * Først drøftet vi valg av feriested
 * Deretter drøftet vi valg av målgruppe
 * Deretter ble vi enig om en tolkning av krav-listen
-* Deretter drøftet vi valg av verktøy. Vi kom fram til å bruk en repo på github ([https://github.com/torstein-vik/mitt-feriested](https://github.com/torstein-vik/mitt-feriested)), og det vi ville lokalt (vi begge brukte brackets på grunn av at det er optimalt for git, og generellt sett en veldig bra tekstredigator)
+* Deretter drøftet vi valg av verktøy. Vi kom fram til å bruke en repo på github ([https://github.com/torstein-vik/mitt-feriested](https://github.com/torstein-vik/mitt-feriested)), og det vi ville lokalt (vi begge brukte brackets på grunn av at det er optimalt for git, og generelt sett en veldig bra tekstredigerer)
 * Deretter ble vi enig om en grov arbeidsfordeling (vi har så klart samarbeidet mye)
-  * Torstein har hovedansvar for prosjektstrukutr, backend (inkl. database), og javascript
+  * Torstein har hovedansvar for prosjektstruktur, backend (inkl. database), og javascript
   * Johannes har hovedansvar for design og stylesheets, samt den lokale DOM-strukturen
   * Delt ansvar for innhold
 * Deretter ble vi enig om følgende tidskjema:
@@ -42,7 +42,7 @@ vet da fan....
   15. Knytte sammen alle løse tråder, fullføre prosjektet
   16. Rigorøse tester
   
-    Å faktisk følge dette tidsskjemaet er såklart veldig ineffektivt, siden Johannes må vente helt til Torstein er ferdig før han kan begynne på design. Derfor er det underforstått at design og backend har gått hånd i hånd. Innhold ventet vi likevel med helt til vi var ferdig.
+    Å faktisk følge dette tidsskjemaet er så klart veldig ineffektivt, siden Johannes må vente helt til Torstein er ferdig før han kan begynne på design. Derfor er det underforstått at design og backend har gått hånd i hånd. Innhold ventet vi likevel med helt til vi var ferdig.
 
 Mot slutten brukte vi github issues for å holde orden på hva som gjensto. Nettsiden ble til slutt rigorøst testet, både mot hacking og brukerfeil. Vi fant noen få småproblemer, som vi fikset.
 
@@ -54,15 +54,15 @@ Her er et bilde:
 
 På github ([https://github.com/torstein-vik/mitt-feriested](https://github.com/torstein-vik/mitt-feriested)) finner man også en .mwb fil for databasemodellen.
 
-Som du man se er det 5 tabeller:
+Som man kan se er det 5 tabeller:
 
 #### users
 
-Users er tabellen over brukere. Den inneholder simpelthen en unik id som primærnøkkel, et brukernavn, en privilege (enten admin eller user, futureproofing dersom vi etterhvert ønsker å ha admins), og passhash og passsalt. Passsalt er unik tilfeldig sekvens av bytes som har som hensikt å gjør passhash unik selv om flere brukere har samme passord. Passhash er en sha256 hashing av passordet og dette saltet. Denne typen passordsikkerhet er ganske moderne og trygg (frem til noen bruker passorder 'passord123').
+Users er tabellen over brukere. Den inneholder simpelthen en unik id som primærnøkkel, et brukernavn, en privilege (enten admin eller user, future proofing dersom vi etterhvert ønsker å ha admins), og passhash og passsalt. Passsalt er unik tilfeldig sekvens av bytes som har som hensikt å gjøre passhash unik selv om flere brukere har samme passord. Passhash er en sha256 hashing av passordet og dette saltet. Denne typen passordsikkerhet er ganske moderne og trygg (frem til noen bruker passordet 'passord123').
 
 #### attractions
 
-attractions er tabellen over attraksjoner. Dette er del av databasen delvis for å kunne spesifiere hvilken attraksjon et reisetips tilhører, men også for å ha færre linjer med kode. Den inneholder attractionid som primærnøkkel, name, som er et kort navn på attraksjonen, pagefile, som er den php-filen som inneholder fakta om attraksjonen, previewimg, som er bildet/logoen som brukes i listen over attraksjoner, og weather, som er hvilken plass vi skal måle vær for.
+attractions er tabellen over attraksjoner. Dette er del av databasen delvis for å kunne spesifisere hvilken attraksjon et reisetips tilhører, men også for å ha færre linjer med kode. Den inneholder attractionid som primærnøkkel, name, som er et kort navn på attraksjonen, pagefile, som er den php-filen som inneholder fakta om attraksjonen, previewimg, som er bildet/logoen som brukes i listen over attraksjoner, og weather, som er hvilken plass vi skal måle vær for.
 
 Vi har laget et lite minisystem for å legge disse attraksjonene inn i databasen. Først endrer vi på attractions.json. Dette er et veldig lett leselig og redigerbart dokument. Deretter kjører vi create_attractions_sql_file.js i nodejs for å lage create_attractions.sql, som er en sql fil som legger inn de riktige attraksjonene (med kategori som vi skal se på senere).
 
@@ -72,11 +72,11 @@ Tips er databasen over kommentarer. Feltene er tipid, primærnøkkelen, userid, 
 
 #### tags
 
-Tags er de kategoriene attraksjonene kan være i. Vi tilater at en attraksjon kan være i flere kategorier samtidig (f.eks. hotel føroyar er både hotell og restaurant), men tags er bare tabellen over selve kategoriene. Kolonnene er tipid, primærnøkkelen, og name, et kort navn til kategorien.
+Tags er de kategoriene attraksjonene kan være i. Vi tillater at en attraksjon kan være i flere kategorier samtidig (f.eks. hotel føroyar er både hotell og restaurant), men tags er bare tabellen over selve kategoriene. Kolonnene er tipid, primærnøkkelen, og name, et kort navn til kategorien.
 
 #### tagselections
 
-Tagselections er databasen over 'utvalg' av kategorier (siden vi tilater flere). Denne tabellen sin primærnøkkel er bygd opp av attractionid og tagid, som også er fremmednøkler til attractions og tags henholdsvis.
+Tagselections er databasen over 'utvalg' av kategorier (siden vi tillater flere). Denne tabellen sin primærnøkkel er bygd opp av attractionid og tagid, som også er fremmednøkler til attractions og tags henholdsvis.
 
 # Mappe- og filstruktur:
 
@@ -95,7 +95,7 @@ Inneholder filer relatert til valg av domenenavn
 Inneholder fargepaletten
 
 ##### /ssl certificate
-Inneholder filer relatert til ssl-sertfikat
+Inneholder filer relatert til ssl-sertifikat
 
 ##### /src/
 Denne mappa inneholder selve kildekoden. src er også mappa som virtual host-en peker til
@@ -112,7 +112,7 @@ Denne mappa inneholder php-filer med innhold og en preview image for alle attrak
 Lisensfil. Dette prosjektet er under GPL 3.0
 
 ##### README.md
-Readme fil, kort beskrivelse og installeringsintruksjoner
+Readme fil, kort beskrivelse og installeringsinstruksjoner
 
 ##### REPORT.md
 Rapportfil. Altså denne filen
@@ -160,7 +160,7 @@ Siden som lar deg browse attraksjoner
 Stylesheet for contact-siden
 
 ##### src/contact.php
-En liten kontakt-side, med github og fake mailadresser
+En liten kontakt-side, med github og fake-e mailadresser
 
 ##### src/home.css
 Stylesheet for home
@@ -220,16 +220,16 @@ Slideshowbilde av gásadulur
 Slideshowbilde av kirkjubøargarður
 
 ##### src/res/logo_transparent_text.png
-Hovedlogoen, som er i øvre ventre hjørne
+Hovedlogoen, som er i øvre venstre hjørne
 
 ##### src/slideshow.php
 Slideshow, del av hjemmesida utenfor boksen (loada inn som external i index.php)
 
 ##### ssl certificate/faroeadventures.com.crt
-ssl-serfikat for nettsida
+ssl-sertifikat for nettsida
 
 ##### ssl certificate/faroeadventures.com.csr
-ssl-sertfikat signerings-forespørsel, klart for godkjenning av en CA, samt public key
+ssl-sertifikat signerings-forespørsel, klart for godkjenning av en CA, samt public key
 
 ##### ssl certificate/faroeadventures.com.key
 Kryptert RSA privatnøkkel for nettsida
@@ -238,7 +238,7 @@ Kryptert RSA privatnøkkel for nettsida
 Ukryptert RSA privatnøkkel for nettsida
 
 ##### ssl certificate/root.ca.crt
-ssl-serfikat for oss som bedrift
+ssl-sertifikat for oss som bedrift
 
 ##### ssl certificate/root.ca.key
 Kryptert RSA privatnøkkel for oss som bedrift
