@@ -3,8 +3,12 @@
         unset($_SESSION["user"]);
         unset($_SESSION["userid"]);
         unset($_SESSION["admin"]);
-        header("Refresh:0");
+        redir();
     } else {
+        redir();
+    }
+
+    function redir(){
         if(isset($_GET["redir"])){
             header("Location: ?page=".$_GET["redir"]);
         } else {

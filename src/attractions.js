@@ -38,7 +38,7 @@ function getCurrentFlags(){
     $(".tagselector.active").each(function(){
         var tagid = $(this).attr('tagid');
 
-        flags |= (1 << (tagid - 1))
+        flags |= (1 << (tagid - 1));
     });
 
     return flags;

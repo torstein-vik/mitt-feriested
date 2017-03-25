@@ -16,6 +16,8 @@
         $attraction = $attractions[$_GET["a"]];
 
         echo "<div class='pagecontent'>";
+        echo "<img style='width:100%;margin: 20px 0' src='".$attraction["previewimg"]."'> </img>";
+
         include($attraction["pagefile"]);
         echo "</div>";
 
@@ -28,7 +30,7 @@
 
         }
 
-        $comment_query = $conn->query("SELECT users.username, users.privilege, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title FROM `mitt-feriested`.`users`, `mitt-feriested`.`tips` WHERE users.userid=tips.userid AND tips.attractionid=".$attraction["attractionid"]." ORDER BY tips.timestamp DESC;");
+        $comment_query = $conn->query("SELECT users.userid, users.username, users.privilege, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title, tips.tipid FROM `mitt-feriested`.`users`, `mitt-feriested`.`tips` WHERE users.userid=tips.userid AND tips.attractionid=".$attraction["attractionid"]." ORDER BY tips.timestamp DESC;");
 
         if(!$comment_query){
             echo $conn->error;
@@ -40,16 +42,17 @@
             $comments[] = $row;
         }
 
-        echo '<div id="comments">';
+        echo '<div class="comments">';
             if($comment_query->num_rows > 0){
                 echo "<h2> Comments about ".$attraction["name"].": </h2>";
             }
 
             foreach($comments as $comment){
+                $userlink = "<a href='?page=mypage&userid=".$comment["userid"]."'> ".$comment["username"].($comment['privilege'] == 'admin' ? " [admin]" : "")."</a>";
                 ?>
-                    <div class="comment">
+                    <div class="comment" id="comment<?php echo $comment['tipid']?>">
                         <h3> <?php echo($comment['title']); ?></h3>
-                        <h4><?php echo($comment["username"].($comment['privilege'] == 'admin' ? " [admin]" : "")." - ".date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"])); ?></h4>
+                        <h4><?php echo $userlink." - ".date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"]); ?></h4>
                         <p><?php echo(nl2br($comment["content"]));?></p>
                     </div>
                 <?php
@@ -60,7 +63,7 @@
                 <form method="POST" action="api?type=addcomment&a=<?php echo $_GET["a"]; ?>">
                     <h2>Leave a comment!</h2><br>
                     <input class="grey" style="border-radius: 5px 5px 0 0" name="title" type="text" placeholder="title">
-                    <textarea name="comment" placeholder="comment"></textarea>
+                    <textarea name="comment" placeholder="comment" rows=5></textarea>
                     <input type="submit" value="Add comment">
                 </form>
             <?php

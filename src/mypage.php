@@ -6,42 +6,118 @@
     $name = $_SESSION["user"];
     $userid = $_SESSION["userid"];
     $admin = $_SESSION["admin"];
-?>
-<?php
-$comment_query = $conn->query("SELECT tips.tipid, attractions.name, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tips` WHERE attractions.attractionid=tips.attractionid AND tips.userid=".$userid." ORDER BY tips.timestamp DESC;");
 
-        if(!$comment_query){
-            echo $conn->error;
-            return;
-        }
+    if(isset($_GET["userid"])){
+        userpage($conn, $_GET["userid"], $admin);
+    } else {
+        if($admin){
+            ?>
+            <div id="users">
+                <h1> These are all the users: </h1>
+                <?php
+                $user_query = $conn->query("SELECT users.userid, users.username, users.privilege FROM `mitt-feriested`.`users`");
 
-        $comments = [];
-        while($row = $comment_query->fetch_assoc()){
-            $comments[] = $row;
-        }
+                $users = [];
+                while($row = $user_query->fetch_assoc()){
+                    $users[] = $row;
+                }
 
-        echo '<div id="comments">';
-            if($comment_query->num_rows > 0){
-                ?><h1>Your comments:</h1><?php
-            } else {
-                ?><p style="padding:20px;font-size:20px;">You may now leave comments on <a href="?page=attractions">attractions</a>!</p><?php
-            }
-            foreach($comments as $comment){
+                foreach($users as $user){
+                    echo "<a href='?page=mypage&userid=".$user["userid"]."'> ".$user["username"].($user['privilege'] == 'admin' ? " [admin]" : "")."</a><br>";
+                }
+
                 ?>
-                    <div class="comment">
-                        <h3> <?php echo($comment['title']) ?></h3>
-                        <h4><?php echo $comment["name"].' - '.date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"]); ?></h4>
-                        <p>
-                            <?php echo($comment["content"]);?>
-                        </p>
-                    </div>
+            </div>
+            <?php
+        }
 
+        commentField($conn, $userid, "Your comments:", '<p style="padding:20px;font-size:20px;">You may leave comments on <a href="?page=attractions">attractions</a>!</p>', false, true);
+
+        if($admin){
+            commentField($conn, 0, "<div style='margin-top:40px'></div>All comments:", '<p style="padding:20px;font-size:20px;">There aren\'t any comments yet!</p>', true, true);
+        }
+    }
+?>
+
+<?php
+
+function commentField($conn, $userid, $header, $emptymsg, $allcomments, $candelete){
+    if($allcomments){
+        $comment_sql = "SELECT tips.tipid, attractions.attractionid, attractions.name, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title, users.username, users.privilege, users.userid FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tips`, `mitt-feriested`.`users` WHERE attractions.attractionid=tips.attractionid AND users.userid=tips.userid ORDER BY tips.timestamp DESC;";
+    } else {
+        $comment_sql = "SELECT tips.tipid, attractions.attractionid, attractions.name, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tips` WHERE attractions.attractionid=tips.attractionid AND tips.userid=".$userid." ORDER BY tips.timestamp DESC;";
+    }
+
+    $comment_query = $conn->query($comment_sql);
+
+    if(!$comment_query){
+        echo $conn->error;
+        return;
+    }
+
+    $comments = [];
+    while($row = $comment_query->fetch_assoc()){
+        $comments[] = $row;
+    }
+
+    echo '<div class="comments">';
+        if($comment_query->num_rows == 0){
+            echo $emptymsg;
+        } else {
+            echo "<h1>$header</h1>";
+        }
+
+        foreach($comments as $comment){
+            ?>
+                <div class="comment">
+                    <h3> <a href='/?page=attractions&a=<?php echo $comment["attractionid"];?>#comment<?php echo $comment["tipid"];?>'><?php echo($comment['title']) ?></a></h3>
+                    <?php
+                    if($allcomments){
+                        $userlink = "<a href='?page=mypage&userid=".$comment["userid"]."'> ".$comment["username"].($comment['privilege'] == 'admin' ? " [admin]" : "")."</a>";
+                        echo "<h4>".$comment["name"].' - '.$userlink.' - '.date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"])."</h4>";
+                    } else {
+                        echo "<h4>".$comment["name"].' - '.date('d/m/Y', $comment["UNIX_TIMESTAMP(tips.timestamp)"])."</h4>";
+                    }
+                    ?>
+                    <p>
+                        <?php echo(nl2br($comment["content"]));?>
+                    </p>
+                </div>
+                <?php if($candelete) { ?>
                     <a  class="deletecomment" tipid="<?php echo $comment["tipid"];?>">
                         <div>
                             Click here to delete this comment
                         </div>
                     </a>
-                <?php
+                <?php }
+        }
+    echo '</div>';
+}
+?>
+
+<?php
+
+function userpage($conn, $userid, $admin){
+    $userq = $conn->query("SELECT users.privilege, users.username FROM `mitt-feriested`.`users` WHERE userid=$userid")->fetch_assoc();
+    $isadmin = $userq["privilege"] == "admin";
+
+    ?>
+        <script>
+            $(".contentBody header h1").html("<?php echo $userq["username"];?>");
+        </script>
+    <?php
+
+    if($admin){
+        echo "<div id='users'>";
+            echo "<a href='#' id='ban' userid='$userid'>Ban this user</a><br>";
+            if($isadmin){
+                echo "<a href='#' id='regrade' userid='$userid' npriv='user'>Demote this admin to only a user</a>";
+            } else {
+                echo "<a href='#' id='regrade' userid='$userid' npriv='admin'>Promote this user to admin</a>";
             }
-        echo '</div>';
+        echo "</div>";
+    }
+    commentField($conn, $userid, "User comments:", '<p style="padding:20px;font-size:20px;">This user has no comments</a>', false, $admin);
+}
+
 ?>
