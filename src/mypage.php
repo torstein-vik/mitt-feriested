@@ -8,11 +8,7 @@
     $admin = $_SESSION["admin"];
 
     if(isset($_GET["userid"])){
-        if($admin){
-            userpage($conn, $_GET["userid"]);
-        } else {
-            header("Location: /?page=mypage");
-        }
+        userpage($conn, $_GET["userid"], $admin);
     } else {
         if($admin){
             ?>
@@ -35,17 +31,17 @@
             <?php
         }
 
-        commentField($conn, $userid, "Your comments:", '<p style="padding:20px;font-size:20px;">You may leave comments on <a href="?page=attractions">attractions</a>!</p>', false);
+        commentField($conn, $userid, "Your comments:", '<p style="padding:20px;font-size:20px;">You may leave comments on <a href="?page=attractions">attractions</a>!</p>', false, true);
 
         if($admin){
-            commentField($conn, 0, "<div style='margin-top:40px'></div>All comments:", '<p style="padding:20px;font-size:20px;">There aren\'t any comments yet!</p>', true);
+            commentField($conn, 0, "<div style='margin-top:40px'></div>All comments:", '<p style="padding:20px;font-size:20px;">There aren\'t any comments yet!</p>', true, true);
         }
     }
 ?>
 
 <?php
 
-function commentField($conn, $userid, $header, $emptymsg, $allcomments){
+function commentField($conn, $userid, $header, $emptymsg, $allcomments, $candelete){
     if($allcomments){
         $comment_sql = "SELECT tips.tipid, attractions.attractionid, attractions.name, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title, users.username, users.privilege, users.userid FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tips`, `mitt-feriested`.`users` WHERE attractions.attractionid=tips.attractionid AND users.userid=tips.userid ORDER BY tips.timestamp DESC;";
     } else {
@@ -87,13 +83,13 @@ function commentField($conn, $userid, $header, $emptymsg, $allcomments){
                         <?php echo(nl2br($comment["content"]));?>
                     </p>
                 </div>
-
-                <a  class="deletecomment" tipid="<?php echo $comment["tipid"];?>">
-                    <div>
-                        Click here to delete this comment
-                    </div>
-                </a>
-            <?php
+                <?php if($candelete) { ?>
+                    <a  class="deletecomment" tipid="<?php echo $comment["tipid"];?>">
+                        <div>
+                            Click here to delete this comment
+                        </div>
+                    </a>
+                <?php }
         }
     echo '</div>';
 }
@@ -101,7 +97,7 @@ function commentField($conn, $userid, $header, $emptymsg, $allcomments){
 
 <?php
 
-function userpage($conn, $userid){
+function userpage($conn, $userid, $admin){
     $userq = $conn->query("SELECT users.privilege, users.username FROM `mitt-feriested`.`users` WHERE userid=$userid")->fetch_assoc();
     $isadmin = $userq["privilege"] == "admin";
 
@@ -111,15 +107,17 @@ function userpage($conn, $userid){
         </script>
     <?php
 
-    echo "<div id='users'>";
-        echo "<a href='#' id='ban' userid='$userid'>Ban this user</a><br>";
-        if($isadmin){
-            echo "<a href='#' id='regrade' userid='$userid' npriv='user'>Demote this admin to only a user</a>";
-        } else {
-            echo "<a href='#' id='regrade' userid='$userid' npriv='admin'>Promote this user to admin</a>";
-        }
-    echo "</div>";
-    commentField($conn, $userid, "User comments:", '<p style="padding:20px;font-size:20px;">This user has no comments</a>', false);
+    if($admin){
+        echo "<div id='users'>";
+            echo "<a href='#' id='ban' userid='$userid'>Ban this user</a><br>";
+            if($isadmin){
+                echo "<a href='#' id='regrade' userid='$userid' npriv='user'>Demote this admin to only a user</a>";
+            } else {
+                echo "<a href='#' id='regrade' userid='$userid' npriv='admin'>Promote this user to admin</a>";
+            }
+        echo "</div>";
+    }
+    commentField($conn, $userid, "User comments:", '<p style="padding:20px;font-size:20px;">This user has no comments</a>', false, $admin);
 }
 
 ?>
