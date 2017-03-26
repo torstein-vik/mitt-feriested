@@ -1,7 +1,7 @@
 <div class="attractionsText">
     <h1>Bøur Gásadalur</h1>
     <?php
-        echo "<img style='width:100%;margin: 20px 0' src='".$attraction["previewimg"]."'> </img>";
+        echo "<img src='".$attraction["previewimg"]."'> </img>";
     ?>
     <p>
         Hike along the old village path to the beautiful village of gásadalur, which was one of the
@@ -32,24 +32,26 @@
         quickly blessed the spring and baptised the baby.
     </p>
 </div>
-<div class="facts">
-    <h2>Facts</h2>
-    <table>
-        <tr class="grey">
-            <th style="border-radius: 5px 0 0 0;">Duration</th>
-            <td style="border-radius: 0 5px 0 0;">2t 30min</td>
-        </tr>
-            <th>Distance</th>
-            <td>3,5 km</td>
-        </tr>
-        <tr class="grey">
-            <th>Maximum height</th>
-            <td>434 m</td>
-        </tr>
-        <tr>
-            <th style="border-radius: 0 0 0 5px;">Tip</th>
-            <td style="border-radius: 0 0 5px 0;">Be extra careful on the way down, as there are many loose stones</td>
-        </tr>
-    </table>
+<div class="extraInfo">
+    <div class="facts">
+        <h2>Facts</h2>
+        <table>
+            <tr class="grey">
+                <th style="border-radius: 5px 0 0 0;">Duration</th>
+                <td style="border-radius: 0 5px 0 0;">2t 30min</td>
+            </tr>
+                <th>Distance</th>
+                <td>3,5 km</td>
+            </tr>
+            <tr class="grey">
+                <th>Maximum height</th>
+                <td>434 m</td>
+            </tr>
+            <tr>
+                <th style="border-radius: 0 0 0 5px;">Tip</th>
+                <td style="border-radius: 0 0 5px 0;">Be extra careful on the way down, as there are many loose stones</td>
+            </tr>
+        </table>
+    </div>
+    ###WEATHER###
 </div>
-###WEATHER###

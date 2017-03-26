@@ -156,7 +156,7 @@ main {
     background-color: aliceblue;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
     min-height: 100px;
-    padding: 20px;
+    padding: 20px 20px 40px 20px;
 }
 
 .mainContent form {
@@ -172,7 +172,9 @@ main {
     text-align: center;
 }
 
-input[type="text"], input[type="password"], textarea {
+input[type="text"],
+input[type="password"],
+textarea {
     padding: 15px 20px;
     font-size: 20px;
     border: white solid 5px;

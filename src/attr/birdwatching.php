@@ -1,5 +1,8 @@
 <div class="attractionsText">
     <h1>Birdwatching</h1>
+    <?php
+        echo "<img src='".$attraction["previewimg"]."'> </img>";
+    ?>
     <p>
         The remote location of the 18 islands constituting the Faroe Islands functions virtually as a
         magnet for birds migrating over the North Atlantic Ocean.

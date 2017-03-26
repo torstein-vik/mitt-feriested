@@ -115,6 +115,11 @@
     margin: 0 20px;
 }
 
+.pagecontent h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 .pagecontent h2 {
     padding: 20px 0 10px;
 }
@@ -126,15 +131,21 @@
 .pagecontent img {
     max-width: 500px;
     float: right;
-    padding-left: 20px;
-    clip-path: polygon(20px 0, 100% 0, 100% 100%, 50px 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 95%);
+    margin-top: 20px;
+}
+
+.extraInfo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .facts {
-    width: 430px;
+    width: 410px;
     min-height: 430px;
-    float: left;
     padding: 20px;
+    margin: auto;
 }
 
 table {
@@ -152,17 +163,13 @@ tr {
 }
 
 th {
-    width: 150px;
     text-align: left;
-}
-
-td {
 }
 
 #weather {
     width: 510px;
     padding: 20px;
-    float: right;
+    margin: auto;
     text-align: center;
 }
 
@@ -173,7 +180,7 @@ td {
 }
 
 .attractionsText {
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .comments {
@@ -185,5 +192,13 @@ td {
 @media screen and (max-width: 1000px) {
     #attractions {
         width: 580px;
+    }
+
+    .facts {
+        width: 100%;
+    }
+
+    #weather {
+        width: 100%
     }
 }
