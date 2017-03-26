@@ -255,7 +255,8 @@ textarea {
     color: #6F961B;
 }
 
-.comment h4 {
+.comment h4,
+.comment h4 a {
     color: grey;
 }
 

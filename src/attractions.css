@@ -112,11 +112,10 @@
 
 .pagecontent {
     line-height: 2;
-    margin: 0 auto;
-    max-width: 600;
+    margin: 0 20px;
 }
 
-h1, h2 {
+.pagecontent h2 {
     padding: 20px 0 10px;
 }
 
@@ -124,7 +123,22 @@ h1, h2 {
     padding: 15px 0;
 }
 
+.pagecontent img {
+    max-width: 500px;
+    float: right;
+    padding-left: 20px;
+    clip-path: polygon(20px 0, 100% 0, 100% 100%, 50px 100%);
+}
+
+.facts {
+    width: 430px;
+    min-height: 430px;
+    float: left;
+    padding: 20px;
+}
+
 table {
+    margin: 10px 0;
     border-collapse: collapse;
     font-size: 20px;
 }
@@ -138,25 +152,33 @@ tr {
 }
 
 th {
-    width: 200px;
+    width: 150px;
     text-align: left;
 }
 
 td {
-    width: 400px;
 }
 
-#weather{
-    margin: 0 auto;
-    max-width: 600px;
+#weather {
+    width: 510px;
+    padding: 20px;
+    float: right;
     text-align: center;
 }
 
-#weather > h2{
+#weather h2 {
+    line-height: 50px;
     text-align: left;
-    margin-bottom: 20px;
+    padding: 20px 0 10px;
 }
 
+.attractionsText {
+    padding: 20px;
+}
+
+.comments {
+    clear: left;
+}
 
 /* Responsive designe */
 

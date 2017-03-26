@@ -2,7 +2,7 @@
     <h1>Bøur Gásadalur</h1>
     <?php
         echo "<img style='width:100%;margin: 20px 0' src='".$attraction["previewimg"]."'> </img>";
-    php?>
+    ?>
     <p>
         Hike along the old village path to the beautiful village of gásadalur, which was one of the
         most isolated villages in the faroe islands until a few years ago.
@@ -31,6 +31,8 @@
         not gain salvation if you die unbaptised. Therefore, the priest, who was travelling with them,
         quickly blessed the spring and baptised the baby.
     </p>
+</div>
+<div class="facts">
     <h2>Facts</h2>
     <table>
         <tr class="grey">
@@ -46,7 +48,7 @@
         </tr>
         <tr>
             <th style="border-radius: 0 0 0 5px;">Tip</th>
-            <td style="border-radius: 0 0 5px 0;">Be extra careful on the way down towards Gásadalur, as there are many loose stones</td>
+            <td style="border-radius: 0 0 5px 0;">Be extra careful on the way down, as there are many loose stones</td>
         </tr>
     </table>
 </div>
