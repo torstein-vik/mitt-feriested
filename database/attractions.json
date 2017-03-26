@@ -103,7 +103,7 @@
             "tags":       ["Hotel", "Food"]
         },
         {
-            "name":       "Hotel Streym Hotell",
+            "name":       "Streym Hotell",
             "pagefile":   "attr/streym.php",
             "previewimg": "attr/streym.jpeg",
             "weather":    "Færøyene/Streymoy/Tórshavn/",
