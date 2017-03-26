@@ -1,5 +1,8 @@
 <div class="attractionsText">
     <h1>Diving - a magnificent underwater world</h1>
+    <?php
+        echo "<img src='".$attraction["previewimg"]."'> </img>";
+    ?>
     <p>
         Diving as an activity is becoming more and more popular in the Faroe Islands. The beautiful,
         varied and unspoilt seabed found in the crystal clear water surrounding the 18 islands is
@@ -23,7 +26,7 @@
         dive. There are diving courses for beginners available around the islands. Certified divers
         can hire equipment.
     </p>
-    <p>
+    <p style="padding-bottom: 50px;">
         Make sure to bring a torch for every dive, so that you can explore cracks and look under
         rocks and fully appreciate the splendid colours and nuances of the flora and fauna. Who knows,
         you might even end up diving with seals!

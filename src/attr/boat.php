@@ -1,5 +1,8 @@
 <div class="attractionsText">
     <h1>Travel by boat</h1>
+     <?php
+        echo "<img src='".$attraction["previewimg"]."'> </img>";
+    ?>
     <p>
         Smyril Line’s ferry, M/S Norröna, sails to the Faroe Islands from Hirtshals in the north of
         Denmark and from Seyðisfjørður in Iceland. Frequency of departures varies according to season.

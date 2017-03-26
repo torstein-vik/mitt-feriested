@@ -14,9 +14,13 @@ body {
 }
 
 #content{
-    display:flex;
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    color: #3f5e10;
 }
 
 header {

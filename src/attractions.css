@@ -39,7 +39,10 @@
     cursor: pointer;
     transition: all 300ms;
     font-size: 20px;
-    color: aliceblue;
+}
+
+.tagselector h3 {
+    color: white;
 }
 
 .tagselector[tagid="1"] {
@@ -152,6 +155,7 @@ table {
     margin: 10px 0;
     border-collapse: collapse;
     font-size: 20px;
+    width: 100%;
 }
 
 th, td {
@@ -195,10 +199,20 @@ th {
     }
 
     .facts {
-        width: 100%;
+        width: 600px;
+        max-height: 430px;
     }
 
     #weather {
-        width: 100%
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .pagecontent img {
+        float: none;
+        clip-path: initial;
+        display: block;
+        margin: auto;
     }
 }
