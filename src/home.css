@@ -63,6 +63,29 @@
 }
 
 
+/* Info about the Faroe Islands */
+
+#about {
+    line-height: 2;
+    margin: 0 100px 20px 100px;
+}
+
+#about h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+#about p {
+    padding-top: 20px;
+}
+
+#about img {
+    width: 400px;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 90%, 0 50%);
+    float: right;
+    padding-top: 20px;
+}
+
 /* Responsive Designe */
 
 @media screen and (max-width: 1160px) {
