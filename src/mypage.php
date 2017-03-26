@@ -1,6 +1,8 @@
 <?php
     if(!$auth){
-        header("Location: ?page=login&redir=mypage");
+        if(isset($_GET["userid"])){
+            userpage($conn, $_GET["userid"], false);
+        }
         return;
     }
     $name = $_SESSION["user"];
