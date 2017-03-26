@@ -31,7 +31,7 @@ INSERT INTO `mitt-feriested`.`attractions` (name, pagefile, previewimg, weather)
                                                                                         ('Plane', 'attr/plane.php', 'attr/plane.jpg', 'NONE'),
                                                                                         ('Boat', 'attr/boat.php', 'attr/boat.jpg', 'NONE'),
                                                                                         ('Hotel Føroyar', 'attr/hotelfoeroyar.php', 'attr/hotelføroyar.jpeg', 'Færøyene/Streymoy/Tórshavn/'),
-                                                                                        ('Hotel Streym Hotell', 'attr/streym.php', 'attr/streym.jpeg', 'Færøyene/Streymoy/Tórshavn/'),
+                                                                                        ('Streym Hotell', 'attr/streym.php', 'attr/streym.jpeg', 'Færøyene/Streymoy/Tórshavn/'),
                                                                                         ('Hotel Tórshavn', 'attr/hoteltorshavn.php', 'attr/hoteltorshavn.jpg', 'Færøyene/Streymoy/Tórshavn/'),
                                                                                         ('Hotel Vagar', 'attr/vagar.php', 'attr/vagar.jpg', 'Færøyene/Vágar/Vagar/');
 
@@ -73,7 +73,7 @@ INSERT INTO `mitt-feriested`.`tagselections` (attractionid, tagid) SELECT attrac
 WHERE attractions.name = 'Hotel Føroyar' AND (tags.name = 'Hotel' OR tags.name = 'Food');
 
 INSERT INTO `mitt-feriested`.`tagselections` (attractionid, tagid) SELECT attractionid, tagid FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tags`
-WHERE attractions.name = 'Hotel Streym Hotell' AND (tags.name = 'Hotel');
+WHERE attractions.name = 'Streym Hotell' AND (tags.name = 'Hotel');
 
 INSERT INTO `mitt-feriested`.`tagselections` (attractionid, tagid) SELECT attractionid, tagid FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tags`
 WHERE attractions.name = 'Hotel Tórshavn' AND (tags.name = 'Hotel' OR tags.name = 'Food');
