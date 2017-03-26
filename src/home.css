@@ -81,7 +81,7 @@
 
 #about img {
     width: 400px;
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 90%, 0 50%);
+    clip-path: polygon(5% 0, 100% 0, 100% 100%, 15% 90%, 0 50%);
     float: right;
     padding-top: 20px;
 }
