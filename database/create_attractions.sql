@@ -19,10 +19,10 @@ ALTER TABLE `mitt-feriested`.`tagselections` AUTO_INCREMENT = 1;
 INSERT INTO `mitt-feriested`.`tags` (name, previewimg) VALUES ('Things to do', 'res/placeholder.jpg'), ('Hotel', 'res/placeholder.jpg'), ('Food', 'res/placeholder.jpg'), ('Travel', 'res/placeholder.jpg');
 
 -- Adding attractions
-INSERT INTO `mitt-feriested`.`attractions` (name, pagefile, previewimg, weather) VALUES ('Koks Restaurant', 'attr/koks.php', 'attr/koks.jpg', 'NONE'),
-                                                                                        ('Áarstova', 'attr/aarstova.php', 'attr/aarstova.jpg', 'NONE'),
-                                                                                        ('Ræst', 'attr/raest.php', 'attr/ræst.jpg', 'NONE'),
-                                                                                        ('Barbara Fishhouse', 'attr/barbara.php', 'attr/barbara.jpg', 'NONE'),
+INSERT INTO `mitt-feriested`.`attractions` (name, pagefile, previewimg, weather) VALUES ('Koks Restaurant', 'attr/koks.php', 'attr/koks.jpg', 'Færøyene/Streymoy/Tórshavn/'),
+                                                                                        ('Áarstova', 'attr/aarstova.php', 'attr/aarstova.jpg', 'Færøyene/Streymoy/Tórshavn/'),
+                                                                                        ('Ræst', 'attr/raest.php', 'attr/ræst.jpg', 'Færøyene/Streymoy/Tórshavn/'),
+                                                                                        ('Barbara Fishhouse', 'attr/barbara.php', 'attr/barbara.jpg', 'Færøyene/Streymoy/Tórshavn/'),
                                                                                         ('Kirkjubøargarður', 'attr/kirkjuboeargarthur.php', 'attr/kirkjubøargarður.jpg', 'Færøyene/Sandoy/Kirkjubøur/'),
                                                                                         ('Gásadalur', 'attr/gasadalur.php', 'attr/gásadalur.jpg', 'Færøyene/Vágar/Gásadalur/'),
                                                                                         ('Slættaratindur', 'attr/slaettaratindur.php', 'attr/slættaratindur.jpg', 'Færøyene/Eysturoy/Slættaratindur/'),
@@ -30,10 +30,10 @@ INSERT INTO `mitt-feriested`.`attractions` (name, pagefile, previewimg, weather)
                                                                                         ('Diving', 'attr/diving.php', 'attr/diving.jpg', 'NONE'),
                                                                                         ('Plane', 'attr/plane.php', 'attr/plane.jpg', 'NONE'),
                                                                                         ('Boat', 'attr/boat.php', 'attr/boat.jpg', 'NONE'),
-                                                                                        ('Hotel Føroyar', 'attr/hotelfoeroyar.php', 'attr/hotelføroyar.jpeg', 'NONE'),
-                                                                                        ('Hotel Streym Hotell', 'attr/streym.php', 'attr/streym.jpeg', 'NONE'),
-                                                                                        ('Hotel Tórshavn', 'attr/hoteltorshavn.php', 'attr/hoteltorshavn.jpg', 'NONE'),
-                                                                                        ('Hotel Vagar', 'attr/vagar.php', 'attr/vagar.jpg', 'NONE');
+                                                                                        ('Hotel Føroyar', 'attr/hotelfoeroyar.php', 'attr/hotelføroyar.jpeg', 'Færøyene/Streymoy/Tórshavn/'),
+                                                                                        ('Hotel Streym Hotell', 'attr/streym.php', 'attr/streym.jpeg', 'Færøyene/Streymoy/Tórshavn/'),
+                                                                                        ('Hotel Tórshavn', 'attr/hoteltorshavn.php', 'attr/hoteltorshavn.jpg', 'Færøyene/Streymoy/Tórshavn/'),
+                                                                                        ('Hotel Vagar', 'attr/vagar.php', 'attr/vagar.jpg', 'Færøyene/Vágar/Vagar/');
 
 -- Adding tag selections
 INSERT INTO `mitt-feriested`.`tagselections` (attractionid, tagid) SELECT attractionid, tagid FROM `mitt-feriested`.`attractions`, `mitt-feriested`.`tags`
