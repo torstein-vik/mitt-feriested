@@ -15,19 +15,32 @@
     if(isset($_GET["a"]) and $_GET["a"] > 0 and sizeof($attractions) > $_GET["a"] - 1){
         $attraction = $attractions[$_GET["a"]];
 
+        global $weather_added;
+        $weather_added = false;
+
+        ob_start();
+        ob_implicit_flush(false);
+        echo "<div id='weather'>";
+        echo "<h2> Weather near ".$attraction["name"].": </h2>";
+
+        echo '<script src="http://www.yr.no/place/'.$attraction["weather"].'/external_box_three_days.js"></script>';
+        echo "</div>";
+        $weather = ob_get_clean();
+
+        $replaceWeatherCallback = function($res) use ($weather){
+            global $weather_added;
+            $weather_added = !(strpos($res, "###WEATHER###") == false);
+            return str_replace("###WEATHER###", $weather, $res);
+        };
+
         echo "<div class='pagecontent'>";
-
-
+        ob_start($replaceWeatherCallback);
         include($attraction["pagefile"]);
+        ob_end_flush();
         echo "</div>";
 
-        if($attraction["weather"] != "NONE"){
-            echo "<div id='weather'>";
-            echo "<h2> Weather near ".$attraction["name"].": </h2>";
-
-            echo '<script src="http://www.yr.no/place/'.$attraction["weather"].'/external_box_three_days.js"></script>';
-            echo "</div>";
-
+        if($attraction["weather"] != "NONE" and !$weather_added){
+            echo $weather;
         }
 
         $comment_query = $conn->query("SELECT users.userid, users.username, users.privilege, UNIX_TIMESTAMP(tips.timestamp), tips.content, tips.title, tips.tipid FROM `mitt-feriested`.`users`, `mitt-feriested`.`tips` WHERE users.userid=tips.userid AND tips.attractionid=".$attraction["attractionid"]." ORDER BY tips.timestamp DESC;");
