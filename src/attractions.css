@@ -117,18 +117,20 @@
 }
 
 table {
-    border: none;
+    border-collapse: collapse;
 }
 
 tr {
     background-color: white;
 }
 
-tr th, tr td {
-    max-width: 300px;
+th {
+    width: 200px;
 }
 
-
+td {
+    width: 400px;
+}
 
 #weather{
     margin: 0 auto;
