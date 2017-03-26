@@ -23,6 +23,7 @@
             "pagefile":   "attr/koks.php",
             "previewimg": "attr/koks.jpg",
             "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "weather":    "NONE",
             "tags":       ["Food"]
         },
         {
@@ -30,6 +31,7 @@
             "pagefile":   "attr/aarstova.php",
             "previewimg": "attr/aarstova.jpg",
             "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "weather":    "NONE",
             "tags":       ["Food"]
         },
         {
@@ -37,6 +39,7 @@
             "pagefile":   "attr/raest.php",
             "previewimg": "attr/ræst.jpg",
             "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "weather":    "NONE",
             "tags":       ["Food"]
         },
         {
@@ -44,6 +47,7 @@
             "pagefile":   "attr/barbara.php",
             "previewimg": "attr/barbara.jpg",
             "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "weather":    "NONE",
             "tags":       ["Food"]
         },
         {
@@ -100,6 +104,7 @@
             "pagefile":   "attr/hotelfoeroyar.php",
             "previewimg": "attr/hotelføroyar.jpeg",
             "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "weather":    "NONE",
             "tags":       ["Hotel", "Food"]
         },
         {
@@ -107,6 +112,7 @@
             "pagefile":   "attr/streym.php",
             "previewimg": "attr/streym.jpeg",
             "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "weather":    "NONE",
             "tags":       ["Hotel"]
         },
         {
@@ -114,6 +120,7 @@
             "pagefile":   "attr/hoteltorshavn.php",
             "previewimg": "attr/hoteltorshavn.jpg",
             "weather":    "Færøyene/Streymoy/Tórshavn/",
+            "weather":    "NONE",
             "tags":       ["Hotel", "Food"]
         },
         {
@@ -121,6 +128,7 @@
             "pagefile":   "attr/vagar.php",
             "previewimg": "attr/vagar.jpg",
             "weather":    "Færøyene/Vágar/Vagar/",
+            "weather":    "NONE",
             "tags":       ["Hotel"]
         }
     ]
