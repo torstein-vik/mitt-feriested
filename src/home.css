@@ -67,23 +67,39 @@
 
 #about {
     line-height: 2;
-    margin: 0 100px 20px 100px;
+    padding: 0 40px;
 }
 
 #about h1 {
-    text-align: center;
     padding: 10px;
+    line-height: normal;
 }
 
 #about p {
     padding-top: 20px;
 }
 
-#about img {
-    width: 400px;
-    clip-path: polygon(5% 0, 100% 0, 100% 100%, 15% 90%, 0 50%);
+#img1 {
+    width: 60%;
     float: right;
-    padding-top: 20px;
+    transform: translate(60px, -20px);
+}
+
+#img1 img {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 90%);
+    width: 100%;
+}
+
+#img2 {
+    float: left;
+    width: 50%;
+    transform: translate(-60px, 0);
+    padding: 25px 0;
+}
+
+#img2 img {
+    width: 100%;
+    clip-path: polygon(0 0, 95% 10%, 100% 90%, 0 100%);
 }
 
 /* Responsive Designe */
