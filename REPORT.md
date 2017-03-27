@@ -58,7 +58,7 @@ Som man kan se er det 5 tabeller:
 
 #### users
 
-Users er tabellen over brukere. Den inneholder simpelthen en unik id som primærnøkkel, et brukernavn, en privilege (enten admin eller user, future proofing dersom vi etterhvert ønsker å ha admins), og passhash og passsalt. Passsalt er unik tilfeldig sekvens av bytes som har som hensikt å gjøre passhash unik selv om flere brukere har samme passord. Passhash er en sha256 hashing av passordet og dette saltet. Denne typen passordsikkerhet er ganske moderne og trygg (frem til noen bruker passordet 'passord123').
+Users er tabellen over brukere. Den inneholder simpelthen en unik id som primærnøkkel, et brukernavn, en privilege (enten admin eller user, future proofing dersom vi etterhvert ønsker å ha admins (Dette er av ENUM-typen så det er 1.normalform)), og passhash og passsalt. Passsalt er unik tilfeldig sekvens av bytes som har som hensikt å gjøre passhash unik selv om flere brukere har samme passord. Passhash er en sha256 hashing av passordet og dette saltet. Denne typen passordsikkerhet er ganske moderne og trygg (frem til noen bruker passordet 'passord123').
 
 #### attractions
 
