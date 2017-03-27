@@ -119,10 +119,9 @@
         $subUserid = $conn->real_escape_string($_GET["userid"]);
 
         if ($admin){
-            $queryDelSQL = "DELETE FROM `mitt-feriested`.`users` WHERE userid=".$subUserid;
-            $queryDelSQL = "DELETE FROM `mitt-feriested`.`tips` WHERE userid=".$subUserid;
+            $queryDelSQL = "DELETE FROM `mitt-feriested`.`users` WHERE userid=".$subUserid."; "."DELETE FROM `mitt-feriested`.`tips` WHERE userid=".$subUserid;
 
-            $queryDel = $conn->query($queryDelSQL);
+            $queryDel = $conn->multi_query($queryDelSQL);
 
             if(!$queryDel){
                 echo $conn->error;
