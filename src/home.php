@@ -1,6 +1,6 @@
 <div id="about">
     <div id="img1">
-        <img src="res/flag.png"/>
+        <img src="res/sheep.jpg"/>
     </div>
     <h1>Europe's best kept secret</h1>
     <p>
