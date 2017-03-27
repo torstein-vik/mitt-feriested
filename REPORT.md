@@ -2,15 +2,23 @@
 
 ### Goals
 
-Målet er å fremme Færøyene som et aktuelt reisemål for Naturinteresserte i alderen fra 15 til 25.
+Målet med denne nettsiden er å fremme Færøyene som et aktuelt reisemål. Færøyene er kjent for sin enestående natur, men dette er det ikke alle som vet og de fleste tenker ikke over at Færøyene kan være en feriedestinasjon. Denne nettsiden har som mål å vise Færøyene fra sin beste side og hva det har å by på og målet er at flere skal vurdere det som en feriedestinasjon. Nettsiden skal også hjelpe turister med å planlegge en eventuell ferie, ved å gi informasjon.
 
 ### Audience
 
-Naturinteresserte i alderen fra 15 til 25.
+Målgruppen er hovedsakelig naturinteresserte i alderen fra 15 til 25, men vi sikter også til de som har lyst til å prøve noe nytt og vi fremstiller derfor Færøyene som noe litt uoppdaget og eventyrlig, for å fenge alle som kanskje har lyst til å prøve noe annet enn for eksempel en badeferie i Syden.
 
 ### Scope
 
-vet da fan....
+Denne nettsiden tilbyr nyttig informasjon som kan hjelpe turister med å planlegge et opphold på Færøyene. Den tilbyr en rekke populære attraksjoner, hoteller, restauranter og transportalternativer, samt mye informasjon og nyttige opplysninger om disse. Men nettsiden har også en plattform for turister, hvor de kan tilføye reisetips om attraksjonene. Slike tips kan gjøre det enklere å velge mellom alle alternativene.
+
+# Designvalg:
+
+Her skal vi forklare noen av tankene bak nettsidens stil og designe. Vi tok utgangspunkt i GAS analysen. Siden målgruppen er mellom 15 og 23 år har vi gått for en moderne stil.
+
+Først lagde vi en fargepalett, ved hjelp av bilder fra Færøyene. Her fokuserte vi på naturen fordi vi føler at det er ikonisk for Færøyene. Før vi designet selve nettsiden lagde vi logoen. Den er inspirert av Færøyenes karakteristiske natur. Dens store bølger, skarpe klipper og sitt grønne gress på overflaten ser man tydelig i logoen. 
+
+Deretter designet vi selve nettsiden. Vi tok bruk samme stilen som i logoen. De skarpe kantene og litt merkelig formene ser man glimt av overalt i nettsiden. Fargene fra fargepaletten einer seg dårlig som bakgrunnsfarge fordi de tar blikkfanget. Men de tas i bruk i små mengder på steder hvor vi ønsker oppmerksomhet. Overskriftene spesielt får mye oppmerksomhet på grunn av den grønne fargen. Dette går igjen i hele nettsiden og gjør det enklere for brukeren å raskt finne frem.
 
 # Planleggingsstadier:
 
